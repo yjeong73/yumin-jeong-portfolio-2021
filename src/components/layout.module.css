@@ -1,6 +1,12 @@
+body {
+	background: #B7C57D;
+}
+
 .container {
   margin: auto;
-  max-width: 500px;
+  width: 90%;
+  max-width: 1920px;
+  border: 3px solid #73AD21;
   font-family: sans-serif;
 }
 
@@ -9,14 +15,23 @@
 }
 .nav-links {
   display: flex;
+  flex-direction: row-reverse;
   list-style: none;
   padding-left: 0;
 }
 .nav-link-item {
-  padding-right: 2rem;
+  padding-left: 4rem;
 }
+
+/* Links */
 .nav-link-text {
-  color: black;
+  color: white;
+  text-decoration: none;
+}
+
+/* mouse over link */
+.nav-link-text:hover {
+  color: grey;
 }
 
 .site-title {
