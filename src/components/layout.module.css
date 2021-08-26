@@ -13,6 +13,24 @@ body {
 .heading {
   color: rebeccapurple;
 }
+
+
+/* Links for Projects */
+.project-titles {
+  text-align: center;
+}
+
+.project-links {
+    color: white;
+    text-decoration: none;
+}
+
+.project-technology {
+    color: hotpink;
+    text-align: center;
+}
+
+/* Links for menu */
 .nav-links {
   display: flex;
   flex-direction: row-reverse;
@@ -23,7 +41,6 @@ body {
   padding-left: 4rem;
 }
 
-/* Links */
 .nav-link-text {
   color: white;
   text-decoration: none;
