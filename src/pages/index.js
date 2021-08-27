@@ -8,11 +8,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 const IndexPage = () => {
   return (
       <Layout pageTitle="Home Page">
-        <p>Hello</p>
-        <StaticImage
-        alt="A cat, lying down"
-        src="../images/cat.jpg"
-      />
+        <p>Hello, I am Yumin Jeong, A recent graduate with passion for computer science and art who is seeking job opportunities as a front-end engineer.</p>
       </Layout>
   )
 }
