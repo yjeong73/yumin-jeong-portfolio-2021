@@ -8,6 +8,7 @@ import {
     projectTitles,
     projectLinks,
     projectTechnology,
+    projectPhoto
 } from '../../components/layout.module.css'
 
 const ProjectPage = ({ data }) => {
@@ -35,7 +36,7 @@ export const query = graphql`
       allMdx(sort: {fields: frontmatter___date, order: DESC}) {
         nodes {
           frontmatter {
-            date(formatString: "MMMM D, YYYY")
+            date
             title
             technology
           }
