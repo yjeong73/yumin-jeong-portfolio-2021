@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 import {
     container,
     heading,
@@ -32,18 +33,18 @@ const Layout = ({ pageTitle, children }) => {
         </h1>
         <ul>
           <li className={navLinkItem}>
-            <Link to="/about" className={navLinkText}>
+            <AnchorLink to="/#aboutMe" className={navLinkText}>
                 ABOUT
-            </Link>
+            </AnchorLink>
+          </li>
+          <li className={navLinkItem}>
+            <AnchorLink to="/#contactInfo" className={navLinkText}>
+                CONTACT
+            </AnchorLink>
           </li>
           <li className={navLinkItem}>
             <Link to="/projects" className={navLinkText}>
-              PROJECTS
-            </Link>
-          </li>
-          <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>
-              CONTACT
+                PROJECTS
             </Link>
           </li>
         </ul>

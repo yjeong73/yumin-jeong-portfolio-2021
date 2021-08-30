@@ -3,6 +3,7 @@ import * as React from 'react'
 //import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 import {
     homeIntro,
     homeName,
@@ -27,7 +28,7 @@ const IndexPage = () => {
         Bachelor of Science in Computer Science Concentration: Intelligence-Media</p>
         <p className={homeDescription}>Education: Georgia Institute of Technology 2017 - 2021
         Bachelor of Science in Computer Science Concentration: Intelligence-Media</p>
-        <h2 className={heading}>Another About Me</h2>
+        <h2 id="aboutMe" className={heading}>Another About Me</h2>
         <p className={homeDescription}>Education: Georgia Institute of Technology 2017 - 2021
         Bachelor of Science in Computer Science Concentration: Intelligence-Media</p>
         <p className={homeDescription}>Education: Georgia Institute of Technology 2017 - 2021
@@ -36,7 +37,7 @@ const IndexPage = () => {
         Bachelor of Science in Computer Science Concentration: Intelligence-Media</p>
         <p className={homeDescription}>Education: Georgia Institute of Technology 2017 - 2021
         Bachelor of Science in Computer Science Concentration: Intelligence-Media</p>
-        <h3 className={heading}>Probably Contact</h3>
+        <h3 id="contactInfo" className={heading}>Probably Contact</h3>
         <p className={homeDescription}>Education: Georgia Institute of Technology 2017 - 2021
         Bachelor of Science in Computer Science Concentration: Intelligence-Media</p>
         <p className={homeDescription}>Education: Georgia Institute of Technology 2017 - 2021
