@@ -10,23 +10,38 @@ import {
     projectTechnology,
     projectPhoto
 } from '../../components/layout.module.css'
+import {
+    cardBody,
+    card,
+    cardImage,
+    cardText,
+    cardStats,
+    date,
+    stat,
+    type,
+    value,
+} from '../../components/projectCard.module.css'
 
 const ProjectPage = ({ data }) => {
   return (
     <Layout pageTitle="Projects">
-        {
-        data.allMdx.nodes.map((node) => (
-            <article key={node.id}>
-                <h2 className={projectTitles}>
-                    <Link to={`/projects/${node.slug}`} className={projectLinks}>
-                        {node.frontmatter.title}
-                    </Link>
-                </h2>
-                <p className={projectTechnology}>
-                Tecnology&#58; {node.frontmatter.technology}</p>
-            </article>
-            ))
-        }
+        <div className={cardBody}>
+            <div className={card}>
+                <div className={cardImage}></div>
+                <div className={cardText}>
+                    <span className={date}>4 days ago</span>
+                    <h2>Post One</h2>
+                    <p> Description goes here!</p>
+                </div>
+                <div className={cardStats}>
+                    <div className={stat}>
+                        <div className={value}>4m</div>
+                        <div className={type}>read</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </Layout>
   )
 }
