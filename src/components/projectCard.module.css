@@ -1,7 +1,9 @@
+@import "./typography.css";
+
 .card-body {
     margin: auto;
     width: 90%;
-    height: 100vh;
+    height: 90vh;
     max-width: 1920px;
     display: flex;
     align-items: center;
@@ -15,11 +17,12 @@
     grid-template-columns: 300px;
     grid-template-rows: 210px 210px 80px;
     grid-template-areas: "image" "text" "stats";
+    margin-right: 50px;
 
-    font-family: roboto;
+    font-family: "Roboto";
     border-radius: 18px;
-    background: white;/*rgba(255, 255, 255, 0.3);*/
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    background: rgba(255, 255, 255, 0.5);
+    /*box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);*/
     text-align: center;
 
     transition: 0.5s ease;
@@ -28,7 +31,6 @@
 
 .card-image {
     grid-area: image;
-    background: url("../images/cat.jpg");
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-size: cover;
@@ -40,7 +42,7 @@
 }
 
 .card-text .date {
-    color: hotpink;
+    color: grey;
     fontsize: 13px;
 }
 
@@ -58,11 +60,11 @@
 .card-stats {
     grid-area: stats;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    background: green;
+    background: rgba(255, 255, 255, 0.4);
 }
 
 .card-stats .stat {
@@ -77,15 +79,17 @@
 .card-stats .type {
     font-size: 11px;
     font-weight: 300;
+    color: grey;
     text-transform: uppercase;
 }
 
 .card-stats .value {
-    font-size: 22px;
+    font-size: 15px;
     font-weight: 500;
+    color: grey;
 }
 
 .card:hover {
     transform: scale(1.1);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    /*box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);*/
 }

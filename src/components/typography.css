@@ -12,3 +12,8 @@
   font-family: "Phosphorus";
   src: url("../fonts/phosphor.woff");
 }
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/roboto.woff");
+}
