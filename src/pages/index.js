@@ -12,6 +12,7 @@ import {
     homeName,
     homeDescription,
     heading,
+    subheading,
     container,
     projectTitles,
     projectLinks,
@@ -19,6 +20,8 @@ import {
     projectPhoto,
     introduction,
     sections,
+    education,
+    educationItem,
 } from '../components/layout.module.css'
 import {
     cardBody,
@@ -36,18 +39,63 @@ import {
 const IndexPage = ({ data }) => {
   return (
       <Layout pageTitle="Home Page">
+
         <div className={introduction}>
             <p className={homeIntro}>Hello,</p>
             <p className={homeName}>I AM YUMIN JEONG,</p>
-            <p className={homeDescription}>A recent graduate with a passion for</p>
-            <p className={homeDescription}>computer science and art who is seeking</p>
-            <p className={homeDescription}>job opportunities as a front-end engineer.</p>
+            <p className={homeDescription}>A recent graduate with a passion for
+            <br/>computer science and art who is seeking
+            <br/>job opportunities as a front-end engineer.</p>
         </div>
 
         <div className={sections}>
             <h1 id="aboutMe" className={heading}>About Me</h1>
-            <p className={homeDescription}>Education: Georgia Institute of Technology 2017 - 2021
-            Bachelor of Science in Computer Science Concentration: Intelligence-Media</p>
+            <p className={subheading}>EDUCATION:</p>
+
+            <div className={education}>
+                <div className={educationItem}>
+                    <StaticImage
+                      src="../images/cat.jpg"
+                      width={150}
+                      height={150}
+                    />
+                </div>
+                <div className={educationItem}>
+                    <p>Georgia Institute of Technology</p>
+                    <p>Aug 2017 - May 2021</p>
+                    <p>Location</p>
+                </div>
+                <div className={educationItem}>
+                    <p>Bachelor of Science in Computer Science</p>
+                    <p>Concentration: Intelligence-Media</p>
+                </div>
+            </div>
+
+            <div className={education}>
+                <div className={educationItem}>
+                    <StaticImage
+                      src="../images/cat.jpg"
+                      width={150}
+                      height={150}
+                    />
+                </div>
+                <div className={educationItem}>
+                    <p>Duluth High School</p>
+                    <p>Aug 2013 - May 2017</p>
+                    <p>Location</p>
+                </div>
+                <div className={educationItem}>
+                    <p>Honors?</p>
+                    <p>What did I do..</p>
+                </div>
+            </div>
+
+            <p className={subheading}>SKILLS:</p>
+            <p>Java, Python, C#, CSS, JavaScript, HTML, </p>
+            <p className={subheading}>TOOLS:</p>
+            <p>Git, Angular, React, Unity, Android Studio, Procreate, Adobe Photoshop, Figma</p>
+            <p className={subheading}>LANGUAGES:</p>
+            <p>Korean (Mother tongue), English (Fluent)</p>
         </div>
 
         <div className={sections}>

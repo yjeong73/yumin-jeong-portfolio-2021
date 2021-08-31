@@ -35,6 +35,32 @@ body {
   letter-spacing: 5px;
 }
 
+.subheading {
+    font-family: "Lemonmilk";
+    width: 75%;
+    margin: auto;
+    color: white;
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+
+.education {
+    width: 75%;
+    margin: auto;
+    border: 3px solid yellow;
+    display: grid;
+    grid-template-columns: 20% 30% 50%;
+    margin-bottom: 50px;
+}
+
+.education-item {
+    color: white;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
 .home-intro {
     font-family: "Rochester";
     color: white;
