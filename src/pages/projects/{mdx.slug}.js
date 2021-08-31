@@ -5,6 +5,8 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../../components/layout'
 import {
     projectPhoto,
+    projectTitles,
+    heading,
 } from '../../components/layout.module.css'
 
 const ProjectPost = ({ data }) => {
@@ -12,12 +14,13 @@ const ProjectPost = ({ data }) => {
 
   return (
       <Layout pageTitle={data.mdx.frontmatter.title}>
-        <p>{data.mdx.frontmatter.date}</p>
+      <h1 className={projectTitles}>{data.mdx.frontmatter.title}</h1>
         <GatsbyImage
           className={projectPhoto}
           image={image}
           alt={data.mdx.frontmatter.hero_image_alt}
         />
+        <p>{data.mdx.frontmatter.date}</p>
         <MDXRenderer>
           {data.mdx.body}
         </MDXRenderer>
