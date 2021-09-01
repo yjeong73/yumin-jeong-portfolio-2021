@@ -7,6 +7,8 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { StaticImage } from 'gatsby-plugin-image'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { makeStyles } from "@material-ui/core/styles";
+import Divider from "@material-ui/core/Divider";
 import {
     homeIntro,
     homeName,
@@ -25,6 +27,8 @@ import {
     educationItemPicture,
     skills,
     skillsItem,
+    contactGrid,
+    contactItem,
 } from '../components/layout.module.css'
 import {
     cardBody,
@@ -39,7 +43,19 @@ import {
 } from '../components/projectCard.module.css'
 
 // Step 2: Define your component
+
+const useStyles = makeStyles(theme => ({
+  divider: {
+    background: "white",
+    width: "75%",
+    margin: "auto",
+    marginBottom: "50px",
+    marginTop: "50px",
+  }
+}));
+
 const IndexPage = ({ data }) => {
+  const classes = useStyles();
   return (
       <Layout pageTitle="Home Page">
 
@@ -53,6 +69,10 @@ const IndexPage = ({ data }) => {
 
         <div className={sections}>
             <h1 id="aboutMe" className={heading}>About Me</h1>
+            <p style={{fontFamily: "Roboto-light", color: "white", textAlign: "center", margin: "0", fontSize: "20px"}}>Somewhat useful information about myself</p>
+
+            <Divider className={classes.divider}/>
+
             <p className={subheading}>EDUCATION:</p>
 
             <div className={education}>
@@ -93,6 +113,8 @@ const IndexPage = ({ data }) => {
                 </div>
             </div>
 
+            <Divider className={classes.divider}/>
+
             <p className={subheading}>SKILLS:</p>
 
             <div className={skills}>
@@ -107,6 +129,8 @@ const IndexPage = ({ data }) => {
                     <p>HTML</p>
                 </div>
             </div>
+
+            <Divider className={classes.divider}/>
 
             <p className={subheading}>TOOLS:</p>
 
@@ -125,6 +149,8 @@ const IndexPage = ({ data }) => {
                 </div>
             </div>
 
+            <Divider className={classes.divider}/>
+
             <p className={subheading}>LANGUAGES:</p>
 
             <div className={skills}>
@@ -140,6 +166,10 @@ const IndexPage = ({ data }) => {
 
         <div className={sections}>
             <h2 id="projects" className={heading}>Projects</h2>
+            <p style={{fontFamily: "Roboto-light", color: "white", textAlign: "center", margin: "0", fontSize: "20px"}}>Some of my projects</p>
+
+            <Divider className={classes.divider}/>
+
             <div className={cardBody}>
                 {
                     data.allMdx.nodes.map((node) => (
@@ -173,14 +203,19 @@ const IndexPage = ({ data }) => {
         </div>
 
         <div className={sections}>
-            <h3 id="contactInfo" className={heading}>Probably Contact</h3>
-            <p className={homeDescription}>Contact: LinkedIn, GitHub</p>
-            <p> some text some text some text some text some text some text</p>
-            <p> some text some text some text some text some text some text</p>
-            <p> some text some text some text some text some text some text</p>
-            <p> some text some text some text some text some text some text</p>
-            <p> some text some text some text some text some text some text</p>
-            <p> some text some text some text some text some text some text</p>
+            <h3 id="contactInfo" className={heading}>Contact</h3>
+            <p style={{fontFamily: "Roboto-light", color: "white", textAlign: "center", margin: "0", fontSize: "20px"}}>Some ways you can contact me</p>
+
+            <Divider className={classes.divider}/>
+
+            <div className={contactGrid}>
+                <div className={contactItem}>
+                    <p>Linked In</p>
+                </div>
+                <div className={contactItem}>
+                    <p>Email</p>
+                </div>
+            </div>
         </div>
       </Layout>
   )
