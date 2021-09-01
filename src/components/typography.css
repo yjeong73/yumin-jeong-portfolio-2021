@@ -17,3 +17,18 @@
   font-family: "Roboto";
   src: url("../fonts/roboto.woff");
 }
+
+@font-face {
+  font-family: "Roboto-light";
+  src: url("../fonts/roboto-light.woff");
+}
+
+@font-face {
+  font-family: "Butler-bold";
+  src: url("../fonts/Butler-Bold.woff");
+}
+
+@font-face {
+  font-family: "Icons-south";
+  src: url("../fonts/icons-south-st.woff");
+}

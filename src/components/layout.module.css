@@ -4,6 +4,8 @@ body {
 	background: #B7C57D;
 }
 
+/*CONTAINERS*/
+
 .container {
   margin: auto;
   width: 90%;
@@ -28,38 +30,7 @@ body {
     border: 3px solid purple;
 }
 
-.heading {
-  font-family: "Rochester";
-  color: white;
-  font-size: 50px;
-  letter-spacing: 5px;
-}
-
-.subheading {
-    font-family: "Lemonmilk";
-    width: 75%;
-    margin: auto;
-    color: white;
-    font-size: 25px;
-    letter-spacing: 5px;
-}
-
-.education {
-    width: 75%;
-    margin: auto;
-    border: 3px solid yellow;
-    display: grid;
-    grid-template-columns: 20% 30% 50%;
-    margin-bottom: 50px;
-}
-
-.education-item {
-    color: white;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-}
+/*TITLE SECTION TYPOGRAPHY*/
 
 .home-intro {
     font-family: "Rochester";
@@ -73,7 +44,7 @@ body {
     font-family: "Lemonmilk";
     color: white;
     font-size: 25px;
-    letter-spacing: 13px;
+    letter-spacing: 10px;
     margin: 3px;
 }
 
@@ -99,8 +70,79 @@ body {
 }
 
 .main-logo:hover {
-    background: rgba(0,0,0,0.5);
+    transition: 0.5s ease;
+    filter: opacity(0.5) drop-shadow(0 0 0 grey) saturate(1000%);
 }
+
+/*HEADINGS*/
+
+.heading {
+  font-family: "Butler-bold";
+  color: white;
+  font-size: 50px;
+  letter-spacing: 5px;
+}
+
+.subheading {
+    font-family: "Butler-bold";
+    width: 75%;
+    margin: auto;
+    color: white;
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+
+/*ABOUT ME SECTION*/
+
+.education {
+    width: 75%;
+    margin: auto;
+    border: 3px solid yellow;
+    display: grid;
+    grid-template-columns: 20% 30% 50%;
+    margin-bottom: 50px;
+}
+
+.education-item {
+    color: white;
+    font-family: "Roboto-light";
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.education-item-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.skills {
+    width: 75%;
+    margin: auto;
+    border: 3px solid yellow;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 50px;
+}
+
+.skills-item {
+    color: white;
+    font-family: "Roboto";
+    font-size: "18px";
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+
+/*PROJECTS*/
 
 /* Project Photo Size */
 .project-photo {
@@ -126,6 +168,8 @@ body {
     text-align: center;
 }
 
+/*NAVIGATION BAR*/
+
 ul {
   list-style-type: none;
 }
@@ -150,11 +194,17 @@ ul {
 .nav-link-text {
   color: white;
   text-decoration: none;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255, 0)),
+    linear-gradient(#ffffff, #ffffff);
+  background-size: 100% 2px, 0 2px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s linear;
 }
 
 /* mouse over link */
 .nav-link-text:hover {
-  color: grey;
+  background-size: 0 2px, 100% 2px;
 }
 
 .site-title {

@@ -22,6 +22,9 @@ import {
     sections,
     education,
     educationItem,
+    educationItemPicture,
+    skills,
+    skillsItem,
 } from '../components/layout.module.css'
 import {
     cardBody,
@@ -53,49 +56,86 @@ const IndexPage = ({ data }) => {
             <p className={subheading}>EDUCATION:</p>
 
             <div className={education}>
-                <div className={educationItem}>
+                <div className={educationItemPicture}>
                     <StaticImage
-                      src="../images/cat.jpg"
+                      src="../images/gt.png"
                       width={150}
                       height={150}
                     />
                 </div>
                 <div className={educationItem}>
-                    <p>Georgia Institute of Technology</p>
-                    <p>Aug 2017 - May 2021</p>
-                    <p>Location</p>
+                    <p style={{fontFamily: "Roboto", fontSize: "18px", marginBottom: "5px"}}>Georgia Institute of Technology</p>
+                    <p style={{margin: "0px"}}>Aug 2017 - May 2021</p>
+                    <p style={{fontFamily: "Icons-south", fontSize: "13px", margin: "0px"}}>j<span style={{fontFamily: "Roboto-light", fontSize: "16px"}}><i>  Atlanta, Georgia</i></span></p>
                 </div>
                 <div className={educationItem}>
-                    <p>Bachelor of Science in Computer Science</p>
-                    <p>Concentration: Intelligence-Media</p>
+                    <p style={{fontFamily: "Roboto", fontSize: "18px", marginBottom: "5px"}}>Bachelor of Science in Computer Science</p>
+                    <p style={{margin: "0px"}}>Concentration: Intelligence-Media</p>
                 </div>
             </div>
 
             <div className={education}>
-                <div className={educationItem}>
+                <div className={educationItemPicture}>
                     <StaticImage
-                      src="../images/cat.jpg"
+                      src="../images/dhs.png"
                       width={150}
                       height={150}
                     />
                 </div>
                 <div className={educationItem}>
-                    <p>Duluth High School</p>
-                    <p>Aug 2013 - May 2017</p>
-                    <p>Location</p>
+                    <p style={{fontFamily: "Roboto", fontSize: "18px", marginBottom: "5px"}}>Duluth High School</p>
+                    <p style={{margin: "0px"}}>Aug 2013 - May 2017</p>
+                    <p style={{fontFamily: "Icons-south", fontSize: "13px", margin: "0px"}}>j<span style={{fontFamily: "Roboto-light", fontSize: "16px"}}><i>  Duluth, Georgia</i></span></p>
                 </div>
                 <div className={educationItem}>
-                    <p>Honors?</p>
+                    <p style={{fontFamily: "Roboto", fontSize: "18px", marginBottom: "5px"}}>Honors?</p>
                     <p>What did I do..</p>
                 </div>
             </div>
 
             <p className={subheading}>SKILLS:</p>
-            <p>Java, Python, C#, CSS, JavaScript, HTML, </p>
+
+            <div className={skills}>
+                <div className={skillsItem}>
+                    <p>Java</p>
+                    <p>Python</p>
+                    <p>C#</p>
+                </div>
+                <div className={skillsItem}>
+                    <p>CSS</p>
+                    <p>JavaScript</p>
+                    <p>HTML</p>
+                </div>
+            </div>
+
             <p className={subheading}>TOOLS:</p>
-            <p>Git, Angular, React, Unity, Android Studio, Procreate, Adobe Photoshop, Figma</p>
+
+            <div className={skills}>
+                <div className={skillsItem}>
+                    <p>Git</p>
+                    <p>Angular</p>
+                    <p>React</p>
+                    <p>Unity</p>
+                </div>
+                <div className={skillsItem}>
+                    <p>Android Studio</p>
+                    <p>Procreate</p>
+                    <p>Adobe Photoshop</p>
+                    <p>Figma</p>
+                </div>
+            </div>
+
             <p className={subheading}>LANGUAGES:</p>
-            <p>Korean (Mother tongue), English (Fluent)</p>
+
+            <div className={skills}>
+                <div className={skillsItem}>
+                    <p>Korean (Mother tongue)</p>
+                </div>
+                <div className={skillsItem}>
+                    <p>English (Fluent)</p>
+                </div>
+            </div>
+
         </div>
 
         <div className={sections}>
