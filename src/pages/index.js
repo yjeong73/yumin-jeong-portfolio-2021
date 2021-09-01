@@ -43,7 +43,7 @@ const IndexPage = ({ data }) => {
   return (
       <Layout pageTitle="Home Page">
 
-        <div className={introduction}>
+        <div id="title" className={introduction}>
             <p className={homeIntro}>Hello,</p>
             <p className={homeName}>I AM YUMIN JEONG,</p>
             <p className={homeDescription}>A recent graduate with a passion for
