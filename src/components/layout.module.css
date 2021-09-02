@@ -155,22 +155,47 @@ body {
 
 /*PROJECTS*/
 
+.project-grid {
+    width: 75%;
+    margin: auto;
+    border: 3px solid yellow;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 50px;
+}
+
+.project-item {
+    font-family: "Roboto";
+    letter-spacing: 1px;
+    margin-bottom: 10%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.box1 {
+   grid-column-start: 1;
+}
+
 /* Project Photo Size */
 .project-photo {
     display: block;
-    margin: auto;
+    margin-left: 0;
     margin-top: 20px;
-    width: 50%;
-    height: 50%;
+    width: 75%;
+    height: 75%;
+    background: red;
+    border: none;
 }
 
 /* Links for Projects */
 .project-titles {
-    font-family: "Butler-bold";
+    font-family: "Roboto";
     color: white;
-    font-size: 40px;
-    letter-spacing: 3px;
-    margin-bottom: 5px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    margin-bottom: 0;
 }
 
 .project-links {

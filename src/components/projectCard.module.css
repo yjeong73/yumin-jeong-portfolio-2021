@@ -36,6 +36,38 @@
     background-size: cover;
 }
 
+.overlayone {
+    display: inline-block;
+    position: relative;
+}
+
+.overlayinn {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    height: 91.5%;
+    width: 75%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+    margin-top: 20px;
+    transition: opacity .5s;
+}
+
+.overlay-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: "white";
+    text-align: "center";
+    font-size: "18px";
+}
+
+.overlayinn:hover {
+  opacity: 1;
+  transition: opacity .5s;
+}
+
 .card-text {
     grid-area: text;
     margin: 25px;

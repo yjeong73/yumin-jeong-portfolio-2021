@@ -29,6 +29,9 @@ import {
     skillsItem,
     contactGrid,
     contactItem,
+    projectGrid,
+    projectItem,
+    box1,
 } from '../components/layout.module.css'
 import {
     cardBody,
@@ -40,6 +43,8 @@ import {
     stat,
     type,
     value,
+    overlayone,
+    overlayinn,
 } from '../components/projectCard.module.css'
 
 // Step 2: Define your component
@@ -54,8 +59,13 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+function handleEvent() {
+    console.log("Button has been clicked!");
+}
+
 const IndexPage = ({ data }) => {
   const classes = useStyles();
+
   return (
       <Layout pageTitle="Home Page">
 
@@ -170,35 +180,30 @@ const IndexPage = ({ data }) => {
 
             <Divider className={classes.divider}/>
 
-            <div className={cardBody}>
-                {
-                    data.allMdx.nodes.map((node) => (
-                        <article key={node.id}>
-                            <Link to={`/projects/${node.slug}`} className={projectLinks}>
-                            <div className={card}>
-                                <GatsbyImage
-                                  className={cardImage}
-                                  image={getImage(node.frontmatter.hero_image)}
-                                />
-                                <div className={cardText}>
-                                    <span className={date}>{node.frontmatter.date}</span>
-                                    <h2 className={projectTitles}>
-                                        {node.frontmatter.title}
-                                    </h2>
-                                    <p className={projectTechnology}>
-                                    Goal&#58; {node.frontmatter.goal}</p>
-                                </div>
-                                <div className={cardStats}>
-                                    <div className={stat}>
-                                        <div className={type}>Technology&#58;</div>
-                                        <div className={value}>{node.frontmatter.technology}</div>
-                                    </div>
-                                </div>
-                            </div>
-                            </Link>
+            <div className={projectGrid}>
+                <div className={box1}>
+                    {
+                        data.allMdx.nodes.map((node) => (
+                            <article key={node.id}>
+                        <div className={projectItem}>
+                                <button className={projectPhoto}>
+                                    <GatsbyImage
+                                      onClick={handleEvent}
+                                      image={getImage(node.frontmatter.hero_image)}
+                                    />
+                                </button>
+
+                                <h2 className={projectTitles}>
+                                    {node.frontmatter.title}
+                                </h2>
+                                <p style={{fontSize: "25px", color: "grey", margin: "0"}}>{node.frontmatter.date}</p>
+                                <p style={{fontSize: "18px", color: "white"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
+                                {node.frontmatter.technology}</span></p>
+                        </div>
                         </article>
                         ))
-                }
+                    }
+                </div>
             </div>
         </div>
 
@@ -210,10 +215,10 @@ const IndexPage = ({ data }) => {
 
             <div className={contactGrid}>
                 <div className={contactItem}>
-                    <p>Linked In</p>
+                    <p style={{fontFamily: "Roboto-light", fontSize: "18px"}}>Linked In https://www.linkedin.com/in/yumin-jeong/</p>
                 </div>
                 <div className={contactItem}>
-                    <p>Email</p>
+                    <p style={{fontFamily: "Roboto-light", fontSize: "18px"}}>Email ymj982@gmail.com</p>
                 </div>
             </div>
         </div>
