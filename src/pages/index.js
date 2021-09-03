@@ -9,6 +9,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { makeStyles } from "@material-ui/core/styles";
 import Divider from "@material-ui/core/Divider";
+import { Button, ButtonBase } from '@material-ui/core';
 import {
     homeIntro,
     homeName,
@@ -20,6 +21,7 @@ import {
     projectLinks,
     projectTechnology,
     projectPhoto,
+    projectButton,
     introduction,
     sections,
     education,
@@ -50,6 +52,14 @@ import {
 // Step 2: Define your component
 
 const useStyles = makeStyles(theme => ({
+  buttons: {
+    width: "75%",
+    height: "75%",
+    border: 0,
+    background: 'red',
+    padding: '0',
+  },
+
   divider: {
     background: "white",
     width: "75%",
@@ -182,16 +192,20 @@ const IndexPage = ({ data }) => {
 
             <div className={projectGrid}>
                 <div className={box1}>
+                    <Button className={classes.buttons}>Testing</Button>
+                </div>
+                <div className={box1}>
                     {
                         data.allMdx.nodes.map((node) => (
                             <article key={node.id}>
                         <div className={projectItem}>
-                                <button className={projectPhoto}>
+                                <Button className={classes.buttons}>
                                     <GatsbyImage
+                                      imgStyle={{width: "100%", height: "100%"}}
                                       onClick={handleEvent}
                                       image={getImage(node.frontmatter.hero_image)}
                                     />
-                                </button>
+                                </Button>
 
                                 <h2 className={projectTitles}>
                                     {node.frontmatter.title}
