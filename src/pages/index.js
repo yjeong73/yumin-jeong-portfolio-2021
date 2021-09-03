@@ -7,9 +7,10 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { StaticImage } from 'gatsby-plugin-image'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
-import { makeStyles } from "@material-ui/core/styles";
+import { withStyles, makeStyles } from "@material-ui/core/styles";
 import Divider from "@material-ui/core/Divider";
-import { Button, ButtonBase } from '@material-ui/core';
+import Fade from '@material-ui/core/Fade';
+import { Button, Tooltip } from '@material-ui/core';
 import {
     homeIntro,
     homeName,
@@ -50,14 +51,19 @@ import {
 } from '../components/projectCard.module.css'
 
 // Step 2: Define your component
-
 const useStyles = makeStyles(theme => ({
   buttons: {
     width: "75%",
     height: "75%",
     border: 0,
-    background: 'red',
+    background: 'transparent',
     padding: '0',
+    color: "white",
+    '&:hover': {
+      transition: "0.5s ease",
+      filter: "opacity(50%)",
+      color: "white"
+    },
   },
 
   divider: {
@@ -68,6 +74,21 @@ const useStyles = makeStyles(theme => ({
     marginTop: "50px",
   }
 }));
+
+const LightTooltip = withStyles((theme) => ({
+    arrow: {
+        width: "2em",
+        height: "2em",
+        color: "rgba(255, 255, 255, 0.3)",
+    },
+
+    tooltip: {
+        backgroundColor: "rgba(255, 255, 255, 0.3)",
+        color: "white",
+        fontSize: "13px",
+        fontFamily: "Roboto",
+    },
+}))(Tooltip);
 
 function handleEvent() {
     console.log("Button has been clicked!");
@@ -192,13 +213,16 @@ const IndexPage = ({ data }) => {
 
             <div className={projectGrid}>
                 <div className={box1}>
-                    <Button className={classes.buttons}>Testing</Button>
-                </div>
-                <div className={box1}>
                     {
                         data.allMdx.nodes.map((node) => (
                             <article key={node.id}>
                         <div className={projectItem}>
+                            <LightTooltip
+                            title="Project Description &#x25B6;"
+                            placement="right-start"
+                            TransitionComponent={Fade}
+                            TransitionProps={{ timeout: 600 }}
+                            leaveDelay={200}>
                                 <Button className={classes.buttons}>
                                     <GatsbyImage
                                       imgStyle={{width: "100%", height: "100%"}}
@@ -206,6 +230,7 @@ const IndexPage = ({ data }) => {
                                       image={getImage(node.frontmatter.hero_image)}
                                     />
                                 </Button>
+                            </LightTooltip>
 
                                 <h2 className={projectTitles}>
                                     {node.frontmatter.title}
