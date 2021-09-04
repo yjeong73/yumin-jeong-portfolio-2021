@@ -9,6 +9,9 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { withStyles, makeStyles } from "@material-ui/core/styles";
 import Divider from "@material-ui/core/Divider";
+import Box from "@material-ui/core/Box";
+import Switch from '@material-ui/core/Switch';
+import { display } from '@material-ui/system';
 import Fade from '@material-ui/core/Fade';
 import { Button, Tooltip } from '@material-ui/core';
 import {
@@ -21,6 +24,8 @@ import {
     projectTitles,
     projectLinks,
     projectTechnology,
+    projectInfoContainer,
+    projectDescription,
     projectPhoto,
     projectButton,
     introduction,
@@ -35,6 +40,7 @@ import {
     projectGrid,
     projectItem,
     box1,
+    box2,
 } from '../components/layout.module.css'
 import {
     cardBody,
@@ -54,10 +60,10 @@ import {
 const useStyles = makeStyles(theme => ({
   buttons: {
     width: "75%",
-    height: "75%",
     border: 0,
     background: 'transparent',
     padding: '0',
+    margin: "0",
     color: "white",
     '&:hover': {
       transition: "0.5s ease",
@@ -90,12 +96,13 @@ const LightTooltip = withStyles((theme) => ({
     },
 }))(Tooltip);
 
-function handleEvent() {
-    console.log("Button has been clicked!");
-}
-
 const IndexPage = ({ data }) => {
   const classes = useStyles();
+  const [checked, setChecked] = React.useState(false);
+
+  const handleEvent = () => {
+    setChecked((prev) => !prev);
+  };
 
   return (
       <Layout pageTitle="Home Page">
@@ -206,44 +213,54 @@ const IndexPage = ({ data }) => {
         </div>
 
         <div className={sections}>
+
             <h2 id="projects" className={heading}>Projects</h2>
             <p style={{fontFamily: "Roboto-light", color: "white", textAlign: "center", margin: "0", fontSize: "20px"}}>Some of my projects</p>
 
             <Divider className={classes.divider}/>
 
-            <div className={projectGrid}>
-                <div className={box1}>
                     {
                         data.allMdx.nodes.map((node) => (
                             <article key={node.id}>
-                        <div className={projectItem}>
-                            <LightTooltip
-                            title="Project Description &#x25B6;"
-                            placement="right-start"
-                            TransitionComponent={Fade}
-                            TransitionProps={{ timeout: 600 }}
-                            leaveDelay={200}>
-                                <Button className={classes.buttons}>
-                                    <GatsbyImage
-                                      imgStyle={{width: "100%", height: "100%"}}
-                                      onClick={handleEvent}
-                                      image={getImage(node.frontmatter.hero_image)}
-                                    />
-                                </Button>
-                            </LightTooltip>
+                            <div className={projectGrid}>
+                                <div className={projectItem}>
+                                    <LightTooltip
+                                    title="Description &#x25B6;"
+                                    placement="right-start"
+                                    TransitionComponent={Fade}
+                                    TransitionProps={{ timeout: 600 }}
+                                    leaveDelay={200}>
+                                        <Button
+                                        control={<Switch checked={checked} onChange={handleEvent} />}
+                                        className={classes.buttons}>
+                                            <GatsbyImage
+                                              imgStyle={{width: "100%", height: "100%"}}
+                                              onClick={handleEvent}
+                                              image={getImage(node.frontmatter.hero_image)}
+                                            />
+                                        </Button>
+                                    </LightTooltip>
 
-                                <h2 className={projectTitles}>
-                                    {node.frontmatter.title}
-                                </h2>
-                                <p style={{fontSize: "25px", color: "grey", margin: "0"}}>{node.frontmatter.date}</p>
-                                <p style={{fontSize: "18px", color: "white"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
-                                {node.frontmatter.technology}</span></p>
-                        </div>
+                                    <h2 className={projectTitles}>
+                                        {node.frontmatter.title}
+                                    </h2>
+                                    <p style={{fontSize: "25px", color: "grey", margin: "0"}}>{node.frontmatter.date}</p>
+                                    <p style={{fontSize: "18px", color: "white"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
+                                    {node.frontmatter.technology}</span></p>
+                                </div>
+
+                                <Fade in={checked}>
+                                    <div className={projectDescription}>
+                                        <p style={{marginTop: "0", fontFamily: "Roboto-bold", letterSpacing: "1px", fontSize: "18px", color: "white"}}>PROJECT DESCRIPTION</p>
+                                        <MDXRenderer>
+                                          {node.body}
+                                        </MDXRenderer>
+                                    </div>
+                                </Fade>
+                            </div>
                         </article>
                         ))
                     }
-                </div>
-            </div>
         </div>
 
         <div className={sections}>
@@ -282,6 +299,7 @@ export const query = graphql`
             }
             id
             slug
+            body
           }
         }
     }
