@@ -2,6 +2,7 @@
 
 body {
 	background: #B7C57D;
+    margin: 0;
 }
 
 /*CONTAINERS*/
@@ -11,13 +12,16 @@ body {
   width: 90%;
   max-width: 1920px;
   /*border: 3px solid #73AD21;*/
+  border: 3px solid #73AD21;
   font-family: sans-serif;
 }
 
 .introduction {
     width: 50%;
-    height: 100vh;
+    height: 92vh;
+    margin-top: 8vh;
     /*border: 3px solid purple;*/
+    border: 3px solid blue;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,6 +31,7 @@ body {
     width: 100%;
     min-height: 100vh;
     /*border: 3px solid purple;*/
+    border: 3px solid purple;
 }
 
 .project-container {
@@ -35,6 +40,7 @@ body {
     width: 100%;
     min-height: 100vh;
     /*border: 3px solid purple;*/
+    border: 3px solid purple;
 }
 
 /*TITLE SECTION TYPOGRAPHY*/
@@ -108,6 +114,7 @@ body {
     width: 75%;
     margin: auto;
     /*border: 3px solid yellow;*/
+    border: 3px solid yellow;
     display: grid;
     grid-template-columns: 20% 30% 50%;
     margin-bottom: 50px;
@@ -116,26 +123,26 @@ body {
 .education-item {
     color: white;
     font-family: "Roboto-light";
-    /*border-top: 1px solid black;
+    border-top: 1px solid black;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
-    border-right: 1px solid black;*/
+    border-right: 1px solid black;
 }
 
 .education-item-picture {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*border-top: 1px solid black;
+    border-top: 1px solid black;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
-    border-right: 1px solid black;*/
+    border-right: 1px solid black;
 }
 
 .skills {
     width: 75%;
     margin: auto;
-    /*border: 3px solid yellow;*/
+    border: 3px solid yellow;
     display: grid;
     grid-template-columns: 50% 50%;
     margin-bottom: 50px;
@@ -145,10 +152,10 @@ body {
     color: white;
     font-family: "Roboto";
     font-size: "18px";
-    /*border-top: 1px solid black;
+    border-top: 1px solid black;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
-    border-right: 1px solid black;*/
+    border-right: 1px solid black;
 }
 
 
@@ -157,7 +164,7 @@ body {
 .project-grid {
     width: 75%;
     margin: auto;
-    /*border: 3px solid yellow;*/
+    border: 3px solid yellow;
     display: grid;
     grid-template-columns: 50% 50%;
     margin-bottom: 10%;
@@ -167,20 +174,20 @@ body {
     font-family: "Roboto-light";
     color: white;
     font-size: 18px;
-    /*border-top: 1px solid red;
+    border-top: 1px solid red;
     border-bottom: 1px solid red;
     border-left: 1px solid red;
-    border-right: 1px solid red;*/
+    border-right: 1px solid red;
 }
 
 .project-item {
     font-family: "Roboto-light";
     color: white;
     font-size: 18px;
-    /*border-top: 1px solid black;
+    border-top: 1px solid black;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
-    border-right: 1px solid black;*/
+    border-right: 1px solid black;
     padding-bottom: 10%;
 }
 
@@ -234,6 +241,7 @@ body {
     width: 75%;
     margin: auto;
     /*border: 3px solid yellow;*/
+    border: 3px solid yellow;
     display: grid;
     grid-template-columns: 50% 50%;
     margin-bottom: 50px;
@@ -243,10 +251,10 @@ body {
     color: white;
     font-family: "Roboto";
     font-size: "18px";
-    /*border-top: 1px solid black;
+    border-top: 1px solid black;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
-    border-right: 1px solid black;*/
+    border-right: 1px solid black;
 }
 
 /*NAVIGATION BAR*/
@@ -261,7 +269,9 @@ ul {
   position: fixed;
   top: 0;
   width: 90%;
-  background: #B7C57D;
+  height: 8vh;
+  background-color: rgba(0, 0, 0, .5);
+  border-bottom: 3px solid hotpink;
   justify-content: space-between;
   list-style: none;
   align-items: center;
