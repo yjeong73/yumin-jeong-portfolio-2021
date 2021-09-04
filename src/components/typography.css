@@ -19,6 +19,11 @@
 }
 
 @font-face {
+  font-family: "Roboto-bold";
+  src: url("../fonts/roboto-bold.woff");
+}
+
+@font-face {
   font-family: "Roboto-light";
   src: url("../fonts/roboto-light.woff");
 }
