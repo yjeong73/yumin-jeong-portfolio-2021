@@ -163,22 +163,22 @@ body {
 
 .project-grid {
     width: 75%;
-    height: 30vh;
     margin: auto;
     border: 3px solid yellow;
     display: grid;
     grid-template-columns: 50% 50%;
-    margin-bottom: 15vh;
 }
 
 .view-more {
-    transition: 0.5s ease;
-    margin-bottom: 50vh;
+    height: fit-content;
+    border: 3px solid orangered;
+    margin-bottom: 5vh;
 }
 
 .view-less {
-    transition: 0.5s ease;
-    margin: 0;
+    height: 30vh;
+    border: 3px solid orangered;
+    margin-bottom: 5vh;
 }
 
 .project-description {
