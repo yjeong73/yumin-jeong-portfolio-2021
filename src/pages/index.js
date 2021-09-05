@@ -41,6 +41,8 @@ import {
     projectItem,
     box1,
     box2,
+    viewMore,
+    viewLess,
 } from '../components/layout.module.css'
 import {
     cardBody,
@@ -54,20 +56,20 @@ import {
     value,
     overlayone,
     overlayinn,
+    box,
+    demo,
 } from '../components/projectCard.module.css'
 
 // Step 2: Define your component
 const useStyles = makeStyles(theme => ({
   buttons: {
-    width: "75%",
-    border: 0,
-    background: 'transparent',
-    padding: '0',
-    margin: "0",
+    width: "auto",
+    background: "rgba(255, 255, 255, 0.2)",
     color: "white",
+    fontFamily: "Roboto-light",
     '&:hover': {
       transition: "0.5s ease",
-      filter: "opacity(50%)",
+      background: "rgba(255, 255, 255, 0.05)",
       color: "white"
     },
   },
@@ -106,17 +108,23 @@ const IndexPage = ({ data }) => {
   const [checked1, setChecked1] = React.useState(false);
   const [checked2, setChecked2] = React.useState(false);
   const [checked3, setChecked3] = React.useState(false);
+  const [expand1, setExpand1] = React.useState(false);
+  const [expand2, setExpand2] = React.useState(false);
+  const [expand3, setExpand3] = React.useState(false);
 
   const handleEvent1 = () => {
     setChecked1((prev) => !prev);
+    setExpand1((prev) => !prev);
   };
 
   const handleEvent2 = () => {
     setChecked2((prev) => !prev);
+    setExpand2((prev) => !prev);
   };
 
   const handleEvent3 = () => {
     setChecked3((prev) => !prev);
+    setExpand3((prev) => !prev);
   };
 
   return (
@@ -234,115 +242,131 @@ const IndexPage = ({ data }) => {
 
             <Divider className={classes.divider}/>
 
+            <div className={expand1 ? viewMore : viewLess}>
             <div className={projectGrid}>
-                <div className={projectItem}>
-                    <LightTooltip
-                    title="Description &#x25B6;"
-                    placement="right-start"
-                    TransitionComponent={Fade}
-                    TransitionProps={{ timeout: 600 }}
-                    leaveDelay={200}>
-                        <Button
-                        control={<Switch checked1={checked1} onChange={handleEvent1} />}
-                        className={classes.buttons}>
-                            <GatsbyImage
-                              imgStyle={{width: "100%", height: "100%"}}
-                              onClick={handleEvent1}
-                              image={getImage(firstItem.frontmatter.hero_image)}
-                            />
-                        </Button>
-                    </LightTooltip>
 
-                    <h2 className={projectTitles}>
-                        {firstItem.frontmatter.title}
-                    </h2>
-                    <p style={{fontSize: "25px", color: "grey", margin: "0"}}>{firstItem.frontmatter.date}</p>
-                    <p style={{fontSize: "18px", color: "white"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
-                    {firstItem.frontmatter.technology}</span></p>
+                <div className={box1}>
+                    <div className={projectItem}>
+                        <GatsbyImage
+                          imgStyle={{width: "75%", height: "75%"}}
+                          image={getImage(firstItem.frontmatter.hero_image)}
+                        />
+                    </div>
                 </div>
 
-                <Fade in={checked1}>
-                    <div className={projectDescription}>
-                        <p style={{marginTop: "0", fontFamily: "Roboto-bold", letterSpacing: "1px", fontSize: "18px", color: "white"}}>PROJECT DESCRIPTION</p>
-                        <MDXRenderer>
-                          {firstItem.body}
-                        </MDXRenderer>
+                <div className={box2}>
+                    <div className={projectItem}>
+                        <h2 className={projectTitles}>
+                            {firstItem.frontmatter.title}
+                        </h2>
+                        <p style={{fontSize: "25px", color: "grey", margin: "0"}}>{firstItem.frontmatter.date}</p>
+                        <p style={{fontSize: "18px", color: "white"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
+                        {firstItem.frontmatter.technology}</span></p>
+
+                        <Button
+                            onClick={handleEvent1}
+                            className={classes.buttons}
+                        >
+                            Project Description
+                        </Button>
                     </div>
-                </Fade>
+
+                    <div className={projectItem}>
+                        <Fade in={checked1}>
+                            <div className={projectDescription}>
+                                <MDXRenderer>
+                                  {firstItem.body}
+                                </MDXRenderer>
+                            </div>
+                        </Fade>
+                    </div>
+                </div>
+
+            </div>
             </div>
 
+            <div className={expand2 ? viewMore : viewLess}>
             <div className={projectGrid}>
-                <div className={projectItem}>
-                    <LightTooltip
-                    title="Description &#x25B6;"
-                    placement="right-start"
-                    TransitionComponent={Fade}
-                    TransitionProps={{ timeout: 600 }}
-                    leaveDelay={200}>
-                        <Button
-                        control={<Switch checked2={checked2} onChange={handleEvent2} />}
-                        className={classes.buttons}>
-                            <GatsbyImage
-                              imgStyle={{width: "100%", height: "100%"}}
-                              onClick={handleEvent2}
-                              image={getImage(secondItem.frontmatter.hero_image)}
-                            />
-                        </Button>
-                    </LightTooltip>
 
-                    <h2 className={projectTitles}>
-                        {secondItem.frontmatter.title}
-                    </h2>
-                    <p style={{fontSize: "25px", color: "grey", margin: "0"}}>{secondItem.frontmatter.date}</p>
-                    <p style={{fontSize: "18px", color: "white"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
-                    {secondItem.frontmatter.technology}</span></p>
+                <div className={box1}>
+                    <div className={projectItem}>
+                        <GatsbyImage
+                          imgStyle={{width: "75%", height: "75%"}}
+                          image={getImage(secondItem.frontmatter.hero_image)}
+                        />
+                    </div>
                 </div>
 
-                <Fade in={checked2}>
-                    <div className={projectDescription}>
-                        <p style={{marginTop: "0", fontFamily: "Roboto-bold", letterSpacing: "1px", fontSize: "18px", color: "white"}}>PROJECT DESCRIPTION</p>
-                        <MDXRenderer>
-                          {secondItem.body}
-                        </MDXRenderer>
+                <div className={box2}>
+                    <div className={projectItem}>
+                        <h2 className={projectTitles}>
+                            {secondItem.frontmatter.title}
+                        </h2>
+                        <p style={{fontSize: "25px", color: "grey", margin: "0"}}>{secondItem.frontmatter.date}</p>
+                        <p style={{fontSize: "18px", color: "white"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
+                        {secondItem.frontmatter.technology}</span></p>
+
+                        <Button
+                            onClick={handleEvent2}
+                            className={classes.buttons}
+                        >
+                            Project Description
+                        </Button>
                     </div>
-                </Fade>
+
+                    <div className={projectItem}>
+                        <Fade in={checked2}>
+                            <div className={projectDescription}>
+                                <MDXRenderer>
+                                  {secondItem.body}
+                                </MDXRenderer>
+                            </div>
+                        </Fade>
+                    </div>
+                </div>
+            </div>
             </div>
 
+            <div className={expand3 ? viewMore : viewLess}>
             <div className={projectGrid}>
-                <div className={projectItem}>
-                    <LightTooltip
-                    title="Description &#x25B6;"
-                    placement="right-start"
-                    TransitionComponent={Fade}
-                    TransitionProps={{ timeout: 600 }}
-                    leaveDelay={200}>
-                        <Button
-                        control={<Switch checked3={checked3} onChange={handleEvent3} />}
-                        className={classes.buttons}>
-                            <GatsbyImage
-                              imgStyle={{width: "100%", height: "100%"}}
-                              onClick={handleEvent3}
-                              image={getImage(thirdItem.frontmatter.hero_image)}
-                            />
-                        </Button>
-                    </LightTooltip>
 
-                    <h2 className={projectTitles}>
-                        {thirdItem.frontmatter.title}
-                    </h2>
-                    <p style={{fontSize: "25px", color: "grey", margin: "0"}}>{thirdItem.frontmatter.date}</p>
-                    <p style={{fontSize: "18px", color: "white"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
-                    {thirdItem.frontmatter.technology}</span></p>
+                <div className={box1}>
+                    <div className={projectItem}>
+                        <GatsbyImage
+                          imgStyle={{width: "75%", height: "75%"}}
+                          image={getImage(thirdItem.frontmatter.hero_image)}
+                        />
+                    </div>
                 </div>
 
-                <Fade in={checked3}>
-                    <div className={projectDescription}>
-                        <p style={{marginTop: "0", fontFamily: "Roboto-bold", letterSpacing: "1px", fontSize: "18px", color: "white"}}>PROJECT DESCRIPTION</p>
-                        <MDXRenderer>
-                          {thirdItem.body}
-                        </MDXRenderer>
+                <div className={box2}>
+                    <div className={projectItem}>
+                        <h2 className={projectTitles}>
+                            {thirdItem.frontmatter.title}
+                        </h2>
+                        <p style={{fontSize: "25px", color: "grey", margin: "0"}}>{thirdItem.frontmatter.date}</p>
+                        <p style={{fontSize: "18px", color: "white"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
+                        {thirdItem.frontmatter.technology}</span></p>
+
+                        <Button
+                            onClick={handleEvent3}
+                            className={classes.buttons}
+                        >
+                            Project Description
+                        </Button>
                     </div>
-                </Fade>
+
+                    <div className={projectItem}>
+                        <Fade in={checked3}>
+                            <div className={projectDescription}>
+                                <MDXRenderer>
+                                  {thirdItem.body}
+                                </MDXRenderer>
+                            </div>
+                        </Fade>
+                    </div>
+                </div>
+            </div>
             </div>
 
         </div>
