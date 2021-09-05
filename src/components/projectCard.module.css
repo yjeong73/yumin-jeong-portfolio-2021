@@ -12,6 +12,67 @@
     overflow: hidden;
 }
 
+.box {
+    background-color: orangered;
+    height: 90px;
+    width: 90px;
+
+    left: 0px;
+    top: 0px;
+
+    position: absolute;
+}
+
+.blue {
+    background-color: blue;
+    height: 90px;
+    width: 90px;
+
+    left: 0px;
+    top: 0px;
+
+    position: absolute;
+}
+
+.color-box {
+    background-color: green;
+    height: 90px;
+    width: 90px;
+
+    left: 0px;
+    top: 0px;
+
+    position: absolute;
+}
+
+.demo {
+  margin-top: 50px;
+  position: relative;
+}
+
+.animation {
+  animation: sampleanimation 1s forwards;
+}
+
+@keyframes sampleanimation {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 300px;
+    top: 0px;
+  }
+  50% {
+    left: 300px;
+    top: 150px;
+  }
+  75% {
+    left: 0px;
+    top: 150px;
+  }
+}
+
 .card {
     display: grid;
     grid-template-columns: 300px;
