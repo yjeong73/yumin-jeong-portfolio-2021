@@ -1,8 +1,29 @@
 @import "./typography.css";
 
 body {
-	background: #B7C57D;
+	/*background: #B7C57D;*/
+    background:
+    radial-gradient(40.6% 68.81% at 77.99% 0%, #DEC693 20.83%,
+        rgba(222, 198, 147, 0) 100%),
+        radial-gradient(30.23% 71.77% at 100% 100%, #83C69F 0%,
+            rgba(131, 198, 159, 0) 100%),
+            radial-gradient(60.23% 60.23% at 1.38% 100%, #F5EAA6 0%,
+                rgba(255, 229, 71, 0) 100%), #B7C57D;
     margin: 0;
+}
+
+body::after {
+    background-image: url("../images/grilled.png");
+    content: "";
+    mix-blend-mode: multiply;
+    opacity: 0.7;
+    height: 1000%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
 }
 
 /*CONTAINERS*/
@@ -80,6 +101,7 @@ body {
     white-space: nowrap;
     overflow: hidden;
     margin: 0 auto;
+    margin-left: 2vw;
 }
 
 .main-logo:hover {
@@ -278,22 +300,24 @@ ul {
   display: flex;
   position: fixed;
   top: 0;
-  width: 90%;
+  width: 100%;
   height: 8vh;
   background-color: rgba(0, 0, 0, .5);
-  border-bottom: 3px solid hotpink;
   justify-content: space-between;
   list-style: none;
   align-items: center;
   padding-left: 0;
 }
 .nav-link-item {
-  padding-left: 4rem;
+  padding-left: 2rem;
   display: inline-block;
+  margin-right: 2vw;
 }
 
 .nav-link-text {
   color: white;
+  font-family: "Roboto";
+  letter-spacing: 1px;
   text-decoration: none;
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255, 0)),
     linear-gradient(#ffffff, #ffffff);
