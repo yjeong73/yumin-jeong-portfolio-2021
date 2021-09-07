@@ -33,6 +33,8 @@ import {
     education,
     educationItem,
     educationItemPicture,
+    educationGT,
+    educationDHS,
     skills,
     skillsItem,
     contactGrid,
@@ -43,6 +45,11 @@ import {
     box2,
     viewMore,
     viewLess,
+    aboutMe,
+    projects,
+    contact,
+    profilePic,
+    profile,
 } from '../components/layout.module.css'
 import {
     cardBody,
@@ -64,18 +71,21 @@ import {
 const useStyles = makeStyles(theme => ({
   buttons: {
     width: "auto",
-    background: "rgba(255, 255, 255, 0.2)",
-    color: "white",
+    // border: "2px solid #578d2b",
+    // borderRadius: "0px",
+    background: "transparent",
+    color: "#578d2b",
     fontFamily: "Roboto-light",
     '&:hover': {
       transition: "0.5s ease",
-      background: "rgba(255, 255, 255, 0.05)",
-      color: "white"
+      borderRadius: "0px",
+      background: "rgba(130, 151, 109, 0.3)",
+      color: "#578d2b"
     },
   },
 
   divider: {
-    background: "white",
+    background: "#578d2b",
     width: "75%",
     margin: "auto",
     marginBottom: "50px",
@@ -138,21 +148,22 @@ const IndexPage = ({ data }) => {
             <br/>job opportunities as a front-end engineer.</p>
         </div>
 
-        <div className={sections}>
+        <div className={aboutMe}>
             <h1 id="aboutMe" className={heading}>About Me</h1>
-            <p style={{fontFamily: "Roboto-light", color: "white", textAlign: "center", margin: "0", fontSize: "20px"}}>Somewhat useful information about myself</p>
+            <div className={profile}>
+                <div className={profilePic}>
+                </div>
+                <div>
+                    <p style={{fontFamily: "Roboto-light", color: "#578d2b", textAlign: "center", margin: "0", fontSize: "20px"}}>Somewhat useful information about myself</p>
+                </div>
+            </div>
 
             <Divider className={classes.divider}/>
 
             <p className={subheading}>EDUCATION:</p>
 
             <div className={education}>
-                <div className={educationItemPicture}>
-                    <StaticImage
-                      src="../images/gt.png"
-                      width={150}
-                      height={150}
-                    />
+                <div className={educationGT}>
                 </div>
                 <div className={educationItem}>
                     <p style={{fontFamily: "Roboto", fontSize: "18px", marginBottom: "5px"}}>Georgia Institute of Technology</p>
@@ -166,12 +177,7 @@ const IndexPage = ({ data }) => {
             </div>
 
             <div className={education}>
-                <div className={educationItemPicture}>
-                    <StaticImage
-                      src="../images/dhs.png"
-                      width={150}
-                      height={150}
-                    />
+                <div className={educationDHS}>
                 </div>
                 <div className={educationItem}>
                     <p style={{fontFamily: "Roboto", fontSize: "18px", marginBottom: "5px"}}>Duluth High School</p>
@@ -235,10 +241,10 @@ const IndexPage = ({ data }) => {
 
         </div>
 
-        <div className={sections}>
+        <div className={projects}>
 
             <h2 id="projects" className={heading}>Projects</h2>
-            <p style={{fontFamily: "Roboto-light", color: "white", textAlign: "center", margin: "0", fontSize: "20px"}}>Some of my projects</p>
+            <p style={{fontFamily: "Roboto-light", color: "#578d2b", textAlign: "center", margin: "0", fontSize: "20px"}}>Some of my projects</p>
 
             <Divider className={classes.divider}/>
 
@@ -248,7 +254,7 @@ const IndexPage = ({ data }) => {
                 <div className={box1}>
                     <div className={projectItem}>
                         <GatsbyImage
-                          imgStyle={{width: "75%", height: "75%"}}
+                          imgStyle={{width: "75%", height: "75%", border: "3px solid #578d2b"}}
                           image={getImage(firstItem.frontmatter.hero_image)}
                         />
                     </div>
@@ -260,7 +266,7 @@ const IndexPage = ({ data }) => {
                             {firstItem.frontmatter.title}
                         </h2>
                         <p style={{fontSize: "25px", color: "grey", margin: "0"}}>{firstItem.frontmatter.date}</p>
-                        <p style={{fontSize: "18px", color: "white"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
+                        <p style={{fontSize: "18px", color: "#578d2b"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
                         {firstItem.frontmatter.technology}</span></p>
 
                         <Button
@@ -291,7 +297,7 @@ const IndexPage = ({ data }) => {
                 <div className={box1}>
                     <div className={projectItem}>
                         <GatsbyImage
-                          imgStyle={{width: "75%", height: "75%"}}
+                          imgStyle={{width: "75%", height: "75%", border: "3px solid #578d2b"}}
                           image={getImage(secondItem.frontmatter.hero_image)}
                         />
                     </div>
@@ -303,7 +309,7 @@ const IndexPage = ({ data }) => {
                             {secondItem.frontmatter.title}
                         </h2>
                         <p style={{fontSize: "25px", color: "grey", margin: "0"}}>{secondItem.frontmatter.date}</p>
-                        <p style={{fontSize: "18px", color: "white"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
+                        <p style={{fontSize: "18px", color: "#578d2b"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
                         {secondItem.frontmatter.technology}</span></p>
 
                         <Button
@@ -333,7 +339,7 @@ const IndexPage = ({ data }) => {
                 <div className={box1}>
                     <div className={projectItem}>
                         <GatsbyImage
-                          imgStyle={{width: "75%", height: "75%"}}
+                          imgStyle={{width: "75%", height: "75%", border: "3px solid #578d2b"}}
                           image={getImage(thirdItem.frontmatter.hero_image)}
                         />
                     </div>
@@ -345,7 +351,7 @@ const IndexPage = ({ data }) => {
                             {thirdItem.frontmatter.title}
                         </h2>
                         <p style={{fontSize: "25px", color: "grey", margin: "0"}}>{thirdItem.frontmatter.date}</p>
-                        <p style={{fontSize: "18px", color: "white"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
+                        <p style={{fontSize: "18px", color: "#578d2b"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
                         {thirdItem.frontmatter.technology}</span></p>
 
                         <Button
@@ -371,18 +377,18 @@ const IndexPage = ({ data }) => {
 
         </div>
 
-        <div className={sections}>
-            <h3 id="contactInfo" className={heading}>Contact</h3>
-            <p style={{fontFamily: "Roboto-light", color: "white", textAlign: "center", margin: "0", fontSize: "20px"}}>Some ways you can contact me</p>
+        <div className={contact}>
+            <h3 id="contactInfo" className={heading} style={{color:"#3C4A2E"}}>Contact</h3>
+            <p style={{fontFamily: "Roboto-light", color: "#3C4A2E", textAlign: "center", margin: "0", fontSize: "20px"}}>Some ways you can contact me</p>
 
             <Divider className={classes.divider}/>
 
             <div className={contactGrid}>
                 <div className={contactItem}>
-                    <p style={{fontFamily: "Roboto-light", fontSize: "18px"}}>Linked In https://www.linkedin.com/in/yumin-jeong/</p>
+                    <p style={{fontFamily: "Roboto-light", fontSize: "18px", color: "#3C4A2E"}}>Linked In https://www.linkedin.com/in/yumin-jeong/</p>
                 </div>
                 <div className={contactItem}>
-                    <p style={{fontFamily: "Roboto-light", fontSize: "18px"}}>Email ymj982@gmail.com</p>
+                    <p style={{fontFamily: "Roboto-light", fontSize: "18px", color: "#3C4A2E"}}>Email ymj982@gmail.com</p>
                 </div>
             </div>
         </div>
