@@ -2,6 +2,11 @@
 import * as React from 'react'
 //import { Link } from 'gatsby'
 import Layout from '../components/layout'
+import CurvedText from '../components/CurvedText'
+import { ArcText } from '@arctext/react'
+import $ from 'jquery';
+import CircleType from 'circletype';
+import styled from 'styled-components'
 import { Link, graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
@@ -33,6 +38,8 @@ import {
     education,
     educationItem,
     educationItemPicture,
+    educationGT,
+    educationDHS,
     skills,
     skillsItem,
     contactGrid,
@@ -43,6 +50,21 @@ import {
     box2,
     viewMore,
     viewLess,
+    aboutMe,
+    projects,
+    contact,
+    profilePic,
+    profile,
+    circleText,
+    middle,
+    chart,
+    chart2,
+    bar,
+    bar2,
+    tools,
+    toolsItem,
+    language,
+    languageItem,
 } from '../components/layout.module.css'
 import {
     cardBody,
@@ -64,18 +86,21 @@ import {
 const useStyles = makeStyles(theme => ({
   buttons: {
     width: "auto",
-    background: "rgba(255, 255, 255, 0.2)",
-    color: "white",
+    // border: "2px solid #578d2b",
+    // borderRadius: "0px",
+    background: "transparent",
+    color: "#578d2b",
     fontFamily: "Roboto-light",
     '&:hover': {
       transition: "0.5s ease",
-      background: "rgba(255, 255, 255, 0.05)",
-      color: "white"
+      borderRadius: "0px",
+      background: "rgba(130, 151, 109, 0.3)",
+      color: "#578d2b"
     },
   },
 
   divider: {
-    background: "white",
+    background: "#578d2b",
     width: "75%",
     margin: "auto",
     marginBottom: "50px",
@@ -98,6 +123,17 @@ const LightTooltip = withStyles((theme) => ({
     },
 }))(Tooltip);
 
+const Circle = styled(ArcText)`
+  background-color: transparent;
+  border-width: 50%;
+
+  // Applied to each characters
+  & span.character {
+    color: #578d2b;
+    font-size: 37px;
+    font-family: "Butler-bold";
+  }
+`
 const IndexPage = ({ data }) => {
   const classes = useStyles();
 
@@ -138,107 +174,125 @@ const IndexPage = ({ data }) => {
             <br/>job opportunities as a front-end engineer.</p>
         </div>
 
-        <div className={sections}>
+        <div className={aboutMe}>
             <h1 id="aboutMe" className={heading}>About Me</h1>
-            <p style={{fontFamily: "Roboto-light", color: "white", textAlign: "center", margin: "0", fontSize: "20px"}}>Somewhat useful information about myself</p>
+            <div className={profile}>
+                <div className={profilePic}>
+                </div>
+                <div className={educationItem}>
+                    <p style={{fontFamily: "Roboto-light", color: "#578d2b", textAlign: "center", margin: "0", fontSize: "20px"}}>Somewhat useful information about myself</p>
+                </div>
+            </div>
 
             <Divider className={classes.divider}/>
 
             <p className={subheading}>EDUCATION:</p>
 
-            <div className={education}>
-                <div className={educationItemPicture}>
-                    <StaticImage
-                      src="../images/gt.png"
-                      width={150}
-                      height={150}
-                    />
+            <div className={middle}>
+                <div className={education}>
+                    <div className={educationGT}>
+                    </div>
+                    <div className={educationItem}>
+                        <p style={{fontFamily: "Roboto", fontSize: "18px", marginTop: "5px", marginBottom: "5px"}}>Georgia Institute of Technology</p>
+                        <p style={{margin: "0px"}}>Aug 2017 - May 2021</p>
+                        <p style={{fontFamily: "Icons-south", fontSize: "13px", margin: "0px"}}>j<span style={{fontFamily: "Roboto-light", fontSize: "16px"}}><i>  Atlanta, Georgia</i></span></p>
+                    </div>
+                    <div className={educationItem}>
+                        <p style={{fontFamily: "Roboto", fontSize: "18px", marginTop: "5px", marginBottom: "5px"}}>Bachelor of Science in Computer Science</p>
+                        <p style={{margin: "0px"}}>Concentration: Intelligence-Media</p>
+                    </div>
                 </div>
-                <div className={educationItem}>
-                    <p style={{fontFamily: "Roboto", fontSize: "18px", marginBottom: "5px"}}>Georgia Institute of Technology</p>
-                    <p style={{margin: "0px"}}>Aug 2017 - May 2021</p>
-                    <p style={{fontFamily: "Icons-south", fontSize: "13px", margin: "0px"}}>j<span style={{fontFamily: "Roboto-light", fontSize: "16px"}}><i>  Atlanta, Georgia</i></span></p>
-                </div>
-                <div className={educationItem}>
-                    <p style={{fontFamily: "Roboto", fontSize: "18px", marginBottom: "5px"}}>Bachelor of Science in Computer Science</p>
-                    <p style={{margin: "0px"}}>Concentration: Intelligence-Media</p>
-                </div>
-            </div>
 
-            <div className={education}>
-                <div className={educationItemPicture}>
-                    <StaticImage
-                      src="../images/dhs.png"
-                      width={150}
-                      height={150}
-                    />
-                </div>
-                <div className={educationItem}>
-                    <p style={{fontFamily: "Roboto", fontSize: "18px", marginBottom: "5px"}}>Duluth High School</p>
-                    <p style={{margin: "0px"}}>Aug 2013 - May 2017</p>
-                    <p style={{fontFamily: "Icons-south", fontSize: "13px", margin: "0px"}}>j<span style={{fontFamily: "Roboto-light", fontSize: "16px"}}><i>  Duluth, Georgia</i></span></p>
-                </div>
-                <div className={educationItem}>
-                    <p style={{fontFamily: "Roboto", fontSize: "18px", marginBottom: "5px"}}>Honors?</p>
-                    <p>What did I do..</p>
+                <div className={education}>
+                    <div className={educationDHS}>
+                    </div>
+                    <div className={educationItem}>
+                        <p style={{fontFamily: "Roboto", fontSize: "18px", marginTop: "5px", marginBottom: "5px"}}>Duluth High School</p>
+                        <p style={{margin: "0px"}}>Aug 2013 - May 2017</p>
+                        <p style={{fontFamily: "Icons-south", fontSize: "13px", margin: "0px"}}>j<span style={{fontFamily: "Roboto-light", fontSize: "16px"}}><i>  Duluth, Georgia</i></span></p>
+                    </div>
+                    <div className={educationItem}>
+                        <p style={{fontFamily: "Roboto", fontSize: "18px", marginTop: "5px", marginBottom: "5px"}}>Honors?</p>
+                        <p>What did I do..</p>
+                    </div>
                 </div>
             </div>
 
             <Divider className={classes.divider}/>
 
-            <p className={subheading}>SKILLS:</p>
+            <p className={subheading} style={{textAlign:"right"}}>SKILLS:</p>
 
+            <div className={middle}>
             <div className={skills}>
-                <div className={skillsItem}>
-                    <p>Java</p>
-                    <p>Python</p>
-                    <p>C#</p>
+                <div className={chart}>
+                    <div className={bar}></div>
+                    <div className={bar}></div>
+                    <div className={bar}></div>
+                    <div className={bar}></div>
+                    <div className={bar}></div>
+                    <div className={bar}></div>
                 </div>
                 <div className={skillsItem}>
-                    <p>CSS</p>
-                    <p>JavaScript</p>
-                    <p>HTML</p>
+                    <p style={{margin: "0", marginBottom: "3vh"}}>Java</p>
+                    <p style={{margin: "0", marginBottom: "3vh"}}>Python</p>
+                    <p style={{margin: "0", marginBottom: "3vh"}}>C#</p>
+                    <p style={{margin: "0", marginBottom: "3vh"}}>CSS</p>
+                    <p style={{margin: "0", marginBottom: "3vh"}}>JavaScript</p>
+                    <p style={{margin: "0"}}>HTML</p>
                 </div>
+            </div>
             </div>
 
             <Divider className={classes.divider}/>
 
             <p className={subheading}>TOOLS:</p>
 
-            <div className={skills}>
-                <div className={skillsItem}>
-                    <p>Git</p>
-                    <p>Angular</p>
-                    <p>React</p>
-                    <p>Unity</p>
+            <div className={middle}>
+            <div className={tools}>
+                <div className={toolsItem}>
+                    <p style={{margin: "0", marginBottom: "3vh"}}>Git</p>
+                    <p style={{margin: "0", marginBottom: "3vh"}}>Angular</p>
+                    <p style={{margin: "0", marginBottom: "3vh"}}>React</p>
+                    <p style={{margin: "0", marginBottom: "3vh"}}>Unity</p>
+                    <p style={{margin: "0", marginBottom: "3vh"}}>Android Studio</p>
+                    <p style={{margin: "0", marginBottom: "3vh"}}>Procreate</p>
+                    <p style={{margin: "0", marginBottom: "3vh"}}>Adobe Photoshop</p>
+                    <p style={{margin: "0"}}>Figma</p>
                 </div>
-                <div className={skillsItem}>
-                    <p>Android Studio</p>
-                    <p>Procreate</p>
-                    <p>Adobe Photoshop</p>
-                    <p>Figma</p>
+                <div className={chart2}>
+                    <div className={bar2}></div>
+                    <div className={bar2}></div>
+                    <div className={bar2}></div>
+                    <div className={bar2}></div>
+                    <div className={bar2}></div>
+                    <div className={bar2}></div>
+                    <div className={bar2}></div>
+                    <div className={bar2}></div>
                 </div>
+            </div>
             </div>
 
             <Divider className={classes.divider}/>
 
             <p className={subheading}>LANGUAGES:</p>
 
-            <div className={skills}>
-                <div className={skillsItem}>
+            <div className={middle}>
+            <div className={language}>
+                <div className={languageItem}>
                     <p>Korean (Mother tongue)</p>
                 </div>
-                <div className={skillsItem}>
+                <div className={languageItem}>
                     <p>English (Fluent)</p>
                 </div>
+            </div>
             </div>
 
         </div>
 
-        <div className={sections}>
+        <div className={projects}>
 
             <h2 id="projects" className={heading}>Projects</h2>
-            <p style={{fontFamily: "Roboto-light", color: "white", textAlign: "center", margin: "0", fontSize: "20px"}}>Some of my projects</p>
+            <p style={{fontFamily: "Roboto-light", color: "#578d2b", textAlign: "center", margin: "0", fontSize: "20px"}}>Some of my works</p>
 
             <Divider className={classes.divider}/>
 
@@ -248,7 +302,7 @@ const IndexPage = ({ data }) => {
                 <div className={box1}>
                     <div className={projectItem}>
                         <GatsbyImage
-                          imgStyle={{width: "75%", height: "75%"}}
+                          imgStyle={{width: "75%", height: "75%", border: "3px solid #578d2b"}}
                           image={getImage(firstItem.frontmatter.hero_image)}
                         />
                     </div>
@@ -260,7 +314,7 @@ const IndexPage = ({ data }) => {
                             {firstItem.frontmatter.title}
                         </h2>
                         <p style={{fontSize: "25px", color: "grey", margin: "0"}}>{firstItem.frontmatter.date}</p>
-                        <p style={{fontSize: "18px", color: "white"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
+                        <p style={{fontSize: "18px", color: "#578d2b"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
                         {firstItem.frontmatter.technology}</span></p>
 
                         <Button
@@ -291,7 +345,7 @@ const IndexPage = ({ data }) => {
                 <div className={box1}>
                     <div className={projectItem}>
                         <GatsbyImage
-                          imgStyle={{width: "75%", height: "75%"}}
+                          imgStyle={{width: "75%", height: "75%", border: "3px solid #578d2b"}}
                           image={getImage(secondItem.frontmatter.hero_image)}
                         />
                     </div>
@@ -303,7 +357,7 @@ const IndexPage = ({ data }) => {
                             {secondItem.frontmatter.title}
                         </h2>
                         <p style={{fontSize: "25px", color: "grey", margin: "0"}}>{secondItem.frontmatter.date}</p>
-                        <p style={{fontSize: "18px", color: "white"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
+                        <p style={{fontSize: "18px", color: "#578d2b"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
                         {secondItem.frontmatter.technology}</span></p>
 
                         <Button
@@ -333,7 +387,7 @@ const IndexPage = ({ data }) => {
                 <div className={box1}>
                     <div className={projectItem}>
                         <GatsbyImage
-                          imgStyle={{width: "75%", height: "75%"}}
+                          imgStyle={{width: "75%", height: "75%", border: "3px solid #578d2b"}}
                           image={getImage(thirdItem.frontmatter.hero_image)}
                         />
                     </div>
@@ -345,7 +399,7 @@ const IndexPage = ({ data }) => {
                             {thirdItem.frontmatter.title}
                         </h2>
                         <p style={{fontSize: "25px", color: "grey", margin: "0"}}>{thirdItem.frontmatter.date}</p>
-                        <p style={{fontSize: "18px", color: "white"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
+                        <p style={{fontSize: "18px", color: "#578d2b"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
                         {thirdItem.frontmatter.technology}</span></p>
 
                         <Button
@@ -371,18 +425,18 @@ const IndexPage = ({ data }) => {
 
         </div>
 
-        <div className={sections}>
-            <h3 id="contactInfo" className={heading}>Contact</h3>
-            <p style={{fontFamily: "Roboto-light", color: "white", textAlign: "center", margin: "0", fontSize: "20px"}}>Some ways you can contact me</p>
+        <div className={contact}>
+            <h3 id="contactInfo" className={heading} style={{color:"#3C4A2E"}}>Contact</h3>
+            <p style={{fontFamily: "Roboto-light", color: "#3C4A2E", textAlign: "center", margin: "0", fontSize: "20px"}}>Let's talk! I am currently actively looking for new opportunities, so please feel free to leave me a message.</p>
 
             <Divider className={classes.divider}/>
 
             <div className={contactGrid}>
                 <div className={contactItem}>
-                    <p style={{fontFamily: "Roboto-light", fontSize: "18px"}}>Linked In https://www.linkedin.com/in/yumin-jeong/</p>
+                    <p style={{fontFamily: "Roboto-light", fontSize: "18px", color: "#3C4A2E"}}>Linked In https://www.linkedin.com/in/yumin-jeong/</p>
                 </div>
                 <div className={contactItem}>
-                    <p style={{fontFamily: "Roboto-light", fontSize: "18px"}}>Email ymj982@gmail.com</p>
+                    <p style={{fontFamily: "Roboto-light", fontSize: "18px", color: "#3C4A2E"}}>Email ymj982@gmail.com</p>
                 </div>
             </div>
         </div>

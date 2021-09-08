@@ -15,11 +15,6 @@ module.exports = {
         },
         "gatsby-plugin-mdx",
         "gatsby-transformer-sharp",
-            {
-              resolve: "gatsby-plugin-anchor-links",
-              options: {
-                offset: -100
-          }
-      },
+        "gatsby-plugin-anchor-links",
     ],
 };

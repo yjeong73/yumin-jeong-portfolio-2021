@@ -2,17 +2,11 @@
 
 body {
 	/*background: #B7C57D;*/
-    background:
-    radial-gradient(40.6% 68.81% at 77.99% 0%, #DEC693 20.83%,
-        rgba(222, 198, 147, 0) 100%),
-        radial-gradient(30.23% 71.77% at 100% 100%, #83C69F 0%,
-            rgba(131, 198, 159, 0) 100%),
-            radial-gradient(60.23% 60.23% at 1.38% 100%, #F5EAA6 0%,
-                rgba(255, 229, 71, 0) 100%), #B7C57D;
+    background: #B7C57D;
     margin: 0;
 }
 
-body::after {
+/* body::after {
     background-image: url("../images/grilled.png");
     content: "";
     mix-blend-mode: multiply;
@@ -24,35 +18,57 @@ body::after {
     right: 0;
     left: 0;
     z-index: -1;
-}
+} */
 
 /*CONTAINERS*/
 
 .container {
   margin: auto;
-  width: 90%;
+  width: 100%;
   max-width: 1920px;
-  /*border: 3px solid #73AD21;*/
   border: 3px solid #73AD21;
   font-family: sans-serif;
 }
 
 .introduction {
-    width: 50%;
-    height: 92vh;
-    margin-top: 8vh;
-    /*border: 3px solid purple;*/
+    width: 100%;
+    height: 100vh;
     border: 3px solid blue;
+    box-shadow: inset 0px 0px 0px 4px #578d2b, inset 0px 0px 0px 9px #B7C57D, inset 0px 0px 0px 11px #578d2b;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
 }
 
-.sections {
+.about-me {
+    background: #A2BC88;
     width: 100%;
     min-height: 100vh;
-    /*border: 3px solid purple;*/
     border: 3px solid purple;
+    border-top: 1px solid #578d2b;
+    border-bottom: 1px solid #A2BC88;
+    box-shadow: inset 0px 0px 0px 4px #578d2b, inset 0px 0px 0px 9px #A2BC88, inset 0px 0px 0px 11px #578d2b;
+}
+
+.projects {
+    background: #E5F7D2;
+    width: 100%;
+    min-height: 100vh;
+    border: 3px solid purple;
+    border-top: 1px solid #578d2b;
+    border-bottom: 1px solid #E5F7D2;
+    box-shadow: inset 0px 0px 0px 4px #578d2b, inset 0px 0px 0px 9px #E5F7D2, inset 0px 0px 0px 11px #578d2b;
+}
+
+.contact {
+    background: #82976D;
+    width: 100%;
+    min-height: 100vh;
+    border: 3px solid purple;
+    border-top: 1px solid #B7C57D;
+    border-bottom: 1px solid #B7C57D;
+    box-shadow: inset 0px 0px 0px 4px #578d2b, inset 0px 0px 0px 9px #82976D, inset 0px 0px 0px 11px #578d2b;
 }
 
 .project-container {
@@ -60,15 +76,14 @@ body::after {
     margin-bottom: 80px;
     width: 100%;
     min-height: 100vh;
-    /*border: 3px solid purple;*/
-    border: 3px solid purple;
+    border: 3px solid pink;
 }
 
 /*TITLE SECTION TYPOGRAPHY*/
 
 .home-intro {
     font-family: "Rochester";
-    color: white;
+    color: #578d2b;
     font-size: 120px;
     letter-spacing: 20px;
     margin: 3px;
@@ -76,7 +91,7 @@ body::after {
 
 .home-name {
     font-family: "Lemonmilk";
-    color: white;
+    color: #578d2b;
     font-size: 25px;
     letter-spacing: 10px;
     margin: 3px;
@@ -86,27 +101,10 @@ body::after {
     font-family: adobe-caslon-pro, serif;
     font-style: normal;
     font-weight: 400;
-    color: white;
+    color: #578d2b;
     font-size: 25px;
     letter-spacing: 1px;
     margin: 3px;
-}
-
-.main-logo {
-    display: block;
-    width: 100px;
-    height: 50px;
-    background: url(../images/logo.png) no-repeat;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    margin: 0 auto;
-    margin-left: 2vw;
-}
-
-.main-logo:hover {
-    transition: 0.5s ease;
-    filter: opacity(0.5) drop-shadow(0 0 0 grey) saturate(1000%);
 }
 
 /*HEADINGS*/
@@ -114,9 +112,10 @@ body::after {
 .heading {
   font-family: "Butler-bold";
   text-align: center;
-  color: white;
+  color: #578d2b;
   font-size: 50px;
   letter-spacing: 5px;
+  margin-top: 10%;
   margin-bottom: 0;
 }
 
@@ -125,43 +124,14 @@ body::after {
     width: 75%;
     margin: auto;
     margin-bottom: 15px;
-    color: white;
+    color: #578d2b;
     font-size: 25px;
     letter-spacing: 5px;
 }
 
 /*ABOUT ME SECTION*/
 
-.education {
-    width: 75%;
-    margin: auto;
-    /*border: 3px solid yellow;*/
-    border: 3px solid yellow;
-    display: grid;
-    grid-template-columns: 20% 30% 50%;
-    margin-bottom: 50px;
-}
-
-.education-item {
-    color: white;
-    font-family: "Roboto-light";
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-}
-
-.education-item-picture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-}
-
-.skills {
+.profile {
     width: 75%;
     margin: auto;
     border: 3px solid yellow;
@@ -170,14 +140,160 @@ body::after {
     margin-bottom: 50px;
 }
 
-.skills-item {
-    color: white;
-    font-family: "Roboto";
-    font-size: "18px";
+.profile-pic {
+    height: 30vh;
+    width: 30vh;
+    margin: auto;
+    background-image: url("../images/cat.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 3px solid #578d2b;
+    display: inline-block;
+}
+
+.middle {
+    width: 75%;
+    margin: auto;
+    border: 3px solid orangered;
+}
+
+.education {
+    width: 75%;
+    margin: auto;
+    margin-left: 0;
+    border: 3px solid yellow;
+    display: grid;
+    grid-template-columns: 10% 35% 55%;
+    margin-bottom: 5vh;
+}
+
+.education-item {
+    color: #578d2b;
+    font-family: "Roboto-light";
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
     border-right: 1px solid black;
+}
+
+.education-GT {
+    width: 10vh;
+    height: 10vh;
+    background-color: #578d2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-image: url("../images/gt.png");
+    background-size: cover;
+    margin: auto;
+}
+
+.education-DHS {
+    width: 10vh;
+    height: 10vh;
+    background-color: #578d2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-image: url("../images/dhs.png");
+    background-size: cover;
+    margin: auto;
+}
+
+.skills {
+    width: 75%;
+    border: 3px solid yellow;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    margin-bottom: 50px;
+    text-align: right;
+    margin: auto;
+    margin-right: 0;
+}
+
+.skills-item {
+    color: #578d2b;
+    font-family: "Roboto";
+    font-size: "18px";
+    border: 3px solid black;
+}
+
+.tools {
+    width: 75%;
+    border: 3px solid yellow;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    margin-bottom: 50px;
+    text-align: left;
+    margin: auto;
+    margin-left: 0;
+}
+
+.tools-item {
+    color: #578d2b;
+    font-family: "Roboto";
+    font-size: "18px";
+    border: 3px solid black;
+}
+
+.language {
+    width: 75%;
+    border: 3px solid yellow;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 50px;
+    text-align: center;
+    margin: auto;
+}
+
+.language-item {
+    color: #578d2b;
+    font-family: "Roboto";
+    font-size: "18px";
+    border: 3px solid black;
+}
+
+.chart {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  grid-row-gap: 3vh;
+}
+
+.chart2 {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  grid-row-gap: 3vh;
+}
+
+.bar {
+  grid-column-start: 3;
+  grid-column-end: 6;
+  background-color: grey;
+  border-radius: 5px 0 0 5px;
+  border-top: 1px solid red;
+  border-bottom: 1px solid red;
+  border-left: 1px solid red;
+  border-right: 1px solid red;
+}
+
+.bar2 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-color: lightblue;
+  border-radius: 0 5px 5px 0;
+  border-top: 1px solid red;
+  border-bottom: 1px solid red;
+  border-left: 1px solid red;
+  border-right: 1px solid red;
 }
 
 
@@ -205,22 +321,22 @@ body::after {
 
 .project-description {
     font-family: "Roboto-light";
-    color: white;
+    color: #578d2b;
     font-size: 18px;
-    border-top: 1px solid red;
+    /* border-top: 1px solid red;
     border-bottom: 1px solid red;
     border-left: 1px solid red;
-    border-right: 1px solid red;
+    border-right: 1px solid red; */
 }
 
 .project-item {
     font-family: "Roboto-light";
-    color: white;
+    color: #578d2b;
     font-size: 18px;
-    border-top: 1px solid black;
+    /* border-top: 1px solid black;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
-    border-right: 1px solid black;
+    border-right: 1px solid black; */
 }
 
 .box1 {
@@ -251,7 +367,7 @@ body::after {
 /* Links for Projects */
 .project-titles {
     font-family: "Roboto";
-    color: white;
+    color: #578d2b;
     font-size: 30px;
     letter-spacing: 1px;
     margin-bottom: 0;
@@ -263,7 +379,7 @@ body::after {
 }
 
 .project-info-container {
-    color: white;
+    color: #578d2b;
     font-family: "Roboto-light";
     font-size: 16px;
 }
@@ -272,7 +388,6 @@ body::after {
 .contact-grid {
     width: 75%;
     margin: auto;
-    /*border: 3px solid yellow;*/
     border: 3px solid yellow;
     display: grid;
     grid-template-columns: 50% 50%;
@@ -280,7 +395,7 @@ body::after {
 }
 
 .contact-item {
-    color: white;
+    color: #578d2b;
     font-family: "Roboto";
     font-size: "18px";
     border-top: 1px solid black;
@@ -290,7 +405,6 @@ body::after {
 }
 
 /*NAVIGATION BAR*/
-
 ul {
   list-style-type: none;
 }
@@ -299,28 +413,26 @@ ul {
 .nav-links {
   display: flex;
   position: fixed;
-  top: 0;
-  width: 100%;
-  height: 8vh;
-  background-color: rgba(0, 0, 0, .5);
-  justify-content: space-between;
-  list-style: none;
+  background: rgba(255, 255, 255, 0.3);
   align-items: center;
-  padding-left: 0;
+  justify-content: center;
+  border: 1px solid hotpink;
 }
+
 .nav-link-item {
-  padding-left: 2rem;
-  display: inline-block;
-  margin-right: 2vw;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
 }
 
 .nav-link-text {
-  color: white;
+  color: #578d2b;
   font-family: "Roboto";
   letter-spacing: 1px;
   text-decoration: none;
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255, 0)),
-    linear-gradient(#ffffff, #ffffff);
+    linear-gradient(#578d2b, #578d2b);
   background-size: 100% 2px, 0 2px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
@@ -330,6 +442,23 @@ ul {
 /* mouse over link */
 .nav-link-text:hover {
   background-size: 0 2px, 100% 2px;
+}
+
+.main-logo {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100px;
+    height: 50px;
+    background: url(../images/logo.png) no-repeat;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.main-logo:hover {
+    transition: 0.5s ease;
+    filter: opacity(0.5) drop-shadow(0 0 0 grey) saturate(1000%);
 }
 
 .site-title {

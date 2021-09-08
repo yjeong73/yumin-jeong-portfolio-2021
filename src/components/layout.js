@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
+import { StaticImage } from 'gatsby-plugin-image'
 import {
     container,
     heading,
@@ -26,12 +27,16 @@ const Layout = ({ pageTitle, children }) => {
     <div>
       <title>{data.site.siteMetadata.title} | {pageTitle}</title>
       <nav className={navLinks}>
-        <h1>
-          <AnchorLink to="/#title" className={mainLogo}>
-            HOME
-          </AnchorLink>
-        </h1>
         <ul>
+          <li className={navLinkItem}>
+            <AnchorLink to="/#title">
+              <StaticImage
+                src="../images/logo.png"
+                width={100}
+                height={50}
+              />
+            </AnchorLink>
+          </li>
           <li className={navLinkItem}>
             <AnchorLink to="/#aboutMe" className={navLinkText}>
                 ABOUT
