@@ -82,27 +82,19 @@ body {
 /*TITLE SECTION TYPOGRAPHY*/
 
 .home-intro {
-    font-family: "Rochester";
+    font-family: 'Staatliches', cursive;
     color: #578d2b;
-    font-size: 120px;
-    letter-spacing: 20px;
-    margin: 3px;
-}
-
-.home-name {
-    font-family: "Lemonmilk";
-    color: #578d2b;
-    font-size: 25px;
-    letter-spacing: 10px;
-    margin: 3px;
+    font-size: 13vh;
+    line-height: 10vh;
+    margin: 0;
 }
 
 .home-description {
-    font-family: adobe-caslon-pro, serif;
+    font-family: 'Nanum Myeongjo', serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: bold;
     color: #578d2b;
-    font-size: 25px;
+    font-size: 3.5vh;
     letter-spacing: 1px;
     margin: 3px;
 }
@@ -110,17 +102,26 @@ body {
 /*HEADINGS*/
 
 .heading {
-  font-family: "Butler-bold";
+  font-family: 'Staatliches', cursive;
   text-align: center;
   color: #578d2b;
-  font-size: 50px;
-  letter-spacing: 5px;
-  margin-top: 10%;
-  margin-bottom: 0;
+  font-size: 7vh;
+  letter-spacing: 1vw;
+  margin: 0;
+  margin-bottom: 10vh;
+}
+
+.heading-decoration {
+    font-family: 'Beth Ellen', cursive;
+    text-align: center;
+    color: #578d2b;
+    font-size: 25px;
+    margin: 0;
+    margin-top: 10vh;
 }
 
 .subheading {
-    font-family: "Butler-bold";
+    font-family: 'Staatliches', cursive;
     width: 75%;
     margin: auto;
     margin-bottom: 15px;
@@ -170,7 +171,8 @@ body {
 
 .education-item {
     color: #578d2b;
-    font-family: "Roboto-light";
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 2.5vh;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
@@ -207,7 +209,7 @@ body {
     width: 75%;
     border: 3px solid yellow;
     display: grid;
-    grid-template-columns: 90% 10%;
+    grid-template-columns: 80% 20%;
     margin-bottom: 50px;
     text-align: right;
     margin: auto;
@@ -216,8 +218,9 @@ body {
 
 .skills-item {
     color: #578d2b;
-    font-family: "Roboto";
-    font-size: "18px";
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 800;
+    font-size: 2.5vh;
     border: 3px solid black;
 }
 
@@ -225,7 +228,7 @@ body {
     width: 75%;
     border: 3px solid yellow;
     display: grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 20% 80%;
     margin-bottom: 50px;
     text-align: left;
     margin: auto;
@@ -234,26 +237,57 @@ body {
 
 .tools-item {
     color: #578d2b;
-    font-family: "Roboto";
-    font-size: "18px";
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 800;
+    font-size: 2.5vh;
     border: 3px solid black;
 }
 
 .language {
-    width: 75%;
+    width: 50%;
     border: 3px solid yellow;
     display: grid;
-    grid-template-columns: 50% 50%;
-    margin-bottom: 50px;
+    grid-template-columns: 85% 15%;
     text-align: center;
+    margin: auto;
+    margin-right: 0;
+    margin-bottom: 5vh;
+}
+
+.korean {
+    width: 5vh;
+    height: 5vh;
+    background-color: #578d2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-image: url("../images/korea.png");
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: auto;
+}
+
+.english {
+    width: 5vh;
+    height: 5vh;
+    background-color: #578d2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-image: url("../images/us.png");
+    background-size: cover;
     margin: auto;
 }
 
 .language-item {
     color: #578d2b;
-    font-family: "Roboto";
-    font-size: "18px";
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 800;
+    font-size: 2.5vh;
     border: 3px solid black;
+    text-align: right;
 }
 
 .chart {
@@ -275,25 +309,23 @@ body {
 }
 
 .bar {
-  grid-column-start: 3;
   grid-column-end: 6;
-  background-color: grey;
+  background-color: #AA6728;
   border-radius: 5px 0 0 5px;
-  border-top: 1px solid red;
+  /* border-top: 1px solid red;
   border-bottom: 1px solid red;
   border-left: 1px solid red;
-  border-right: 1px solid red;
+  border-right: 1px solid red; */
 }
 
 .bar2 {
   grid-column-start: 1;
-  grid-column-end: 3;
-  background-color: lightblue;
+  background-color: #E69A59;
   border-radius: 0 5px 5px 0;
-  border-top: 1px solid red;
+  /* border-top: 1px solid red;
   border-bottom: 1px solid red;
   border-left: 1px solid red;
-  border-right: 1px solid red;
+  border-right: 1px solid red; */
 }
 
 
@@ -304,7 +336,7 @@ body {
     margin: auto;
     border: 3px solid yellow;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 30% 70%;
 }
 
 .view-more {
@@ -333,10 +365,10 @@ body {
     font-family: "Roboto-light";
     color: #578d2b;
     font-size: 18px;
-    /* border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black; */
+    border-top: 1px solid purple;
+    border-bottom: 1px solid purple;
+    border-left: 1px solid purple;
+    border-right: 1px solid purple;
 }
 
 .box1 {
@@ -413,22 +445,27 @@ ul {
 .nav-links {
   display: flex;
   position: fixed;
-  background: rgba(255, 255, 255, 0.3);
+  right: 3vh;
+  margin-top: 3vh;
+  /* background: rgba(255, 255, 255, 0.3); */
   align-items: center;
   justify-content: center;
-  border: 1px solid hotpink;
+  /* border: 1px solid hotpink; */
 }
 
 .nav-link-item {
-    border-top: 1px solid black;
+    margin-bottom: 3vh;
+    /* border-top: 1px solid black;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
-    border-right: 1px solid black;
+    border-right: 1px solid black; */
 }
 
 .nav-link-text {
   color: #578d2b;
-  font-family: "Roboto";
+  font-family: 'Nanum Myeongjo', serif;
+  font-weight: 800;
+  font-size: 2.5vh;
   letter-spacing: 1px;
   text-decoration: none;
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255, 0)),
@@ -447,18 +484,14 @@ ul {
 .main-logo {
     display: flex;
     position: fixed;
-    top: 0;
+    margin: 3vh;
     width: 100px;
     height: 50px;
-    background: url(../images/logo.png) no-repeat;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
 .main-logo:hover {
     transition: 0.5s ease;
-    filter: opacity(0.5) drop-shadow(0 0 0 grey) saturate(1000%);
+    filter: opacity(0.3);
 }
 
 .site-title {

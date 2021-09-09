@@ -26,17 +26,15 @@ const Layout = ({ pageTitle, children }) => {
   return (
     <div>
       <title>{data.site.siteMetadata.title} | {pageTitle}</title>
+      <AnchorLink to="/#title" className={mainLogo}>
+        <StaticImage
+          src="../images/logo-green.png"
+          width={100}
+          height={50}
+        />
+      </AnchorLink>
       <nav className={navLinks}>
         <ul>
-          <li className={navLinkItem}>
-            <AnchorLink to="/#title">
-              <StaticImage
-                src="../images/logo.png"
-                width={100}
-                height={50}
-              />
-            </AnchorLink>
-          </li>
           <li className={navLinkItem}>
             <AnchorLink to="/#aboutMe" className={navLinkText}>
                 ABOUT
