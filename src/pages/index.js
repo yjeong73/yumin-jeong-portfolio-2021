@@ -65,6 +65,8 @@ import {
     toolsItem,
     language,
     languageItem,
+    korean,
+    english,
 } from '../components/layout.module.css'
 import {
     cardBody,
@@ -225,12 +227,12 @@ const IndexPage = ({ data }) => {
             <div className={middle}>
             <div className={skills}>
                 <div className={chart}>
-                    <div className={bar}></div>
-                    <div className={bar}></div>
-                    <div className={bar}></div>
-                    <div className={bar}></div>
-                    <div className={bar}></div>
-                    <div className={bar}></div>
+                    <div className={bar} style={{gridColumnStart: "2"}}></div>
+                    <div className={bar} style={{gridColumnStart: "2"}}></div>
+                    <div className={bar} style={{gridColumnStart: "5"}}></div>
+                    <div className={bar} style={{gridColumnStart: "3"}}></div>
+                    <div className={bar} style={{gridColumnStart: "4"}}></div>
+                    <div className={bar} style={{gridColumnStart: "4"}}></div>
                 </div>
                 <div className={skillsItem}>
                     <p style={{margin: "0", marginBottom: "3vh"}}>Java</p>
@@ -260,29 +262,36 @@ const IndexPage = ({ data }) => {
                     <p style={{margin: "0"}}>Figma</p>
                 </div>
                 <div className={chart2}>
-                    <div className={bar2}></div>
-                    <div className={bar2}></div>
-                    <div className={bar2}></div>
-                    <div className={bar2}></div>
-                    <div className={bar2}></div>
-                    <div className={bar2}></div>
-                    <div className={bar2}></div>
-                    <div className={bar2}></div>
+                    <div className={bar2} style={{gridColumnEnd: "4"}}></div>
+                    <div className={bar2} style={{gridColumnEnd: "3"}}></div>
+                    <div className={bar2} style={{gridColumnEnd: "3"}}></div>
+                    <div className={bar2} style={{gridColumnEnd: "2"}}></div>
+                    <div className={bar2} style={{gridColumnEnd: "2"}}></div>
+                    <div className={bar2} style={{gridColumnEnd: "5"}}></div>
+                    <div className={bar2} style={{gridColumnEnd: "3"}}></div>
+                    <div className={bar2} style={{gridColumnEnd: "3"}}></div>
                 </div>
             </div>
             </div>
 
             <Divider className={classes.divider}/>
 
-            <p className={subheading}>LANGUAGES:</p>
+            <p className={subheading} style={{textAlign: "right"}}>LANGUAGES:</p>
 
             <div className={middle}>
             <div className={language}>
                 <div className={languageItem}>
                     <p>Korean (Mother tongue)</p>
                 </div>
+                <div className={korean}>
+                </div>
+            </div>
+
+            <div className={language}>
                 <div className={languageItem}>
                     <p>English (Fluent)</p>
+                </div>
+                <div className={english}>
                 </div>
             </div>
             </div>
@@ -302,7 +311,7 @@ const IndexPage = ({ data }) => {
                 <div className={box1}>
                     <div className={projectItem}>
                         <GatsbyImage
-                          imgStyle={{width: "75%", height: "75%", border: "3px solid #578d2b"}}
+                          imgStyle={{width: "20vh", height: "20vh", border: "3px solid #578d2b"}}
                           image={getImage(firstItem.frontmatter.hero_image)}
                         />
                     </div>
@@ -345,7 +354,7 @@ const IndexPage = ({ data }) => {
                 <div className={box1}>
                     <div className={projectItem}>
                         <GatsbyImage
-                          imgStyle={{width: "75%", height: "75%", border: "3px solid #578d2b"}}
+                          imgStyle={{width: "20vh", height: "20vh", border: "3px solid #578d2b"}}
                           image={getImage(secondItem.frontmatter.hero_image)}
                         />
                     </div>
@@ -387,7 +396,7 @@ const IndexPage = ({ data }) => {
                 <div className={box1}>
                     <div className={projectItem}>
                         <GatsbyImage
-                          imgStyle={{width: "75%", height: "75%", border: "3px solid #578d2b"}}
+                          imgStyle={{width: "20vh", height: "20vh", border: "3px solid #578d2b"}}
                           image={getImage(thirdItem.frontmatter.hero_image)}
                         />
                     </div>
