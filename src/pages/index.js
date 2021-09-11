@@ -67,6 +67,7 @@ import {
     languageItem,
     korean,
     english,
+    highlight,
 } from '../components/layout.module.css'
 import {
     cardBody,
@@ -162,7 +163,7 @@ const IndexPage = ({ data }) => {
             <p style={{fontFamily:" Beth Ellen, cursive", fontSize: "5vh", color: "#578d2b", margin: "0"}}>I am</p>
             <p className={homeIntro}>YUMIN JEONG</p>
             <p className={homeDescription}>A recent graduate with a passion for
-            <br/>computer science and art who is seeking
+            <br/><span className={highlight}>computer science</span> and <span className={highlight}>art</span> who is seeking
             <br/>job opportunities as a front-end engineer.</p>
         </div>
 
@@ -218,7 +219,7 @@ const IndexPage = ({ data }) => {
             <div className={middle}>
             <div className={skills}>
                 <div className={chart}>
-                    <div className={bar} style={{gridColumnStart: "2"}}></div>
+                    <div className={bar} style={{gridColumnStart: "2",  animation: "0.5s ease"}}></div>
                     <div className={bar} style={{gridColumnStart: "2"}}></div>
                     <div className={bar} style={{gridColumnStart: "5"}}></div>
                     <div className={bar} style={{gridColumnStart: "3"}}></div>
