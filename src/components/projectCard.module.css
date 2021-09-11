@@ -12,6 +12,32 @@
     overflow: hidden;
 }
 
+.radial-gradient {
+  position:absolute;
+  top:0px;
+  left:0px;
+  height:100%;
+  width:100%;
+
+  /*Fallback if gradeints don't work */
+  /*Linear gradient... */
+}
+
+.circles {
+    position: absolute;
+    z-index: -1;
+    top: 0%;
+    left: 0%;
+    width: 100vh;
+    height: 100vh;
+    background: #F2D479;
+    border-radius: 50%;
+    filter: blur(30vh);
+    opacity: 100%;
+    transition: 0.5s ease;
+}
+
+
 .box {
     background-color: orangered;
     height: 90px;

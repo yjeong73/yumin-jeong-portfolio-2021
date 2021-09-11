@@ -83,6 +83,8 @@ import {
     overlayinn,
     box,
     demo,
+    radialGradient,
+    circles,
 } from '../components/projectCard.module.css'
 
 // Step 2: Define your component
@@ -155,16 +157,29 @@ const IndexPage = ({ data }) => {
     setExpand3((prev) => !prev);
   };
 
+  $(document).mousemove(function (event) {
+      var windowWidth = $(window).width();
+      var windowHeight = $(window).height();
+
+      var mouseXpercentage = Math.round((event.pageX / windowWidth) * 100);
+      var mouseYpercentage = Math.round((event.pageY / windowHeight) * 100);
+
+      document.getElementById("circles").style.top = mouseXpercentage + "%";
+      document.getElementById("circles").style.left = mouseYpercentage + "%";
+
+      console.log("mouse moving:", mouseXpercentage, mouseYpercentage);
+    });
+
+
   return (
       <Layout pageTitle="Home Page">
 
         <div id="title" className={introduction}>
-            <p className={homeIntro}>Hello,</p>
-            <p style={{fontFamily:" Beth Ellen, cursive", fontSize: "5vh", color: "#578d2b", margin: "0"}}>I am</p>
             <p className={homeIntro}>YUMIN JEONG</p>
-            <p className={homeDescription}>A recent graduate with a passion for
+            <p className={homeDescription}><span style={{fontFamily:"Beth Ellen, cursive"}}>Hello,</span> I'm a recent graduate with a passion for
             <br/><span className={highlight}>computer science</span> and <span className={highlight}>art</span> who is seeking
             <br/>job opportunities as a front-end engineer.</p>
+            <div className={circles} id="circles"></div>
         </div>
 
         <div id="aboutMe" className={aboutMe}>
