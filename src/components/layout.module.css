@@ -567,7 +567,7 @@ ul {
 
 .main-logo:hover {
     transition: 0.5s ease;
-    filter: opacity(0.3);
+    filter: opacity(0.5);
 }
 
 .site-title {
