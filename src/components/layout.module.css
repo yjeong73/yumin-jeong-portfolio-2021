@@ -1,5 +1,4 @@
 @import "./typography.css";
-@import '~material-design-icons/iconfont/material-icons.css';
 
 :root {
     --darkbrown: #4D4637;
@@ -198,6 +197,48 @@ body {
     margin: auto;
     margin-top: 0;
     margin-left: calc(20% + 5px);
+}
+
+.circle-1 {
+    position: absolute;
+    z-index: -1;
+    top: 0%;
+    left: 0%;
+    width: 100vh;
+    height: 100vh;
+    background: #F2D479;
+    border-radius: 50%;
+    filter: blur(30vh);
+    opacity: 100%;
+    transition: 0.5s ease;
+}
+
+.circle-2 {
+    position: absolute;
+    z-index: -1;
+    top: 0%;
+    left: 30%;
+    width: 50vh;
+    height: 50vh;
+    background: #F28907;
+    border-radius: 50%;
+    filter: blur(30vh);
+    opacity: 100%;
+    transition: 0.7s ease;
+}
+
+.circle-3 {
+    position: absolute;
+    z-index: -1;
+    bottom: 0%;
+    right: 0%;
+    width: 75vh;
+    height: 75vh;
+    background: #CDA291;
+    border-radius: 50%;
+    filter: blur(30vh);
+    opacity: 100%;
+    transition: 0.5s ease;
 }
 
 /*HEADINGS*/
@@ -529,15 +570,17 @@ body {
 
 /* CONTACT INFO*/
 .contact-grid {
-    width: 75%;
+    width: 30%;
     margin: auto;
     /* border: 3px solid yellow; */
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 20% 80%;
+    grid-row-gap: 3vh;
     margin-bottom: 50px;
 }
 
 .contact-item {
+    margin: auto;
     color: var(--darkbrown);
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
@@ -548,6 +591,15 @@ body {
     border-right: 1px solid black; */
 }
 
+.contact-item:hover {
+    transform: translateY(-5px);
+    transition: 0.3s ease;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
 /*NAVIGATION BAR*/
 ul {
   list-style-type: none;
@@ -555,14 +607,13 @@ ul {
 
 /* Links for menu */
 .nav-links {
-  display: flex;
   position: fixed;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
   z-index: 1;
   right: 3vh;
-  margin-top: 3vh;
-  /* background: rgba(255, 255, 255, 0.3); */
-  align-items: center;
-  justify-content: center;
+  margin-top: 5vh;
   /* border: 1px solid hotpink; */
 }
 
@@ -580,6 +631,8 @@ ul {
   font-size: 2.5vh;
   letter-spacing: 1px;
   text-decoration: none;
+
+  /*Underline Transition*/
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255, 0)),
     linear-gradient(var(--orange), var(--orange));
   background-size: 100% 2px, 0 2px;
@@ -597,7 +650,7 @@ ul {
     display: flex;
     position: fixed;
     z-index: 1;
-    margin: 3vh;
+    margin: 5vh;
     width: 100px;
     height: 50px;
 }
@@ -605,11 +658,4 @@ ul {
 .main-logo:hover {
     transition: 0.5s ease;
     filter: opacity(0.5);
-}
-
-.site-title {
-  font-size: 3rem;
-  color: gray;
-  font-weight: 700;
-  margin: 3rem 0;
 }

@@ -70,26 +70,11 @@ import {
     english,
     highlight,
     plate,
-} from '../components/layout.module.css'
-import {
-    cardBody,
-    card,
-    cardImage,
-    cardText,
-    cardStats,
-    date,
-    stat,
-    type,
-    value,
-    overlayone,
-    overlayinn,
-    box,
-    demo,
-    radialGradient,
     circle1,
     circle2,
     circle3,
-} from '../components/projectCard.module.css'
+    disabled,
+} from '../components/layout.module.css'
 
 // Step 2: Define your component
 const useStyles = makeStyles(theme => ({
@@ -460,10 +445,16 @@ const IndexPage = ({ data }) => {
 
             <div className={contactGrid}>
                 <div className={contactItem}>
-                    <LinkedInIcon style={{background: "#F2D479", border: "1vh solid #F2D479", borderRadius: "50%"}}></LinkedInIcon><span style={{marginTop: "0"}}>  https://www.linkedin.com/in/yumin-jeong/</span>
+                    <LinkedInIcon style={{background: "#F2D479", border: "1vh solid #F2D479", borderRadius: "50%"}}></LinkedInIcon>
+                </div>
+                <div className={contactItem + ' ' + disabled} style={{marginLeft:"0"}}>
+                    https://www.linkedin.com/in/yumin-jeong/
                 </div>
                 <div className={contactItem}>
-                    <EmailIcon style={{background: "#F2D479", border: "1vh solid #F2D479", borderRadius: "50%"}}></EmailIcon><span>  ymj982@gmail.com</span>
+                    <EmailIcon style={{background: "#F2D479", border: "1vh solid #F2D479", borderRadius: "50%"}}></EmailIcon>
+                </div>
+                <div className={contactItem + ' ' + disabled} style={{marginLeft:"0"}}>
+                    ymj982@gmail.com
                 </div>
             </div>
         </div>
