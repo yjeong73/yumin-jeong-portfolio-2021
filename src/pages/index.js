@@ -3,10 +3,7 @@ import * as React from 'react'
 import { useEffect } from 'react'
 //import { Link } from 'gatsby'
 import Layout from '../components/layout'
-import CurvedText from '../components/CurvedText'
-import { ArcText } from '@arctext/react'
 import $ from 'jquery';
-import CircleType from 'circletype';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
@@ -316,7 +313,7 @@ const IndexPage = ({ data }) => {
 
         <div id="projects" className={projects}>
 
-            <div className={plate} style={{background: "#F2D479"}}></div>
+            <div className={plate}></div>
             <p className={headingDecoration}><span className={highlight}>02.📋</span></p>
             <h2 className={heading}>Projects</h2>
             <p style={{fontFamily: "Nanum Myeongjo, serif", color: "#4D4637", textAlign: "center", margin: "0", fontSize: "3vh"}}>Some of my works</p>
@@ -454,7 +451,7 @@ const IndexPage = ({ data }) => {
 
         <div id="contactInfo" className={contact}>
 
-            <div className={plate} style={{background: "#F2A007"}}></div>
+            <div className={plate}></div>
             <p className={headingDecoration}><span className={highlight}>03.📬</span></p>
             <h3 className={heading}>Contact</h3>
             <p style={{fontFamily: "Roboto-light", color: "#3C4A2E", textAlign: "center", margin: "0", fontSize: "20px"}}>Let's talk! I am currently actively looking for new opportunities, so please feel free to leave me a message.</p>
