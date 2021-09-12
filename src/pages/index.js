@@ -7,6 +7,9 @@ import CurvedText from '../components/CurvedText'
 import { ArcText } from '@arctext/react'
 import $ from 'jquery';
 import CircleType from 'circletype';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import EmailIcon from '@material-ui/icons/Email';
 import styled from 'styled-components'
 import { Link, graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
@@ -69,6 +72,7 @@ import {
     korean,
     english,
     highlight,
+    plate,
 } from '../components/layout.module.css'
 import {
     cardBody,
@@ -85,7 +89,9 @@ import {
     box,
     demo,
     radialGradient,
-    circles,
+    circle1,
+    circle2,
+    circle3,
 } from '../components/projectCard.module.css'
 
 // Step 2: Define your component
@@ -94,19 +100,21 @@ const useStyles = makeStyles(theme => ({
     width: "auto",
     // border: "2px solid #578d2b",
     // borderRadius: "0px",
-    background: "transparent",
-    color: "#578d2b",
-    fontFamily: "Roboto-light",
+    background: "#F2D479",
+    borderRadius: "0px",
+    color: "#4D4637",
+    fontFamily: "Open Sans, sans-serif",
+    fontWeight: "bold",
     '&:hover': {
       transition: "0.5s ease",
       borderRadius: "0px",
-      background: "rgba(130, 151, 109, 0.3)",
-      color: "#578d2b"
+      background: "transparent",
+      color: "#A7905E"
     },
   },
 
   divider: {
-    background: "#578d2b",
+    background: "#4D4637",
     width: "75%",
     margin: "auto",
     marginBottom: "50px",
@@ -175,22 +183,23 @@ const IndexPage = ({ data }) => {
   return (
       <Layout pageTitle="Home Page">
         <div id="title" className={introduction}>
-            <div className={circles} id="circles"></div>
-            <p className={homeIntro}>YUMIN JEONG</p>
-            <p className={homeDescription}><span style={{fontFamily:"Beth Ellen, cursive"}}>Hello,</span> I'm a recent graduate with a passion for
-            <br/><span className={highlight}>computer science</span> and <span className={highlight}>art</span> who is seeking
+            <div className={circle1} id="circles"></div>
+            <div className={circle2} id="circles"></div>
+            <div className={circle3} id="circles"></div>
+            <p className={homeIntro}>Hello, <br/> I am Yumin Jeong</p>
+            <p className={homeDescription}>I'm a recent graduate with a passion for
+            <br/><span className={highlight}>computer science👩‍💻</span> and <span className={highlight}>art🌻</span> who is seeking
             <br/>job opportunities as a front-end engineer.</p>
         </div>
 
         <div id="aboutMe" className={aboutMe}>
-            <p className={headingDecoration}>first</p>
+            <div className={plate}></div>
+            <p className={headingDecoration}><span className={highlight}>01.🙋</span></p>
             <h1 className={heading}>About Me</h1>
             <div className={profile}>
                 <div className={profilePic}>
                 </div>
-                <div className={educationItem}>
-                    <p style={{fontFamily: "Roboto-light", color: "#578d2b", textAlign: "center", margin: "0", fontSize: "20px"}}>Somewhat useful information about myself</p>
-                </div>
+                <p>Somewhat useful information about myself</p>
             </div>
 
             <Divider className={classes.divider}/>
@@ -204,7 +213,7 @@ const IndexPage = ({ data }) => {
                     <div className={educationItem}>
                         <p style={{fontWeight: "800", marginTop: "5px", marginBottom: "5px"}}>Georgia Institute of Technology</p>
                         <p style={{margin: "0px"}}>Aug 2017 - May 2021</p>
-                        <p style={{fontFamily: "Icons-south", fontSize: "2vh", margin: "0px"}}>j<span style={{fontFamily: "Nanum Myeongjo, serif", fontSize: "2.5vh"}}><i>  Atlanta, Georgia</i></span></p>
+                        <p style={{margin: "0px", fontFamily: "Nanum Myeongjo, serif", fontSize: "2.5vh"}}>📍<i>Atlanta, Georgia</i></p>
                     </div>
                     <div className={educationItem}>
                         <p style={{fontWeight: "800", marginTop: "5px", marginBottom: "5px"}}>Bachelor of Science in Computer Science</p>
@@ -218,7 +227,7 @@ const IndexPage = ({ data }) => {
                     <div className={educationItem}>
                         <p style={{fontWeight: "800", marginTop: "5px", marginBottom: "5px"}}>Duluth High School</p>
                         <p style={{margin: "0px"}}>Aug 2013 - May 2017</p>
-                        <p style={{fontFamily: "Icons-south", fontSize: "2vh", margin: "0px"}}>j<span style={{fontFamily: "Nanum Myeongjo, serif", fontSize: "2.5vh"}}><i>  Duluth, Georgia</i></span></p>
+                        <p style={{margin: "0px", fontFamily: "Nanum Myeongjo, serif", fontSize: "2.5vh"}}>📍<i>Duluth, Georgia</i></p>
                     </div>
                     <div className={educationItem}>
                         <p style={{fontWeight: "800", marginTop: "5px", marginBottom: "5px"}}>Honors?</p>
@@ -307,9 +316,10 @@ const IndexPage = ({ data }) => {
 
         <div id="projects" className={projects}>
 
-            <p className={headingDecoration}>second</p>
+            <div className={plate} style={{background: "#F2D479"}}></div>
+            <p className={headingDecoration}><span className={highlight}>02.📋</span></p>
             <h2 className={heading}>Projects</h2>
-            <p style={{fontFamily: "Roboto-light", color: "#578d2b", textAlign: "center", margin: "0", fontSize: "20px"}}>Some of my works</p>
+            <p style={{fontFamily: "Nanum Myeongjo, serif", color: "#4D4637", textAlign: "center", margin: "0", fontSize: "3vh"}}>Some of my works</p>
 
             <Divider className={classes.divider}/>
 
@@ -319,7 +329,7 @@ const IndexPage = ({ data }) => {
                 <div className={box1}>
                     <div className={projectItem}>
                         <GatsbyImage
-                          imgStyle={{width: "20vh", height: "20vh", border: "3px solid #578d2b"}}
+                          imgStyle={{width: "100%", height: "100"}}
                           image={getImage(firstItem.frontmatter.hero_image)}
                         />
                     </div>
@@ -330,15 +340,15 @@ const IndexPage = ({ data }) => {
                         <h2 className={projectTitles}>
                             {firstItem.frontmatter.title}
                         </h2>
-                        <p style={{fontSize: "25px", color: "grey", margin: "0"}}>{firstItem.frontmatter.date}</p>
-                        <p style={{fontSize: "18px", color: "#578d2b"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
+                        <p style={{fontSize: "3vh", color: "#A7905E", margin: "0"}}>{firstItem.frontmatter.date}</p>
+                        <p style={{fontSize: "18px"}}><span className={highlight}>Technology&#58;</span>  <span style={{fontFamily: "Nanum Myeongjo, serif"}}>
                         {firstItem.frontmatter.technology}</span></p>
 
                         <Button
                             onClick={handleEvent1}
                             className={classes.buttons}
                         >
-                            Project Description
+                            Project Description<ExpandMoreIcon></ExpandMoreIcon>
                         </Button>
                     </div>
 
@@ -362,7 +372,7 @@ const IndexPage = ({ data }) => {
                 <div className={box1}>
                     <div className={projectItem}>
                         <GatsbyImage
-                          imgStyle={{width: "20vh", height: "20vh", border: "3px solid #578d2b"}}
+                          imgStyle={{width: "100%", height: "100%", border: "3px solid #578d2b"}}
                           image={getImage(secondItem.frontmatter.hero_image)}
                         />
                     </div>
@@ -373,15 +383,15 @@ const IndexPage = ({ data }) => {
                         <h2 className={projectTitles}>
                             {secondItem.frontmatter.title}
                         </h2>
-                        <p style={{fontSize: "25px", color: "grey", margin: "0"}}>{secondItem.frontmatter.date}</p>
-                        <p style={{fontSize: "18px", color: "#578d2b"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
+                        <p style={{fontSize: "3vh", color: "#A7905E", margin: "0"}}>{secondItem.frontmatter.date}</p>
+                        <p style={{fontSize: "18px"}}><span className={highlight}>Technology&#58;</span>  <span style={{fontFamily: "Nanum Myeongjo, serif"}}>
                         {secondItem.frontmatter.technology}</span></p>
 
                         <Button
                             onClick={handleEvent2}
                             className={classes.buttons}
                         >
-                            Project Description
+                            Project Description<ExpandMoreIcon></ExpandMoreIcon>
                         </Button>
                     </div>
 
@@ -404,7 +414,7 @@ const IndexPage = ({ data }) => {
                 <div className={box1}>
                     <div className={projectItem}>
                         <GatsbyImage
-                          imgStyle={{width: "20vh", height: "20vh", border: "3px solid #578d2b"}}
+                          imgStyle={{width: "100%", height: "100%", border: "3px solid #578d2b"}}
                           image={getImage(thirdItem.frontmatter.hero_image)}
                         />
                     </div>
@@ -415,15 +425,15 @@ const IndexPage = ({ data }) => {
                         <h2 className={projectTitles}>
                             {thirdItem.frontmatter.title}
                         </h2>
-                        <p style={{fontSize: "25px", color: "grey", margin: "0"}}>{thirdItem.frontmatter.date}</p>
-                        <p style={{fontSize: "18px", color: "#578d2b"}}>Technology&#58; <span style={{fontFamily: "Roboto-light"}}>
+                        <p style={{fontSize: "3vh", color: "#A7905E", margin: "0"}}>{thirdItem.frontmatter.date}</p>
+                        <p style={{fontSize: "18px"}}><span className={highlight}>Technology&#58;</span>  <span style={{fontFamily: "Nanum Myeongjo, serif"}}>
                         {thirdItem.frontmatter.technology}</span></p>
 
                         <Button
                             onClick={handleEvent3}
                             className={classes.buttons}
                         >
-                            Project Description
+                            Project Description<ExpandMoreIcon></ExpandMoreIcon>
                         </Button>
                     </div>
 
@@ -443,18 +453,20 @@ const IndexPage = ({ data }) => {
         </div>
 
         <div id="contactInfo" className={contact}>
-            <p className={headingDecoration}>third</p>
-            <h3 className={heading} style={{color:"#3C4A2E"}}>Contact</h3>
+
+            <div className={plate} style={{background: "#F2A007"}}></div>
+            <p className={headingDecoration}><span className={highlight}>03.📬</span></p>
+            <h3 className={heading}>Contact</h3>
             <p style={{fontFamily: "Roboto-light", color: "#3C4A2E", textAlign: "center", margin: "0", fontSize: "20px"}}>Let's talk! I am currently actively looking for new opportunities, so please feel free to leave me a message.</p>
 
             <Divider className={classes.divider}/>
 
             <div className={contactGrid}>
                 <div className={contactItem}>
-                    <p style={{fontFamily: "Roboto-light", fontSize: "18px", color: "#3C4A2E"}}>Linked In https://www.linkedin.com/in/yumin-jeong/</p>
+                    <LinkedInIcon style={{background: "#F2D479", border: "1vh solid #F2D479", borderRadius: "50%"}}></LinkedInIcon><span style={{marginTop: "0"}}>  https://www.linkedin.com/in/yumin-jeong/</span>
                 </div>
                 <div className={contactItem}>
-                    <p style={{fontFamily: "Roboto-light", fontSize: "18px", color: "#3C4A2E"}}>Email ymj982@gmail.com</p>
+                    <EmailIcon style={{background: "#F2D479", border: "1vh solid #F2D479", borderRadius: "50%"}}></EmailIcon><span>  ymj982@gmail.com</span>
                 </div>
             </div>
         </div>
