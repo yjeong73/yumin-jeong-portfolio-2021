@@ -407,20 +407,20 @@ body {
 .project-grid {
     width: 75%;
     margin: auto;
-    border: 3px solid yellow;
+    /* border: 3px solid yellow; */
     display: grid;
     grid-template-columns: 30% 70%;
 }
 
 .view-more {
     height: fit-content;
-    border: 3px solid orangered;
+    /* border: 3px solid orangered; */
     margin-bottom: 5vh;
 }
 
 .view-less {
     height: 30vh;
-    border: 3px solid orangered;
+    /* border: 3px solid orangered; */
     margin-bottom: 5vh;
 }
 
@@ -439,10 +439,10 @@ body {
     color: var(--darkbrown);
     font-size: 18px;
     margin-left: 5vw;
-    border-top: 1px solid purple;
+    /* border-top: 1px solid purple;
     border-bottom: 1px solid purple;
     border-left: 1px solid purple;
-    border-right: 1px solid purple;
+    border-right: 1px solid purple; */
 }
 
 .box1 {
@@ -494,7 +494,7 @@ body {
 .contact-grid {
     width: 75%;
     margin: auto;
-    border: 3px solid yellow;
+    /* border: 3px solid yellow; */
     display: grid;
     grid-template-columns: 50% 50%;
     margin-bottom: 50px;
@@ -505,10 +505,10 @@ body {
     font-family: "Open Sans", sans-serif;
     font-weight: bold;
     font-size: 2vh;
-    border-top: 1px solid black;
+    /* border-top: 1px solid black;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
-    border-right: 1px solid black;
+    border-right: 1px solid black; */
 }
 
 /*NAVIGATION BAR*/
@@ -567,7 +567,7 @@ ul {
 
 .main-logo:hover {
     transition: 0.5s ease;
-    filter: opacity(0.3);
+    filter: opacity(0.5);
 }
 
 .site-title {
