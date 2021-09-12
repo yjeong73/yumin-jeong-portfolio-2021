@@ -428,10 +428,16 @@ body {
     font-family: "Nanum Myeongjo", serif;
     color: var(--darkbrown);
     font-size: 2.5vh;
+    margin-bottom: 15vh;
     /* border-top: 1px solid red;
     border-bottom: 1px solid red;
     border-left: 1px solid red;
     border-right: 1px solid red; */
+}
+
+.h1 {
+    font-family: 'Yeseva One', cursive;
+    color: var(--yellow);
 }
 
 .project-item {
