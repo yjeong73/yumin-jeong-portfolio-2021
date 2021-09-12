@@ -23,7 +23,7 @@
   /*Linear gradient... */
 }
 
-.circles {
+.circle-1 {
     position: absolute;
     z-index: -1;
     top: 0%;
@@ -35,7 +35,34 @@
     filter: blur(30vh);
     opacity: 100%;
     transition: 0.5s ease;
-    overflow: hidden;
+}
+
+.circle-2 {
+    position: absolute;
+    z-index: -1;
+    top: 0%;
+    left: 30%;
+    width: 50vh;
+    height: 50vh;
+    background: #F28907;
+    border-radius: 50%;
+    filter: blur(30vh);
+    opacity: 100%;
+    transition: 0.7s ease;
+}
+
+.circle-3 {
+    position: absolute;
+    z-index: -1;
+    bottom: 0%;
+    right: 0%;
+    width: 75vh;
+    height: 75vh;
+    background: #CDA291;
+    border-radius: 50%;
+    filter: blur(30vh);
+    opacity: 100%;
+    transition: 0.5s ease;
 }
 
 

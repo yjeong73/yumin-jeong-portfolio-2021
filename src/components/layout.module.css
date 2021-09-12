@@ -1,17 +1,30 @@
 @import "./typography.css";
+@import '~material-design-icons/iconfont/material-icons.css';
 
 :root {
-    --darkestgreen: #1C261D;
-    --mint: #89A67C;
-    --mutedmint: #B2BFA8;
-    --green: #42592A;
-    --lightgreen: #EAF2DC;
+    --darkbrown: #4D4637;
+    --lightbrown: #A7905E;
+    --orange: #F28907;
+    --lightorange: #F2A007;
+    --yellow: #F2C335;
+    --lightyellow: #F2D479;
+    --lightestyellow: #FFEFCA;
+    --mutedpink: #CDA291;
+}
+
+::selection {
+  background: var(--mutedpink);
 }
 
 body {
-	/*background: #B7C57D;*/
+	background:white;
     position: relative;
-    background: white;
+    /* background:
+        radial-gradient(63.33% 49.07% at -22.76% 43.9%, rgba(167, 144, 94, 0.2) 0%, rgba(167, 144, 94, 0) 100%),
+        radial-gradient(74.75% 22.12% at 54.32% 106.52%, rgba(242, 160, 7, 0.2) 0%, rgba(242, 160, 7, 0) 100%),
+        radial-gradient(73.33% 36.44% at 118.49% 55.36%, rgba(205, 162, 145, 0.4) 0%, rgba(205, 162, 145, 0) 100%),
+        radial-gradient(138.75% 78.45% at 193.91% 2.62%, #F2D479 0%, rgba(242, 212, 121, 0) 100%),
+        #FFFFFF; */
     margin: 0;
 }
 
@@ -34,15 +47,18 @@ body {
 .container {
   margin: auto;
   width: 100%;
-  max-width: 1920px;
+
   /* border: 3px solid #73AD21; */
   font-family: sans-serif;
 }
 
 .introduction {
+    background: white;
+    z-index: -1;
     position: relative;
     overflow: hidden;
     width: 100%;
+    max-width: 1920px;
     height: 100vh;
     margin: auto;
     display: flex;
@@ -64,33 +80,29 @@ body {
 }
 
 .about-me {
-    background: #A2BC88;
     width: 100%;
     min-height: 100vh;
     /* border: 3px solid purple; */
-    border-top: 1px solid var(--green);
-    border-bottom: 1px solid #A2BC88;
-    box-shadow: inset 0px 0px 0px 4px var(--green), inset 0px 0px 0px 9px var(--mint), inset 0px 0px 0px 11px var(--green);
+    position: relative;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
 }
 
 .projects {
-    background: #E5F7D2;
     width: 100%;
     min-height: 100vh;
     /* border: 3px solid purple; */
-    border-top: 1px solid #578d2b;
-    border-bottom: 1px solid #E5F7D2;
-    box-shadow: inset 0px 0px 0px 4px #578d2b, inset 0px 0px 0px 9px #E5F7D2, inset 0px 0px 0px 11px #578d2b;
+    position: relative;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
 }
 
 .contact {
-    background: #82976D;
     width: 100%;
     min-height: 100vh;
+    position: relative;
     /* border: 3px solid purple; */
-    border-top: 1px solid #B7C57D;
-    border-bottom: 1px solid #B7C57D;
-    box-shadow: inset 0px 0px 0px 4px #578d2b, inset 0px 0px 0px 9px #82976D, inset 0px 0px 0px 11px #578d2b;
+    border-top: 1px solid white;
 }
 
 .project-container {
@@ -101,13 +113,31 @@ body {
     /* border: 3px solid pink; */
 }
 
+.plate {
+    background: white;
+    position: absolute;
+    z-index: -1;
+    opacity: 15%;
+    width: 98%;
+    height: 98%;
+    border-radius: 15px;
+
+    /*Centering*/
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+}
+
 /*TITLE SECTION TYPOGRAPHY*/
 
 .highlight {
     background: linear-gradient(
         to bottom,
         transparent 50%,
-        #EEF4CE 50%
+        var(--yellow) 50%
         );
     transition: 0.5s ease;
 }
@@ -117,49 +147,56 @@ body {
 }
 
 .home-intro {
-    font-family: 'Staatliches', cursive;
-    color: var(--green);
-    font-size: 13vh;
-    margin: 0;
+    font-family: 'Yeseva One', cursive;
+    text-align: left;
+    color: var(--darkbrown);
+    font-size: 10vh;
+    margin: auto;
+    margin-bottom: 0;
+    margin-left: 20%;
 }
 
 .home-description {
     font-family: 'Nanum Myeongjo', serif;
     font-style: normal;
     font-weight: bold;
-    color: var(--green);
+    text-align: left;
+    color: var(--darkbrown);
     font-size: 3.5vh;
     letter-spacing: 1px;
-    margin: 3px;
+    margin: auto;
+    margin-top: 0;
+    margin-left: calc(20% + 5px);
 }
 
 /*HEADINGS*/
 
 .heading {
-  font-family: 'Staatliches', cursive;
+  font-family: 'Yeseva One', cursive;
   text-align: center;
-  color: #578d2b;
+  color: var(--darkbrown);
   font-size: 7vh;
-  letter-spacing: 1vw;
+  letter-spacing: 0.3vw;
   margin: 0;
-  margin-bottom: 10vh;
+  margin-bottom: 2vh;
 }
 
 .heading-decoration {
-    font-family: 'Beth Ellen', cursive;
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: bold;
     text-align: center;
-    color: #578d2b;
+    color: var(--darkbrown);
     font-size: 25px;
     margin: 0;
     margin-top: 10vh;
 }
 
 .subheading {
-    font-family: 'Staatliches', cursive;
+    font-family: 'Yeseva One', cursive;
     width: 75%;
     margin: auto;
     margin-bottom: 15px;
-    color: #578d2b;
+    color: var(--darkbrown);
     font-size: 25px;
     letter-spacing: 5px;
 }
@@ -170,9 +207,11 @@ body {
     width: 75%;
     margin: auto;
     /* border: 3px solid yellow; */
-    display: grid;
-    grid-template-columns: 50% 50%;
     margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 3vh;
+    color: var(--darkbrown);
 }
 
 .profile-pic {
@@ -183,7 +222,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50%;
-    border: 3px solid #578d2b;
+    border: 10px solid var(--lightestyellow);
     display: inline-block;
 }
 
@@ -204,7 +243,7 @@ body {
 }
 
 .education-item {
-    color: #578d2b;
+    color: var(--darkbrown);
     font-family: 'Nanum Myeongjo', serif;
     font-size: 2.5vh;
     /* border-top: 1px solid black;
@@ -216,7 +255,7 @@ body {
 .education-GT {
     width: 10vh;
     height: 10vh;
-    background-color: #578d2b;
+    background-color: var(--lightyellow);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -229,7 +268,7 @@ body {
 .education-DHS {
     width: 10vh;
     height: 10vh;
-    background-color: #578d2b;
+    background-color: var(--lightyellow);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -251,7 +290,7 @@ body {
 }
 
 .skills-item {
-    color: #578d2b;
+    color: var(--darkbrown);
     font-family: 'Nanum Myeongjo', serif;
     font-weight: 800;
     font-size: 2.5vh;
@@ -270,7 +309,7 @@ body {
 }
 
 .tools-item {
-    color: #578d2b;
+    color: var(--darkbrown);
     font-family: 'Nanum Myeongjo', serif;
     font-weight: 800;
     font-size: 2.5vh;
@@ -291,10 +330,10 @@ body {
 .korean {
     width: 5vh;
     height: 5vh;
-    background-color: #578d2b;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 3px solid var(--lightyellow);
     border-radius: 50%;
     background-image: url("../images/korea.png");
     background-size: cover;
@@ -305,10 +344,10 @@ body {
 .english {
     width: 5vh;
     height: 5vh;
-    background-color: #578d2b;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 3px solid var(--lightyellow);
     border-radius: 50%;
     background-image: url("../images/us.png");
     background-size: cover;
@@ -316,7 +355,7 @@ body {
 }
 
 .language-item {
-    color: #578d2b;
+    color: var(--darkbrown);
     font-family: 'Nanum Myeongjo', serif;
     font-weight: 800;
     font-size: 2.5vh;
@@ -344,7 +383,7 @@ body {
 
 .bar {
   grid-column-end: 6;
-  background-color: #AA6728;
+  background-color: var(--lightorange);
   border-radius: 5px 0 0 5px;
   /* border-top: 1px solid red;
   border-bottom: 1px solid red;
@@ -354,7 +393,7 @@ body {
 
 .bar2 {
   grid-column-start: 1;
-  background-color: #E69A59;
+  background-color: var(--yellow);
   border-radius: 0 5px 5px 0;
   /* border-top: 1px solid red;
   border-bottom: 1px solid red;
@@ -386,9 +425,9 @@ body {
 }
 
 .project-description {
-    font-family: "Roboto-light";
-    color: #578d2b;
-    font-size: 18px;
+    font-family: "Nanum Myeongjo", serif;
+    color: var(--darkbrown);
+    font-size: 2.5vh;
     /* border-top: 1px solid red;
     border-bottom: 1px solid red;
     border-left: 1px solid red;
@@ -396,9 +435,10 @@ body {
 }
 
 .project-item {
-    font-family: "Roboto-light";
-    color: #578d2b;
+    font-family: 'Yeseva One', cursive;
+    color: var(--darkbrown);
     font-size: 18px;
+    margin-left: 5vw;
     border-top: 1px solid purple;
     border-bottom: 1px solid purple;
     border-left: 1px solid purple;
@@ -432,9 +472,9 @@ body {
 
 /* Links for Projects */
 .project-titles {
-    font-family: "Roboto";
-    color: #578d2b;
-    font-size: 30px;
+    font-family: 'Yeseva One', cursive;
+    color: var(--darkbrown);
+    font-size: 4vh;
     letter-spacing: 1px;
     margin-bottom: 0;
     margin-top: 0;
@@ -461,9 +501,10 @@ body {
 }
 
 .contact-item {
-    color: #578d2b;
-    font-family: "Roboto";
-    font-size: "18px";
+    color: var(--darkbrown);
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 2vh;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
@@ -479,6 +520,7 @@ ul {
 .nav-links {
   display: flex;
   position: fixed;
+  z-index: 1;
   right: 3vh;
   margin-top: 3vh;
   /* background: rgba(255, 255, 255, 0.3); */
@@ -496,14 +538,13 @@ ul {
 }
 
 .nav-link-text {
-  color: #578d2b;
-  font-family: 'Nanum Myeongjo', serif;
-  font-weight: 800;
+  color: var(--darkbrown);
+  font-family: 'Yeseva One', cursive;
   font-size: 2.5vh;
   letter-spacing: 1px;
   text-decoration: none;
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255, 0)),
-    linear-gradient(#578d2b, #578d2b);
+    linear-gradient(var(--orange), var(--orange));
   background-size: 100% 2px, 0 2px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
@@ -518,6 +559,7 @@ ul {
 .main-logo {
     display: flex;
     position: fixed;
+    z-index: 1;
     margin: 3vh;
     width: 100px;
     height: 50px;
