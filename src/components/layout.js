@@ -34,23 +34,21 @@ const Layout = ({ pageTitle, children }) => {
         />
       </AnchorLink>
       <nav className={navLinks}>
-        <ul>
-          <li className={navLinkItem}>
+          <div className={navLinkItem}>
             <AnchorLink to="/#aboutMe" className={navLinkText}>
                 ABOUT
             </AnchorLink>
-          </li>
-          <li className={navLinkItem}>
+          </div>
+          <div className={navLinkItem}>
           <AnchorLink to="/#projects" className={navLinkText}>
               PROJECTS
           </AnchorLink>
-          </li>
-          <li className={navLinkItem}>
+          </div>
+          <div className={navLinkItem}>
           <AnchorLink to="/#contactInfo" className={navLinkText}>
               CONTACT
           </AnchorLink>
-          </li>
-        </ul>
+          </div>
       </nav>
       <main className={container}>
         {children}
