@@ -10,6 +10,7 @@
 
 body {
 	/*background: #B7C57D;*/
+    position: relative;
     background: white;
     margin: 0;
 }
@@ -39,17 +40,11 @@ body {
 }
 
 .introduction {
+    position: relative;
+    overflow: hidden;
     width: 100%;
     height: 100vh;
-    border: 3px solid blue;
     margin: auto;
-    /* background:
-      radial-gradient(40.6% 68.81% at 77.99% 0%, #DEC693 20.83%, rgba(222, 198, 147, 0) 100%),
-      radial-gradient(30.23% 71.77% at 100% 100%, #83C69F 0%,
-      rgba(131, 198, 159, 0) 100%), radial-gradient(54.32% 46.65% at 0% 99.15%, #F5EAA6 0%, rgba(255, 229, 71, 0) 100%),
-      #FFFFFF; */
-    /* box-shadow: inset 0px 0px 0px 5vh var(--green), inset 0px 0px 0px 6vh var(--mint), inset 0px 0px 0px 7vh var(--green), inset 0px 0px 0px 7.5vh var(--mint); */
-    /* box-shadow: inset 0px 0px 0px 15vh var(--mint), inset 0px 0px 0px 16vh var(--green), inset 0px 0px 0px 17vh var(--mint), inset 0px 0px 0px 17.5vh var(--green); */
     display: flex;
     flex-direction: column;
     justify-content: center;
