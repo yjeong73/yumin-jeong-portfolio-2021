@@ -1,5 +1,6 @@
 // Step 1: Import React
 import * as React from 'react'
+import { useEffect } from 'react'
 //import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import CurvedText from '../components/CurvedText'
@@ -157,29 +158,28 @@ const IndexPage = ({ data }) => {
     setExpand3((prev) => !prev);
   };
 
-  $(document).mousemove(function (event) {
-      var windowWidth = $(window).width();
-      var windowHeight = $(window).height();
+  useEffect(() => {
+      $(document).mousemove(function (event) {
+        var windowWidth = $(window).width();
+        var windowHeight = $(window).height();
 
-      var mouseXpercentage = Math.round((event.pageX / windowWidth) * 100);
-      var mouseYpercentage = Math.round((event.pageY / windowHeight) * 100);
+        var mouseXpercentage = Math.round((event.pageX / windowWidth) * 100);
+        var mouseYpercentage = Math.round((event.pageY / windowHeight) * 100);
 
-      document.getElementById("circles").style.top = mouseXpercentage + "%";
-      document.getElementById("circles").style.left = mouseYpercentage + "%";
-
-      console.log("mouse moving:", mouseXpercentage, mouseYpercentage);
-    });
-
+        document.getElementById("circles").style.top = mouseXpercentage + "%";
+        document.getElementById("circles").style.left = mouseYpercentage + "%";
+        console.log("mouse moving:", mouseXpercentage, mouseYpercentage);
+      });
+  });
 
   return (
       <Layout pageTitle="Home Page">
-
         <div id="title" className={introduction}>
+            <div className={circles} id="circles"></div>
             <p className={homeIntro}>YUMIN JEONG</p>
             <p className={homeDescription}><span style={{fontFamily:"Beth Ellen, cursive"}}>Hello,</span> I'm a recent graduate with a passion for
             <br/><span className={highlight}>computer science</span> and <span className={highlight}>art</span> who is seeking
             <br/>job opportunities as a front-end engineer.</p>
-            <div className={circles} id="circles"></div>
         </div>
 
         <div id="aboutMe" className={aboutMe}>
