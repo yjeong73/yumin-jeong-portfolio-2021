@@ -19,12 +19,15 @@
 body {
 	background:white;
     position: relative;
-    /* background:
-        radial-gradient(63.33% 49.07% at -22.76% 43.9%, rgba(167, 144, 94, 0.2) 0%, rgba(167, 144, 94, 0) 100%),
-        radial-gradient(74.75% 22.12% at 54.32% 106.52%, rgba(242, 160, 7, 0.2) 0%, rgba(242, 160, 7, 0) 100%),
-        radial-gradient(73.33% 36.44% at 118.49% 55.36%, rgba(205, 162, 145, 0.4) 0%, rgba(205, 162, 145, 0) 100%),
-        radial-gradient(138.75% 78.45% at 193.91% 2.62%, #F2D479 0%, rgba(242, 212, 121, 0) 100%),
-        #FFFFFF; */
+    background:
+        radial-gradient(50.83% 16.6% at 94.74% 100%, rgba(242, 137, 7, 0.7) 0%, rgba(242, 137, 7, 0) 100%),
+        radial-gradient(74.17% 23.4% at 5.57% 100%, rgba(167, 144, 94, 0.7) 0%, rgba(167, 144, 94, 0) 100%),
+        radial-gradient(37.52% 10.54% at 100% 73.79%, rgba(242, 160, 7, 0.7) 0%, rgba(242, 160, 7, 0) 100%),
+        radial-gradient(72.99% 20.94% at 5.57% 63.06%, rgba(205, 162, 145, 0.7) 0%, rgba(205, 162, 145, 0) 100%),
+        radial-gradient(57.24% 16% at 0% 42.49%, rgba(255, 239, 202, 0.7) 0%, rgba(255, 239, 202, 0) 100%),
+        radial-gradient(36.93% 10.87% at 100% 44.02%, rgba(242, 137, 7, 0.7) 0%, rgba(242, 137, 7, 0) 100%),
+        radial-gradient(43.59% 12.52% at 100% 29.79%, rgba(242, 195, 53, 0.7) 27.08%, rgba(242, 195, 53, 0) 100%),
+        #FFFFFF;
     margin: 0;
 }
 
@@ -84,8 +87,8 @@ body {
     min-height: 100vh;
     /* border: 3px solid purple; */
     position: relative;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
 }
 
 .projects {
@@ -93,8 +96,8 @@ body {
     min-height: 100vh;
     /* border: 3px solid purple; */
     position: relative;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
 }
 
 .contact {
@@ -102,7 +105,7 @@ body {
     min-height: 100vh;
     position: relative;
     /* border: 3px solid purple; */
-    border-top: 1px solid white;
+    border-top: 1px solid transparent;
 }
 
 .project-container {
@@ -113,22 +116,50 @@ body {
     /* border: 3px solid pink; */
 }
 
-.plate {
-    background: white;
-    position: absolute;
-    z-index: -1;
-    opacity: 15%;
-    width: 98%;
-    height: 98%;
-    border-radius: 15px;
+/* Checks browser support for frosted plate effect*/
+@supports (backdrop-filter: none) {
+    .plate {
+        position: absolute;
+        z-index: -1;
+        width: 98%;
+        height: 98%;
+        border-radius: 15px;
 
-    /*Centering*/
-    margin: auto;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    text-align: center;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5);
+        background: white;
+        opacity: 25%;
+        backdrop-filter: blur(5px);
+
+        /*Centering*/
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        text-align: center;
+    }
+}
+
+@supports not (backdrop-filter: none) {
+    .plate {
+        position: absolute;
+        z-index: -1;
+        width: 98%;
+        height: 98%;
+        border-radius: 15px;
+
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5);
+        background: white;
+        opacity: 25%;
+
+        /*Centering*/
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        text-align: center;
+    }
 }
 
 /*TITLE SECTION TYPOGRAPHY*/
