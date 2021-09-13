@@ -21,7 +21,7 @@ import {
     projects,
     highlight,
     plate,
-} from '../components/layout.module.css'
+} from '../components/sections.module.css'
 
 const useStyles = makeStyles(theme => ({
   buttons: {
