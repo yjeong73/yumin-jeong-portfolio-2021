@@ -383,6 +383,7 @@
 
 .contact-item:hover {
     transform: translateY(-5px);
+    color: var(--lightbrown);
     transition: 0.3s ease;
 }
 
