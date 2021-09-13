@@ -11,11 +11,13 @@ import {
     homeIntro,
     homeDescription,
     introduction,
-    highlight,
     circle1,
     circle2,
     circle3,
 } from '../components/layout.module.css'
+import {
+    highlight,
+} from '../components/sections.module.css'
 
 const IndexPage = () => {
   useEffect(() => {
