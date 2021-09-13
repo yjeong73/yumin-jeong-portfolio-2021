@@ -27,7 +27,7 @@ import {
     english,
     highlight,
     plate,
-} from '../components/layout.module.css'
+} from '../components/sections.module.css'
 
 const useStyles = makeStyles(theme => ({
   divider: {

@@ -26,9 +26,9 @@ const Layout = ({ pageTitle, children }) => {
       <title>{data.site.siteMetadata.title} | {pageTitle}</title>
       <AnchorLink to="/#title" className={mainLogo}>
         <StaticImage
-          src="../images/logo-green.png"
-          width={100}
-          height={50}
+          src="../images/new_logo.png"
+          width={40}
+          height={40}
         />
       </AnchorLink>
       <nav className={navLinks}>
