@@ -49,7 +49,7 @@ const AboutSection = () => {
             <div className={profile}>
                 <div className={profilePic}>
                 </div>
-                <p>Somewhat useful information about myself</p>
+                <p>I've been coding for about 4 years and I like building and designing things. <br/>In my spare time, I enjoy supporting local Asian American artists, <br/>and I've had some opportunities work as a <a href="https://open.spotify.com/artist/5BN3GsRbz8oZM5A65K36Lx" target="_blank" style={{color: "#CDA291", textDecoration: "none"}}>cover art designer</a> too.</p>
             </div>
 
             <Divider className={classes.divider}/>
