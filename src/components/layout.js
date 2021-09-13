@@ -1,14 +1,12 @@
 import * as React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { StaticImage } from 'gatsby-plugin-image'
 import {
     container,
-    heading,
     navLinks,
     navLinkItem,
     navLinkText,
-    siteTitle,
     mainLogo,
 } from './layout.module.css'
 
