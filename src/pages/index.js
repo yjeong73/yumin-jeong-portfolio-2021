@@ -18,19 +18,19 @@ import {
 } from '../components/layout.module.css'
 
 const IndexPage = () => {
-  useEffect(() => {
-      $(document).mousemove(function (event) {
-        var windowWidth = $(window).width();
-        var windowHeight = $(window).height();
-
-        var mouseXpercentage = Math.round((event.pageX / windowWidth) * 100);
-        var mouseYpercentage = Math.round((event.pageY / windowHeight) * 100);
-
-        document.getElementById("circles").style.top = mouseXpercentage + "%";
-        document.getElementById("circles").style.left = mouseYpercentage + "%";
-        console.log("mouse moving:", mouseXpercentage, mouseYpercentage);
-      });
-  });
+  // useEffect(() => {
+  //     $(document).mousemove(function (event) {
+  //       var windowWidth = $(window).width();
+  //       var windowHeight = $(window).height();
+  //
+  //       var mouseXpercentage = Math.round((event.pageX / windowWidth) * 100);
+  //       var mouseYpercentage = Math.round((event.pageY / windowHeight) * 100);
+  //
+  //       document.getElementById("circles").style.top = mouseXpercentage + "%";
+  //       document.getElementById("circles").style.left = mouseYpercentage + "%";
+  //       console.log("mouse moving:", mouseXpercentage, mouseYpercentage);
+  //     });
+  // });
 
   return (
       <Layout pageTitle="Home Page">
