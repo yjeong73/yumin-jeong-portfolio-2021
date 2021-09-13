@@ -39,13 +39,17 @@ const ContactSection = () => {
 
             <div className={contactGrid}>
                 <div className={contactItem}>
-                    <LinkedInIcon style={{background: "#F2D479", border: "1vh solid #F2D479", borderRadius: "50%"}}></LinkedInIcon>
+                    <a href="https://www.linkedin.com/in/yumin-jeong/" target="_blank" style={{color: "#4D4637"}}>
+                        <LinkedInIcon style={{background: "#F2D479", border: "1vh solid #F2D479", borderRadius: "50%"}}></LinkedInIcon>
+                    </a>
                 </div>
                 <div className={contactItem + ' ' + disabled} style={{marginLeft:"0"}}>
                     https://www.linkedin.com/in/yumin-jeong/
                 </div>
                 <div className={contactItem}>
-                    <EmailIcon style={{background: "#F2D479", border: "1vh solid #F2D479", borderRadius: "50%"}}></EmailIcon>
+                    <a href={`mailto:ymj982@gmail.com`} style={{color: "#4D4637"}}>
+                        <EmailIcon style={{background: "#F2D479", border: "1vh solid #F2D479", borderRadius: "50%"}}></EmailIcon>
+                    </a>
                 </div>
                 <div className={contactItem + ' ' + disabled} style={{marginLeft:"0"}}>
                     ymj982@gmail.com
