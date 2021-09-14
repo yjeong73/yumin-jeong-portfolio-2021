@@ -174,28 +174,71 @@
     margin: auto;
 } */
 
-.skills {
-    width: 75%;
-    /* border: 3px solid yellow; */
-    display: grid;
-    grid-template-columns: 80% 20%;
-    margin-bottom: 50px;
-    text-align: right;
+.skills-grid {
+    position: relative;
+    display: flex;
+    /* border: 3px solid green; */
+    width: 50%;
     margin: auto;
-    margin-right: 0;
 }
 
-.skills-item {
+.info-container {
+    position: relative;
+    display: flex;
+    width: 50%;
+    border: 3px solid yellow;
+    margin: auto;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    /* border: 1px solid red; */
+}
+
+.skillsItem {
+    width: auto;
     color: var(--darkbrown);
     font-family: 'Nanum Myeongjo', serif;
     font-weight: 800;
     font-size: 2.5vh;
-    /* border: 3px solid black; */
+    /* border: 1px solid black; */
+    margin-bottom: 15px;
+}
+
+.test {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* border: 1px solid orange; */
+}
+
+.bar-animation {
+    /* border: 1px solid red; */
+    margin-bottom: 15px;
+    animation: 3s forwards slidein;
+}
+
+@keyframes slidein {
+  from {
+    width: 0%;
+    height: 100%;
+    border-radius: 5px;
+    background: var(--yellow);
+  }
+
+  to {
+    width: attr(target);
+    height: 100%;
+    border-radius: 5px;
+    background: var(--orange);
+  }
 }
 
 .tools {
     width: 75%;
-    /* border: 3px solid yellow; */
+    border: 3px solid yellow;
     display: grid;
     grid-template-columns: 20% 80%;
     margin-bottom: 50px;
@@ -209,7 +252,7 @@
     font-family: 'Nanum Myeongjo', serif;
     font-weight: 800;
     font-size: 2.5vh;
-    /* border: 3px solid black; */
+    border: 3px solid black;
 }
 
 .language {

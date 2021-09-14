@@ -1,5 +1,7 @@
 import * as React from 'react'
 import Divider from "@material-ui/core/Divider";
+import "animate.css/animate.min.css"
+import ScrollAnimation from 'react-animate-on-scroll';
 import { makeStyles } from "@material-ui/core/styles";
 import {
     headingDecoration,
@@ -27,6 +29,11 @@ import {
     english,
     highlight,
     plate,
+    test,
+    testChart,
+    infoContainer,
+    skillsGrid,
+    barAnimation,
 } from '../components/sections.module.css'
 
 const useStyles = makeStyles(theme => ({
@@ -41,15 +48,22 @@ const useStyles = makeStyles(theme => ({
 
 const AboutSection = () => {
     const classes = useStyles();
+
     return (
         <div className={aboutMe}>
             <div className={plate}></div>
-            <p className={headingDecoration}><span className={highlight}>01.🙋</span></p>
-            <h1 className={heading}>About Me</h1>
+            <ScrollAnimation animateIn="animate__fadeInUp" animateOnce={true}>
+                <p className={headingDecoration}><span className={highlight}>01.🙋‍♀️</span></p>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="animate__fadeInUp" animateOnce={true}>
+                <h1 className={heading}>About Me</h1>
+            </ScrollAnimation>
+
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={500}>
             <div className={profile}>
                 <div className={profilePic}>
                 </div>
-                <p>I've been coding for about 4 years and I like building and designing things. <br/>In my spare time, I enjoy supporting local Asian American artists, <br/>and I've had some opportunities work as a <a href="https://open.spotify.com/artist/5BN3GsRbz8oZM5A65K36Lx" target="_blank" style={{color: "#CDA291", textDecoration: "none"}}>cover art designer</a> too.</p>
+                <p>Hi, I've been coding for about 4 years and I like building and designing things. <br/>In my spare time, I enjoy supporting local Asian American artists, <br/>and I've had some opportunities work as a <a href="https://open.spotify.com/artist/5BN3GsRbz8oZM5A65K36Lx" target="_blank" style={{color: "#CDA291", textDecoration: "none"}}>cover art designer</a> too.</p>
             </div>
 
             <Divider className={classes.divider}/>
@@ -88,57 +102,57 @@ const AboutSection = () => {
 
             <Divider className={classes.divider}/>
 
-            <p className={subheading} style={{textAlign:"right"}}>SKILLS:</p>
+            <p className={subheading}>SKILLS:</p>
+            </ScrollAnimation>
 
-            <div className={middle}>
-            <div className={skills}>
-                <div className={chart}>
-                    <div className={bar} style={{gridColumnStart: "2",  animation: "0.5s ease"}}></div>
-                    <div className={bar} style={{gridColumnStart: "2"}}></div>
-                    <div className={bar} style={{gridColumnStart: "5"}}></div>
-                    <div className={bar} style={{gridColumnStart: "3"}}></div>
-                    <div className={bar} style={{gridColumnStart: "4"}}></div>
-                    <div className={bar} style={{gridColumnStart: "4"}}></div>
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true}>
+            <div className={skillsGrid}>
+                <div className={skills}>
+                    <div className={skillsItem}>Java</div>
+                    <div className={skillsItem}>Python</div>
+                    <div className={skillsItem}>C#</div>
+                    <div className={skillsItem}>CSS</div>
+                    <div className={skillsItem}>JavaScript</div>
+                    <div className={skillsItem}>HTML</div>
                 </div>
-                <div className={skillsItem}>
-                    <p style={{margin: "0", marginBottom: "3vh"}}>Java</p>
-                    <p style={{margin: "0", marginBottom: "3vh"}}>Python</p>
-                    <p style={{margin: "0", marginBottom: "3vh"}}>C#</p>
-                    <p style={{margin: "0", marginBottom: "3vh"}}>CSS</p>
-                    <p style={{margin: "0", marginBottom: "3vh"}}>JavaScript</p>
-                    <p style={{margin: "0"}}>HTML</p>
+
+                <div className={test}>
+                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
+                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
+                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
+                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
+                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
+                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
                 </div>
             </div>
-            </div>
+            </ScrollAnimation>
 
             <Divider className={classes.divider}/>
 
             <p className={subheading}>TOOLS:</p>
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true}>
+            <div className={skillsGrid}>
+                <div className={skills}>
+                    <div className={skillsItem}>Git</div>
+                    <div className={skillsItem}>Angular</div>
+                    <div className={skillsItem}>React</div>
+                    <div className={skillsItem}>Unity</div>
+                    <div className={skillsItem}>Procreate</div>
+                    <div className={skillsItem}>Photoshop</div>
+                    <div className={skillsItem}>Figma</div>
+                </div>
 
-            <div className={middle}>
-            <div className={tools}>
-                <div className={toolsItem}>
-                    <p style={{margin: "0", marginBottom: "3vh"}}>Git</p>
-                    <p style={{margin: "0", marginBottom: "3vh"}}>Angular</p>
-                    <p style={{margin: "0", marginBottom: "3vh"}}>React</p>
-                    <p style={{margin: "0", marginBottom: "3vh"}}>Unity</p>
-                    <p style={{margin: "0", marginBottom: "3vh"}}>Android Studio</p>
-                    <p style={{margin: "0", marginBottom: "3vh"}}>Procreate</p>
-                    <p style={{margin: "0", marginBottom: "3vh"}}>Adobe Photoshop</p>
-                    <p style={{margin: "0"}}>Figma</p>
-                </div>
-                <div className={chart2}>
-                    <div className={bar2} style={{gridColumnEnd: "4"}}></div>
-                    <div className={bar2} style={{gridColumnEnd: "3"}}></div>
-                    <div className={bar2} style={{gridColumnEnd: "3"}}></div>
-                    <div className={bar2} style={{gridColumnEnd: "2"}}></div>
-                    <div className={bar2} style={{gridColumnEnd: "2"}}></div>
-                    <div className={bar2} style={{gridColumnEnd: "5"}}></div>
-                    <div className={bar2} style={{gridColumnEnd: "3"}}></div>
-                    <div className={bar2} style={{gridColumnEnd: "3"}}></div>
+                <div className={test}>
+                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
+                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
+                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
+                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
+                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
+                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
+                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
                 </div>
             </div>
-            </div>
+            </ScrollAnimation>
 
             <Divider className={classes.divider}/>
 
@@ -161,7 +175,6 @@ const AboutSection = () => {
                 </div>
             </div>
             </div>
-
         </div>
     )
 }
