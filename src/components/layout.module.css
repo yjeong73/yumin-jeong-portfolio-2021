@@ -86,7 +86,7 @@ body {
     left: 0%;
     width: 100vh;
     height: 100vh;
-    background: #F2D479;
+    background: var(--lightyellow);
     border-radius: 50%;
     filter: blur(30vh);
     opacity: 100%;
@@ -100,7 +100,7 @@ body {
     left: 30%;
     width: 50vh;
     height: 50vh;
-    background: #F28907;
+    background: var(--orange);
     border-radius: 50%;
     filter: blur(30vh);
     opacity: 100%;
@@ -114,7 +114,33 @@ body {
     right: 0%;
     width: 75vh;
     height: 75vh;
-    background: #CDA291;
+    background: var(--mutedpink);
+    border-radius: 50%;
+    filter: blur(30vh);
+    opacity: 100%;
+    transition: 0.5s ease;
+}
+
+.random-circle-1 {
+    position: absolute;
+    z-index: -2;
+    top: 0%;
+    left: 0%;
+    width: 75vh;
+    height: 75vh;
+    border-radius: 50%;
+    filter: blur(30vh);
+    opacity: 100%;
+    transition: 0.5s ease;
+}
+
+.random-circle-2 {
+    position: absolute;
+    z-index: -2;
+    top: 0%;
+    right: 0%;
+    width: 50vh;
+    height: 50vh;
     border-radius: 50%;
     filter: blur(30vh);
     opacity: 100%;
