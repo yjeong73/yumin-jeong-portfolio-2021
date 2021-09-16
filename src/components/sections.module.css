@@ -124,9 +124,9 @@
 .education {
     width: 50%;
     margin: auto;
-    border: 3px solid yellow;
     display: grid;
     grid-template-columns: 10% 35% 55%;
+    column-gap: 15px;
     margin-bottom: 5vh;
 }
 
@@ -134,36 +134,9 @@
     color: var(--darkbrown);
     font-family: 'Nanum Myeongjo', serif;
     font-size: 2.5vh;
-    border: 1px solid black;
 }
 
-/* .education-GT {
-    width: 10vh;
-    height: 10vh;
-    background-color: var(--lightyellow);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-image: url("../images/gt.png");
-    background-size: cover;
-    margin: auto;
-} */
-
-/* .education-DHS {
-    width: 10vh;
-    height: 10vh;
-    background-color: var(--lightyellow);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background-image: url("../images/dhs.png");
-    background-size: cover;
-    margin: auto;
-} */
-
-.skills-grid {
+.skills {
     position: relative;
     display: flex;
     /* border: 3px solid green; */
@@ -171,7 +144,7 @@
     margin: auto;
 }
 
-.skills {
+.skills-item {
     display: flex;
     flex-direction: column;
     width: auto;
@@ -195,7 +168,7 @@
     /* border: 1px solid red; */
 }
 
-.test {
+.chart {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -223,47 +196,19 @@
 
 .language {
     width: 50%;
-    border: 3px solid yellow;
-    display: grid;
-    grid-template-columns: 85% 15%;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
     margin: auto;
-    margin-bottom: 5vh;
+    margin-bottom: 15px;
 }
-
-/* .korean {
-    width: 5vh;
-    height: 5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid var(--lightyellow);
-    border-radius: 50%;
-    background-image: url("../images/korea.png");
-    background-size: cover;
-    background-position: 50% 50%;
-    margin: auto;
-} */
-
-/* .english {
-    width: 5vh;
-    height: 5vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid var(--lightyellow);
-    border-radius: 50%;
-    background-image: url("../images/us.png");
-    background-size: cover;
-    margin: auto;
-} */
 
 .language-item {
     color: var(--darkbrown);
     font-family: 'Nanum Myeongjo', serif;
     font-weight: 800;
     font-size: 2.5vh;
-    border: 1px solid black;
 }
 
 /*PROJECTS*/
