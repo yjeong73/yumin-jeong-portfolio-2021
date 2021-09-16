@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Divider from "@material-ui/core/Divider";
+import { StaticImage } from 'gatsby-plugin-image'
 import "animate.css/animate.min.css"
 import ScrollAnimation from 'react-animate-on-scroll';
 import { makeStyles } from "@material-ui/core/styles";
@@ -9,23 +10,19 @@ import {
     subheading,
     education,
     educationItem,
-    educationGT,
-    educationDHS,
     skills,
     skillsItem,
     percentage,
     aboutMe,
     profilePic,
     profile,
-    middle,
     language,
     languageItem,
     korean,
     english,
     highlight,
     plate,
-    test,
-    skillsGrid,
+    chart,
     barAnimation,
 } from '../components/sections.module.css'
 
@@ -65,30 +62,19 @@ const AboutSection = () => {
             <p className={subheading}>EDUCATION:</p>
 
                 <div className={education}>
-                    <div className={educationGT}>
+                    <div className={educationItem} style={{background: "#F2D479", borderRadius: "50%", border: "none", height: "75px", width:"75px", margin: "auto"}}>
+                        <StaticImage
+                          src="../images/gt.png"
+                        />
                     </div>
                     <div className={educationItem}>
                         <p style={{fontWeight: "800", marginTop: "5px", marginBottom: "5px"}}>Georgia Institute of Technology</p>
-                        <p style={{margin: "0px"}}>Aug 2017 - May 2021</p>
-                        <p style={{margin: "0px", fontFamily: "Nanum Myeongjo, serif", fontSize: "2.5vh"}}>📍<i>Atlanta, Georgia</i></p>
+                        <p style={{margin: "0px", color: "#A7905E"}}>Aug 2017 - May 2021</p>
+                        <p style={{margin: "0px", color: "#A7905E"}}>📍<i>Atlanta, Georgia</i></p>
                     </div>
                     <div className={educationItem}>
                         <p style={{fontWeight: "800", marginTop: "5px", marginBottom: "5px"}}>Bachelor of Science in Computer Science</p>
-                        <p style={{margin: "0px"}}>Concentration: Intelligence-Media</p>
-                    </div>
-                </div>
-
-                <div className={education}>
-                    <div className={educationDHS}>
-                    </div>
-                    <div className={educationItem}>
-                        <p style={{fontWeight: "800", marginTop: "5px", marginBottom: "5px"}}>Duluth High School</p>
-                        <p style={{margin: "0px"}}>Aug 2013 - May 2017</p>
-                        <p style={{margin: "0px", fontFamily: "Nanum Myeongjo, serif", fontSize: "2.5vh"}}>📍<i>Duluth, Georgia</i></p>
-                    </div>
-                    <div className={educationItem}>
-                        <p style={{fontWeight: "800", marginTop: "5px", marginBottom: "5px"}}>Honors?</p>
-                        <p>What did I do..</p>
+                        <p style={{margin: "0px", color: "#A7905E"}}>Concentration: Intelligence-Media</p>
                     </div>
                 </div>
 
@@ -98,8 +84,8 @@ const AboutSection = () => {
             </ScrollAnimation>
 
             <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true}>
-            <div className={skillsGrid}>
-                <div className={skills}>
+            <div className={skills}>
+                <div className={skillsItem}>
                     <p style={{margin: "0", marginBottom: "15px"}}>Java</p>
                     <p style={{margin: "0", marginBottom: "15px"}}>Python</p>
                     <p style={{margin: "0", marginBottom: "15px"}}>C#</p>
@@ -108,7 +94,7 @@ const AboutSection = () => {
                     <p style={{margin: "0", marginBottom: "15px"}}>HTML</p>
                 </div>
 
-                <div className={test}>
+                <div className={chart}>
                     <div style={{height: "100%", marginBottom: "15px", width: "80%"}}>
                         <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(242, 195, 53, 0.7), rgba(242, 137, 7, 0.7))"}}></ScrollAnimation>
                     </div>
@@ -145,8 +131,8 @@ const AboutSection = () => {
 
             <p className={subheading}>TOOLS:</p>
             <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true}>
-            <div className={skillsGrid}>
-                <div className={skills}>
+            <div className={skills}>
+                <div className={skillsItem}>
                     <p style={{margin: "0", marginBottom: "15px"}}>Git</p>
                     <p style={{margin: "0", marginBottom: "15px"}}>Angular</p>
                     <p style={{margin: "0", marginBottom: "15px"}}>React</p>
@@ -156,7 +142,7 @@ const AboutSection = () => {
                     <p style={{margin: "0", marginBottom: "15px"}}>Figma</p>
                 </div>
 
-                <div className={test}>
+                <div className={chart}>
                     <div style={{height: "100%", marginBottom: "15px", width: "80%"}}>
                         <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(205, 162, 145, 0.7), rgba(179, 129, 91, 0.7))"}}></ScrollAnimation>
                     </div>
@@ -197,18 +183,30 @@ const AboutSection = () => {
             <p className={subheading}>LANGUAGES:</p>
 
             <div className={language}>
+                <div style={{height: "50px", width: "50px", borderRadius: "50%", border: "5px solid #F2D479"}}>
+                    <StaticImage
+                      src="../images/korea.png"
+                      width={100}
+                      height={100}
+                      imgStyle={{borderRadius: "50%"}}
+                    />
+                </div>
                 <div className={languageItem}>
                     <p>Korean (Mother tongue)</p>
                 </div>
-                <div className={korean}>
-                </div>
             </div>
 
-            <div className={language}>
+            <div className={language} style={{marginBottom: "15vh"}}>
+                <div style={{height: "50px", width: "50px", borderRadius: "50%", border: "5px solid #F2D479"}}>
+                    <StaticImage
+                      src="../images/us.png"
+                      width={100}
+                      height={100}
+                      imgStyle={{borderRadius: "50%"}}
+                    />
+                </div>
                 <div className={languageItem}>
                     <p>English (Fluent)</p>
-                </div>
-                <div className={english}>
                 </div>
             </div>
         </div>
