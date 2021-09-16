@@ -3,6 +3,7 @@ import Divider from "@material-ui/core/Divider";
 import { makeStyles } from "@material-ui/core/styles";
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import GitHubIcon from '@material-ui/icons/GitHub';
 import Fade from '@material-ui/core/Fade';
 import { Button } from '@material-ui/core';
 import { useAllMdx } from "../hooks/use-all-mdx";
@@ -14,6 +15,8 @@ import {
     projectDescription,
     projectGrid,
     projectItem,
+    projectPhoto,
+    projectIcons,
     box1,
     box2,
     viewMore,
@@ -29,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     // border: "2px solid #578d2b",
     // borderRadius: "0px",
     background: "#F2D479",
-    borderRadius: "0px",
+    borderRadius: "3px",
     color: "#4D4637",
     fontFamily: "Open Sans, sans-serif",
     fontWeight: "bold",
@@ -42,8 +45,8 @@ const useStyles = makeStyles(theme => ({
   },
 
   divider: {
-    background: "#4D4637",
-    width: "75%",
+    background: "rgba(0, 0, 0, 0.1)",
+    width: "40%",
     margin: "auto",
     marginBottom: "50px",
     marginTop: "50px",
@@ -94,7 +97,7 @@ const ProjectsSection = () => {
             <div className={projectGrid}>
 
                 <div className={box1}>
-                    <div className={projectItem}>
+                    <div className={projectPhoto}>
                         <GatsbyImage
                           imgStyle={{width: "100%", height: "100"}}
                           image={getImage(firstItem.frontmatter.hero_image)}
@@ -111,12 +114,18 @@ const ProjectsSection = () => {
                         <p style={{fontSize: "18px"}}><span className={highlight}>Technology&#58;</span>  <span style={{fontFamily: "Nanum Myeongjo, serif"}}>
                         {firstItem.frontmatter.technology}</span></p>
 
-                        <Button
-                            onClick={handleEvent1}
-                            className={classes.buttons}
-                        >
-                            Project Description<ExpandMoreIcon></ExpandMoreIcon>
-                        </Button>
+                        <div className={projectIcons}>
+                            <Button
+                                onClick={handleEvent1}
+                                className={classes.buttons}
+                            >
+                                Project Description<ExpandMoreIcon></ExpandMoreIcon>
+                            </Button>
+
+                            <a title="GitHub" href="https://github.com/yjeong73/testing-website" target="_blank" style={{display: "table-cell", color: "#4D4637"}}>
+                                <GitHubIcon></GitHubIcon>
+                            </a>
+                        </div>
                     </div>
 
                     <div className={projectItem}>
@@ -137,9 +146,9 @@ const ProjectsSection = () => {
             <div className={projectGrid}>
 
                 <div className={box1}>
-                    <div className={projectItem}>
+                    <div className={projectPhoto}>
                         <GatsbyImage
-                          imgStyle={{width: "100%", height: "100%", border: "3px solid #578d2b"}}
+                          imgStyle={{width: "100%", height: "100%"}}
                           image={getImage(secondItem.frontmatter.hero_image)}
                         />
                     </div>
@@ -154,12 +163,17 @@ const ProjectsSection = () => {
                         <p style={{fontSize: "18px"}}><span className={highlight}>Technology&#58;</span>  <span style={{fontFamily: "Nanum Myeongjo, serif"}}>
                         {secondItem.frontmatter.technology}</span></p>
 
-                        <Button
-                            onClick={handleEvent2}
-                            className={classes.buttons}
-                        >
-                            Project Description<ExpandMoreIcon></ExpandMoreIcon>
-                        </Button>
+                        <div className={projectIcons}>
+                            <Button
+                                onClick={handleEvent2}
+                                className={classes.buttons}
+                            >
+                                Project Description<ExpandMoreIcon></ExpandMoreIcon>
+                            </Button>
+                            <a title="GitHub" href="https://github.com/william-crawford/brainy-phonics-web" target="_blank" style={{display: "table-cell", color: "#4D4637"}}>
+                                <GitHubIcon></GitHubIcon>
+                            </a>
+                        </div>
                     </div>
 
                     <div className={projectItem}>
@@ -179,9 +193,9 @@ const ProjectsSection = () => {
             <div className={projectGrid}>
 
                 <div className={box1}>
-                    <div className={projectItem}>
+                    <div className={projectPhoto}>
                         <GatsbyImage
-                          imgStyle={{width: "100%", height: "100%", border: "3px solid #578d2b"}}
+                          imgStyle={{width: "100%", height: "100%"}}
                           image={getImage(thirdItem.frontmatter.hero_image)}
                         />
                     </div>
@@ -196,12 +210,15 @@ const ProjectsSection = () => {
                         <p style={{fontSize: "18px"}}><span className={highlight}>Technology&#58;</span>  <span style={{fontFamily: "Nanum Myeongjo, serif"}}>
                         {thirdItem.frontmatter.technology}</span></p>
 
-                        <Button
-                            onClick={handleEvent3}
-                            className={classes.buttons}
-                        >
-                            Project Description<ExpandMoreIcon></ExpandMoreIcon>
-                        </Button>
+                        <div className={projectIcons}>
+                            <Button
+                                onClick={handleEvent3}
+                                className={classes.buttons}
+                            >
+                                Project Description<ExpandMoreIcon></ExpandMoreIcon>
+                            </Button>
+                            <GitHubIcon style={{color: "rgba(0, 0, 0, 0.2)"}}></GitHubIcon>
+                        </div>
                     </div>
 
                     <div className={projectItem}>
