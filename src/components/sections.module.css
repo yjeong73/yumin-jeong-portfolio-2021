@@ -194,6 +194,7 @@
     display: flex;
     flex-direction: column;
     width: auto;
+    margin-right: 15px;
     /* border: 1px solid red; */
 }
 
@@ -216,7 +217,6 @@
 
 .bar-animation {
     /* border: 1px solid red; */
-    margin-bottom: 15px;
     animation: 3s forwards slidein;
 }
 
@@ -225,14 +225,12 @@
     width: 0%;
     height: 100%;
     border-radius: 5px;
-    background: var(--yellow);
   }
 
   to {
-    width: attr(target);
+    width: 100%;
     height: 100%;
     border-radius: 5px;
-    background: var(--orange);
   }
 }
 

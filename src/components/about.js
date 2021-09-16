@@ -3,6 +3,7 @@ import Divider from "@material-ui/core/Divider";
 import "animate.css/animate.min.css"
 import ScrollAnimation from 'react-animate-on-scroll';
 import { makeStyles } from "@material-ui/core/styles";
+import { useEffect } from 'react'
 import {
     headingDecoration,
     heading,
@@ -48,6 +49,7 @@ const useStyles = makeStyles(theme => ({
 
 const AboutSection = () => {
     const classes = useStyles();
+    // document.getElementById("skill1").style.background = "white";
 
     return (
         <div className={aboutMe}>
@@ -117,12 +119,24 @@ const AboutSection = () => {
                 </div>
 
                 <div className={test}>
-                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
-                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
-                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
-                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
-                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
-                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
+                    <div style={{height: "100%", marginBottom: "15px", width: "80%"}}>
+                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(242, 195, 53, 0.7), rgba(242, 137, 7, 0.7))"}}></ScrollAnimation>
+                    </div>
+                    <div style={{height: "100%", marginBottom: "15px", width: "80%"}}>
+                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(242, 195, 53, 0.7), rgba(242, 137, 7, 0.7))"}}></ScrollAnimation>
+                    </div>
+                    <div style={{height: "100%", marginBottom: "15px", width: "20%"}}>
+                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(242, 195, 53, 0.7), rgba(242, 137, 7, 0.7))"}}></ScrollAnimation>
+                    </div>
+                    <div style={{height: "100%", marginBottom: "15px", width: "60%"}}>
+                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(242, 195, 53, 0.7), rgba(242, 137, 7, 0.7))"}}></ScrollAnimation>
+                    </div>
+                    <div style={{height: "100%", marginBottom: "15px", width: "60%"}}>
+                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(242, 195, 53, 0.7), rgba(242, 137, 7, 0.7))"}}></ScrollAnimation>
+                    </div>
+                    <div style={{height: "100%", marginBottom: "15px", width: "40%"}}>
+                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(242, 195, 53, 0.7), rgba(242, 137, 7, 0.7))"}}></ScrollAnimation>
+                    </div>
                 </div>
             </div>
             </ScrollAnimation>
@@ -143,13 +157,27 @@ const AboutSection = () => {
                 </div>
 
                 <div className={test}>
-                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
-                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
-                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
-                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
-                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
-                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
-                    <ScrollAnimation animateIn={barAnimation} animateOnce={true}></ScrollAnimation>
+                    <div style={{height: "100%", marginBottom: "15px", width: "80%"}}>
+                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(205, 162, 145, 0.7), rgba(179, 129, 91, 0.7))"}}></ScrollAnimation>
+                    </div>
+                    <div style={{height: "100%", marginBottom: "15px", width: "60%"}}>
+                        <ScrollAnimation animateIn={barAnimation} animateOnce={true}style={{background: "linear-gradient(45deg, rgba(205, 162, 145, 0.7), rgba(179, 129, 91, 0.7))"}}></ScrollAnimation>
+                    </div>
+                    <div style={{height: "100%", marginBottom: "15px", width: "60%"}}>
+                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(205, 162, 145, 0.7), rgba(179, 129, 91, 0.7))"}}></ScrollAnimation>
+                    </div>
+                    <div style={{height: "100%", marginBottom: "15px", width: "40%"}}>
+                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(205, 162, 145, 0.7), rgba(179, 129, 91, 0.7))"}}></ScrollAnimation>
+                    </div>
+                    <div style={{height: "100%", marginBottom: "15px", width: "100%"}}>
+                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(205, 162, 145, 0.7), rgba(179, 129, 91, 0.7))"}}></ScrollAnimation>
+                    </div>
+                    <div style={{height: "100%", marginBottom: "15px", width: "60%"}}>
+                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(205, 162, 145, 0.7), rgba(179, 129, 91, 0.7))"}}></ScrollAnimation>
+                    </div>
+                    <div style={{height: "100%", marginBottom: "15px", width: "60%"}}>
+                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(205, 162, 145, 0.7), rgba(179, 129, 91, 0.7))"}}></ScrollAnimation>
+                    </div>
                 </div>
             </div>
             </ScrollAnimation>
