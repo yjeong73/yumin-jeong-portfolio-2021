@@ -16,8 +16,8 @@ import {
 
 const useStyles = makeStyles(theme => ({
   divider: {
-    background: "#4D4637",
-    width: "75%",
+    background: "rgba(0, 0, 0, 0.1)",
+    width: "40%",
     margin: "auto",
     marginBottom: "50px",
     marginTop: "50px",
@@ -33,7 +33,7 @@ const ContactSection = () => {
             <div className={plate}></div>
             <p className={headingDecoration}><span className={highlight}>03.📬</span></p>
             <h3 className={heading}>Contact</h3>
-            <p style={{fontFamily: "Roboto-light", color: "#3C4A2E", textAlign: "center", margin: "0", fontSize: "20px"}}>Let's talk! I am currently actively looking for new opportunities, so please feel free to leave me a message.</p>
+            <p style={{fontFamily: "Roboto-light", color: "#3C4A2E", textAlign: "center", margin: "0", fontSize: "20px"}}>Let's talk! <br/>I am currently actively looking for new opportunities, <br/>so please feel free to leave me a message.</p>
 
             <Divider className={classes.divider}/>
 
