@@ -6,13 +6,11 @@ import EmailIcon from '@material-ui/icons/Email';
 import {
     headingDecoration,
     heading,
-    contact,
     contactGrid,
     contactItem,
     highlight,
-    plate,
     disabled,
-} from '../components/sections.module.css'
+} from '../styles/sections.module.css'
 
 const useStyles = makeStyles(theme => ({
   divider: {
@@ -28,12 +26,10 @@ const ContactSection = () => {
     const classes = useStyles();
 
     return (
-        <div id="contactInfo" className={contact}>
-
-            <div className={plate}></div>
+        <div>
             <p className={headingDecoration}><span className={highlight}>03.📬</span></p>
             <h3 className={heading}>Contact</h3>
-            <p style={{fontFamily: "Roboto-light", color: "#3C4A2E", textAlign: "center", margin: "0", fontSize: "20px"}}>Let's talk! <br/>I am currently actively looking for new opportunities, <br/>so please feel free to leave me a message.</p>
+            <p style={{fontFamily: "Nanum Myeongjo, serif", color: "#4D4637", textAlign: "center", margin: "0", fontSize: "3vh"}}>Let's talk! <br/>I am currently actively looking for new opportunities, <br/>so please feel free to leave me a message.</p>
 
             <Divider className={classes.divider}/>
 

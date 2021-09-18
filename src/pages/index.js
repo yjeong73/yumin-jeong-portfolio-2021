@@ -5,9 +5,13 @@ import AboutSection from '../components/about'
 import ProjectsSection from '../components/projects'
 import ContactSection from '../components/contact'
 import {
+    plate,
     randomCircle1,
     randomCircle2,
-} from '../components/layout.module.css'
+} from '../styles/layout.module.css'
+import {
+    section,
+} from '../styles/sections.module.css'
 
 function randomValue() {
     return Math.floor(Math.random() * 101);
@@ -22,19 +26,22 @@ const IndexPage = () => {
             <TitleSection></TitleSection>
         </div>
 
-        <div id="aboutMe" style={{position: "relative", overflow: "hidden"}}>
+        <div id="aboutMe" className={section}>
+            <div className={plate}></div>
             <AboutSection></AboutSection>
             <div className={randomCircle1} style={{top: values[0] + "%", background: "#F2A007"}}></div>
             <div className={randomCircle2} style={{top: values[1] + "%", background: "#F2D479"}}></div>
         </div>
 
-        <div id="projects" style={{position: "relative", overflow: "hidden"}}>
+        <div id="projects" className={section}>
+            <div className={plate}></div>
             <ProjectsSection></ProjectsSection>
             <div className={randomCircle1} style={{top: values[2] + "%", background: "#F2D479"}}></div>
             <div className={randomCircle2} style={{top: values[3] + "%", background: "#F2C335"}}></div>
         </div>
 
-        <div id="contactInfo" style={{position: "relative", overflow: "hidden"}}>
+        <div id="contactInfo" className={section}>
+            <div className={plate}></div>
             <ContactSection></ContactSection>
             <div className={randomCircle1} style={{top: values[4] + "%", background: "#F2C335"}}></div>
             <div className={randomCircle2} style={{top: values[5] + "%", background: "#CDA291"}}></div>
