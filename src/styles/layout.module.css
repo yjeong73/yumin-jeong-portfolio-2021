@@ -69,7 +69,7 @@ body {
     font-family: 'Yeseva One', cursive;
     text-align: left;
     color: var(--darkbrown);
-    font-size: 10vh;
+    font-size: 75px;
     margin: auto;
     margin-bottom: 0;
 }
@@ -80,7 +80,7 @@ body {
     font-weight: bold;
     text-align: left;
     color: var(--darkbrown);
-    font-size: 3.5vh;
+    font-size: 26px;
     letter-spacing: 1px;
     margin: auto;
     margin-top: 0;
@@ -159,16 +159,16 @@ body {
   position: fixed;
   display: flex;
   flex-direction: column;
-  gap: 3vh;
+  gap: 25px;
   z-index: 1;
-  right: 5vh;
-  margin-top: 5vh;
+  right: 38px;
+  margin-top: 38px;
 }
 
 .nav-link-text {
   color: var(--darkbrown);
   font-family: 'Yeseva One', cursive;
-  font-size: 2.5vh;
+  font-size: 18px;
   letter-spacing: 1px;
   text-decoration: none;
 
@@ -189,7 +189,7 @@ body {
     display: flex;
     position: fixed;
     z-index: 1;
-    margin: 5vh;
+    margin: 38px;
     width: 100px;
     height: 50px;
 }
@@ -201,7 +201,7 @@ body {
 
 .contact-bar {
     position: fixed;
-    bottom: 5vh;
+    bottom: 38px;
     display: flex;
     flex-direction: row;
     align-items: center;

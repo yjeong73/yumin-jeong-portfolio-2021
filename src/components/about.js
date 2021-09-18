@@ -34,7 +34,6 @@ const useStyles = makeStyles(theme => ({
 
 const AboutSection = () => {
     const classes = useStyles();
-    // document.getElementById("skill1").style.background = "white";
 
     return (
         <div>
@@ -201,7 +200,7 @@ const AboutSection = () => {
                 </div>
             </div>
 
-            <div className={language} style={{marginBottom: "15vh"}}>
+            <div className={language} style={{marginBottom: "110px"}}>
                 <div style={{height: "50px", width: "50px", borderRadius: "50%", border: "5px solid #F2D479"}}>
                     <StaticImage
                       src="../images/us.png"

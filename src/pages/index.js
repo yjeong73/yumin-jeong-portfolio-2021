@@ -4,6 +4,7 @@ import TitleSection from '../components/title'
 import AboutSection from '../components/about'
 import ProjectsSection from '../components/projects'
 import ContactSection from '../components/contact'
+import Loader from "react-loader-spinner";
 import {
     plate,
     randomCircle1,
