@@ -39,7 +39,7 @@ const ContactSection = () => {
 
             <div className={contactGrid}>
                 <div className={contactItem}>
-                    <a href="https://www.linkedin.com/in/yumin-jeong/" target="_blank" style={{color: "#4D4637"}}>
+                    <a href="https://www.linkedin.com/in/yumin-jeong/" target="_blank" rel="noopener noreferrer" style={{color: "#4D4637"}}>
                         <LinkedInIcon style={{background: "#F2D479", border: "1vh solid #F2D479", borderRadius: "50%"}}></LinkedInIcon>
                     </a>
                 </div>

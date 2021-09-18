@@ -18,8 +18,6 @@ import {
     profile,
     language,
     languageItem,
-    korean,
-    english,
     highlight,
     plate,
     chart,
@@ -54,12 +52,12 @@ const AboutSection = () => {
             <div className={profile}>
                 <div className={profilePic}>
                 </div>
-                <p>Hi, I've been coding for about 4 years and I like building and designing things. <br/>In my spare time, I enjoy creating graphic designs/illustrations <br/>and supporting local Asian American artists, <br/>and I've had some opportunities work as a <a href="https://open.spotify.com/artist/5BN3GsRbz8oZM5A65K36Lx" target="_blank" style={{color: "#CDA291", textDecoration: "none"}}>cover art designer</a> too!</p>
+                <p>Hi, I've been coding for about 4 years and I like building and designing things. <br/>In my spare time, I enjoy creating graphic designs/illustrations <br/>and supporting local Asian American artists, <br/>and I've had some opportunities work as a <a href="https://open.spotify.com/artist/5BN3GsRbz8oZM5A65K36Lx" target="_blank" rel="noopener noreferrer" style={{color: "#CDA291", textDecoration: "none"}}>cover art designer</a> too!</p>
             </div>
 
             <Divider className={classes.divider}/>
 
-            <p className={subheading}>EDUCATION:</p>
+            <p className={subheading}>EDUCATION</p>
 
                 <div className={education}>
                     <div className={educationItem} style={{background: "#F2D479", borderRadius: "50%", border: "none", height: "75px", width:"75px", margin: "auto"}}>
@@ -80,7 +78,7 @@ const AboutSection = () => {
 
             <Divider className={classes.divider}/>
 
-            <p className={subheading}>SKILLS:</p>
+            <p className={subheading}>SKILLS</p>
             </ScrollAnimation>
 
             <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true}>
@@ -129,7 +127,7 @@ const AboutSection = () => {
 
             <Divider className={classes.divider}/>
 
-            <p className={subheading}>TOOLS:</p>
+            <p className={subheading}>TOOLS</p>
             <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true}>
             <div className={skills}>
                 <div className={skillsItem}>
@@ -180,7 +178,7 @@ const AboutSection = () => {
 
             <Divider className={classes.divider}/>
 
-            <p className={subheading}>LANGUAGES:</p>
+            <p className={subheading}>LANGUAGES</p>
 
             <div className={language}>
                 <div style={{height: "50px", width: "50px", borderRadius: "50%", border: "5px solid #F2D479"}}>
@@ -192,7 +190,7 @@ const AboutSection = () => {
                     />
                 </div>
                 <div className={languageItem}>
-                    <p>Korean (Mother tongue)</p>
+                    <p>Korean <span style={{color: "#A7905E", fontWeight:"400"}}>(Mother tongue)</span></p>
                 </div>
             </div>
 
@@ -206,7 +204,7 @@ const AboutSection = () => {
                     />
                 </div>
                 <div className={languageItem}>
-                    <p>English (Fluent)</p>
+                    <p>English <span style={{color: "#A7905E", fontWeight:"400"}}>(Fluent)</span></p>
                 </div>
             </div>
         </div>
