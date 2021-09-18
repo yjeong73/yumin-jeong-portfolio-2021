@@ -122,7 +122,7 @@ const ProjectsSection = () => {
                                 Project Description<ExpandMoreIcon></ExpandMoreIcon>
                             </Button>
 
-                            <a title="GitHub" href="https://github.com/yjeong73/testing-website" target="_blank" style={{display: "table-cell", color: "#4D4637"}}>
+                            <a title="GitHub" href="https://github.com/yjeong73/testing-website" target="_blank" rel="noopener noreferrer" style={{display: "table-cell", color: "#4D4637"}}>
                                 <GitHubIcon></GitHubIcon>
                             </a>
                         </div>
@@ -170,7 +170,7 @@ const ProjectsSection = () => {
                             >
                                 Project Description<ExpandMoreIcon></ExpandMoreIcon>
                             </Button>
-                            <a title="GitHub" href="https://github.com/william-crawford/brainy-phonics-web" target="_blank" style={{display: "table-cell", color: "#4D4637"}}>
+                            <a title="GitHub" href="https://github.com/william-crawford/brainy-phonics-web" target="_blank" rel="noopener noreferrer" style={{display: "table-cell", color: "#4D4637"}}>
                                 <GitHubIcon></GitHubIcon>
                             </a>
                         </div>
