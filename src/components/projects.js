@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
     width: "auto",
     // border: "2px solid #578d2b",
     // borderRadius: "0px",
-    background: "#F2D479",
+    background: "transparent",
     borderRadius: "3px",
     color: "#4D4637",
     fontFamily: "Open Sans, sans-serif",
@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
       transition: "0.5s ease",
       borderRadius: "0px",
       background: "transparent",
-      color: "#A7905E"
+      color: "#F2C335"
     },
   },
 
@@ -82,12 +82,17 @@ const ProjectsSection = () => {
 
     return(
         <div>
-            <p className={headingDecoration}><span className={highlight}>02.📋</span></p>
-            <h2 className={heading}>Projects</h2>
+            <ScrollAnimation animateIn="animate__slideInUp" animateOnce={true}>
+                <p className={headingDecoration}><span className={highlight}>02.📋</span></p>
+                <h2 className={heading}>Projects</h2>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={300}>
             <p style={{fontFamily: "Nanum Myeongjo, serif", color: "#4D4637", textAlign: "center", margin: "0", fontSize: "3vh"}}>Some of my works</p>
+            </ScrollAnimation>
 
             <Divider className={classes.divider}/>
 
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={300}>
             <div className={expand1 ? viewMore : viewLess}>
                 <div className={projectGrid}>
                     <div>
@@ -134,7 +139,9 @@ const ProjectsSection = () => {
                     </div>
                 </div>
             </div>
+            </ScrollAnimation>
 
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={300}>
             <div className={expand2 ? viewMore : viewLess}>
                 <div className={projectGrid}>
                     <div>
@@ -180,7 +187,9 @@ const ProjectsSection = () => {
                     </div>
                 </div>
             </div>
+            </ScrollAnimation>
 
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={300}>
             <div className={expand3 ? viewMore : viewLess}>
                 <div className={projectGrid}>
                     <div>
@@ -224,7 +233,7 @@ const ProjectsSection = () => {
                     </div>
                 </div>
             </div>
-
+            </ScrollAnimation>
         </div>
     )
 }

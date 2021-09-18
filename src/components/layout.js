@@ -2,12 +2,14 @@ import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { StaticImage } from 'gatsby-plugin-image'
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import EmailIcon from '@material-ui/icons/Email';
 import {
     container,
     navLinks,
-    navLinkItem,
     navLinkText,
     mainLogo,
+    contactBar,
 } from '../styles/layout.module.css'
 
 const Layout = ({ children }) => {
@@ -24,6 +26,7 @@ const Layout = ({ children }) => {
   return (
     <div>
       <title>{data.site.siteMetadata.title}</title>
+
       <AnchorLink to="/#title" className={mainLogo}>
         <StaticImage
           src="../images/new_logo.png"
@@ -31,23 +34,37 @@ const Layout = ({ children }) => {
           height={40}
         />
       </AnchorLink>
+
+      <div className={contactBar}>
+        <div style={{width: "50px", height: "2px", background: "#4D4637"}}></div>
+        <div>
+            <a href="https://www.linkedin.com/in/yumin-jeong/" target="_blank" rel="noopener noreferrer" style={{color: "#4D4637"}}>
+            <LinkedInIcon style={{color: "#4D4637"}}></LinkedInIcon></a>
+        </div>
+        <div>
+            <a href={`mailto:ymj982@gmail.com`} style={{color: "#4D4637"}}>
+            <EmailIcon style={{color: "#4D4637"}}></EmailIcon></a>
+            </div>
+      </div>
+
       <nav className={navLinks}>
-          <div className={navLinkItem}>
+          <div>
             <AnchorLink to="/#aboutMe" className={navLinkText}>
                 ABOUT
             </AnchorLink>
           </div>
-          <div className={navLinkItem}>
+          <div>
           <AnchorLink to="/#projects" className={navLinkText}>
               PROJECTS
           </AnchorLink>
           </div>
-          <div className={navLinkItem}>
+          <div>
           <AnchorLink to="/#contactInfo" className={navLinkText}>
               CONTACT
           </AnchorLink>
           </div>
       </nav>
+
       <main className={container}>
         {children}
       </main>

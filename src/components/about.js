@@ -27,8 +27,8 @@ const useStyles = makeStyles(theme => ({
     background: "rgba(0, 0, 0, 0.1)",
     width: "40%",
     margin: "auto",
-    marginBottom: "50px",
-    marginTop: "50px",
+    marginBottom: "75px",
+    marginTop: "75px",
   }
 }));
 
@@ -38,24 +38,26 @@ const AboutSection = () => {
 
     return (
         <div>
-            <ScrollAnimation animateIn="animate__fadeInUp" animateOnce={true}>
+            <ScrollAnimation animateIn="animate__slideInUp" animateOnce={true}>
                 <p className={headingDecoration}><span className={highlight}>01.🙋‍♀️</span></p>
-            </ScrollAnimation>
-            <ScrollAnimation animateIn="animate__fadeInUp" animateOnce={true}>
                 <h1 className={heading}>About Me</h1>
             </ScrollAnimation>
 
-            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={500}>
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={300}>
             <div className={profile}>
                 <div className={profilePic}>
                 </div>
                 <p>Hi, I've been coding for about 4 years and I like building and designing things. <br/>In my spare time, I enjoy creating graphic designs/illustrations <br/>and supporting local Asian American artists, <br/>and I've had some opportunities work as a <a href="https://open.spotify.com/artist/5BN3GsRbz8oZM5A65K36Lx" target="_blank" rel="noopener noreferrer" style={{color: "#CDA291", textDecoration: "none"}}>cover art designer</a> too!</p>
             </div>
+            </ScrollAnimation>
 
             <Divider className={classes.divider}/>
 
+            <ScrollAnimation animateIn="animate__slideInUp" animateOnce={true}>
             <p className={subheading}>EDUCATION</p>
+            </ScrollAnimation>
 
+                <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={300}>
                 <div className={education}>
                     <div className={educationItem} style={{background: "#F2D479", borderRadius: "50%", border: "none", height: "75px", width:"75px", margin: "auto"}}>
                         <StaticImage
@@ -72,13 +74,15 @@ const AboutSection = () => {
                         <p style={{margin: "0px", color: "#A7905E"}}>Concentration: Intelligence-Media</p>
                     </div>
                 </div>
+                </ScrollAnimation>
 
             <Divider className={classes.divider}/>
 
+            <ScrollAnimation animateIn="animate__slideInUp" animateOnce={true}>
             <p className={subheading}>SKILLS</p>
             </ScrollAnimation>
 
-            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true}>
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={300}>
             <div className={skills}>
                 <div className={skillsItem}>
                     <p style={{margin: "0", marginBottom: "15px"}}>Java</p>
@@ -124,8 +128,11 @@ const AboutSection = () => {
 
             <Divider className={classes.divider}/>
 
+            <ScrollAnimation animateIn="animate__slideInUp" animateOnce={true}>
             <p className={subheading}>TOOLS</p>
-            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true}>
+            </ScrollAnimation>
+
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={300}>
             <div className={skills}>
                 <div className={skillsItem}>
                     <p style={{margin: "0", marginBottom: "15px"}}>Git</p>
@@ -175,8 +182,11 @@ const AboutSection = () => {
 
             <Divider className={classes.divider}/>
 
+            <ScrollAnimation animateIn="animate__slideInUp" animateOnce={true}>
             <p className={subheading}>LANGUAGES</p>
+            </ScrollAnimation>
 
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={300}>
             <div className={language}>
                 <div style={{height: "50px", width: "50px", borderRadius: "50%", border: "5px solid #F2D479"}}>
                     <StaticImage
@@ -187,7 +197,7 @@ const AboutSection = () => {
                     />
                 </div>
                 <div className={languageItem}>
-                    <p>Korean <span style={{color: "#A7905E", fontWeight:"400"}}>(Mother tongue)</span></p>
+                    <p>Korean <span style={{color: "#A7905E", fontWeight:"400"}}>(Native)</span></p>
                 </div>
             </div>
 
@@ -204,6 +214,7 @@ const AboutSection = () => {
                     <p>English <span style={{color: "#A7905E", fontWeight:"400"}}>(Fluent)</span></p>
                 </div>
             </div>
+            </ScrollAnimation>
         </div>
     )
 }
