@@ -1,9 +1,9 @@
 import * as React from 'react'
 import Divider from "@material-ui/core/Divider";
+import { makeStyles } from "@material-ui/core/styles";
 import { StaticImage } from 'gatsby-plugin-image'
 import "animate.css/animate.min.css"
 import ScrollAnimation from 'react-animate-on-scroll';
-import { makeStyles } from "@material-ui/core/styles";
 import {
     headingDecoration,
     heading,

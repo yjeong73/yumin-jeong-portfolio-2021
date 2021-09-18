@@ -177,9 +177,8 @@ a:hover {
 
 .project-photo {
     height: auto;
-    border-radius: 3px;
-    border-top: 13px solid rgba(242, 212, 121, 0.5);
-    border-bottom: 13px solid rgba(242, 212, 121, 0.5);
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
 }
 
 .project-titles {
