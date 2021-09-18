@@ -42,9 +42,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
-    /* animation-duration: 2s;
-    animation-name: intro; */
+    align-items: center;
 }
 
 .home-intro {
@@ -54,7 +52,6 @@ body {
     font-size: 10vh;
     margin: auto;
     margin-bottom: 0;
-    margin-left: 20%;
 }
 
 .home-description {
@@ -67,7 +64,6 @@ body {
     letter-spacing: 1px;
     margin: auto;
     margin-top: 0;
-    margin-left: calc(20% + 5px);
 }
 
 .circle-1 {
@@ -151,7 +147,7 @@ ul {
   grid-template-columns: 100%;
   grid-template-rows: auto;
   z-index: 1;
-  right: 3vh;
+  right: 5vh;
   margin-top: 5vh;
   /* border: 1px solid hotpink; */
 }
