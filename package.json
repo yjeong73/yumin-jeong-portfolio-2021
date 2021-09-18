@@ -1,8 +1,8 @@
 {
-  "name": "testing-website",
+  "name": "yumin-jeong-portfolio-2021",
   "version": "1.0.0",
   "private": true,
-  "description": "Testing Website",
+  "description": "Portfolio Website",
   "author": "Yumin Jeong",
   "keywords": [
     "gatsby"
@@ -15,13 +15,11 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@arctext/react": "^1.0.0",
     "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.11.2",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "animate.css": "^4.1.1",
-    "circletype": "^2.3.0",
     "gatsby": "^3.11.1",
     "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-gatsby-cloud": "^3.0.0",

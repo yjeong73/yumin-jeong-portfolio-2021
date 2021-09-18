@@ -13,16 +13,14 @@ import {
     skills,
     skillsItem,
     percentage,
-    aboutMe,
     profilePic,
     profile,
     language,
     languageItem,
     highlight,
-    plate,
     chart,
     barAnimation,
-} from '../components/sections.module.css'
+} from '../styles/sections.module.css'
 
 const useStyles = makeStyles(theme => ({
   divider: {
@@ -39,8 +37,7 @@ const AboutSection = () => {
     // document.getElementById("skill1").style.background = "white";
 
     return (
-        <div className={aboutMe}>
-            <div className={plate}></div>
+        <div>
             <ScrollAnimation animateIn="animate__fadeInUp" animateOnce={true}>
                 <p className={headingDecoration}><span className={highlight}>01.🙋‍♀️</span></p>
             </ScrollAnimation>

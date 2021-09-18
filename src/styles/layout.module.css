@@ -1,5 +1,7 @@
 @import "./typography.css";
 
+/*ROOT*/
+
 :root {
     --darkbrown: #4D4637;
     --lightbrown: #A7905E;
@@ -21,13 +23,35 @@ body {
     margin: 0;
 }
 
+ul {
+  list-style-type: none;
+}
+
 /*CONTAINERS*/
 
 .container {
   margin: auto;
   width: 100%;
+}
 
-  /* border: 3px solid #73AD21; */
+.plate {
+    position: absolute;
+    z-index: -1;
+    width: 98%;
+    height: 98%;
+    border-radius: 15px;
+
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5);
+    background: white;
+    opacity: 25%;
+
+    /*Centering*/
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
 }
 
 .introduction {
@@ -135,12 +159,6 @@ body {
 }
 
 /*NAVIGATION BAR*/
-
-ul {
-  list-style-type: none;
-}
-
-/* Links for menu */
 .nav-links {
   position: fixed;
   display: grid;
@@ -149,15 +167,10 @@ ul {
   z-index: 1;
   right: 5vh;
   margin-top: 5vh;
-  /* border: 1px solid hotpink; */
 }
 
 .nav-link-item {
     margin-bottom: 3vh;
-    /* border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
-    border-right: 1px solid black; */
 }
 
 .nav-link-text {
@@ -176,7 +189,6 @@ ul {
   transition: background-size 0.3s linear;
 }
 
-/* mouse over link */
 .nav-link-text:hover {
   background-size: 0 2px, 100% 2px;
 }

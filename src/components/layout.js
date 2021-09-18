@@ -8,9 +8,9 @@ import {
     navLinkItem,
     navLinkText,
     mainLogo,
-} from './layout.module.css'
+} from '../styles/layout.module.css'
 
-const Layout = ({ pageTitle, children }) => {
+const Layout = ({ children }) => {
     const data = useStaticQuery(graphql`
     query {
       site {
@@ -23,7 +23,7 @@ const Layout = ({ pageTitle, children }) => {
 
   return (
     <div>
-      <title>{data.site.siteMetadata.title} | {pageTitle}</title>
+      <title>{data.site.siteMetadata.title}</title>
       <AnchorLink to="/#title" className={mainLogo}>
         <StaticImage
           src="../images/new_logo.png"

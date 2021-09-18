@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
-    title: "Testing Website",
+    title: "Yumin Jeong Portfolio 2021",
   },
   plugins: ["gatsby-plugin-gatsby-cloud",
             "gatsby-plugin-image",
@@ -9,8 +9,8 @@ module.exports = {
             {
               resolve: "gatsby-source-filesystem",
               options: {
-                name: `blog`,
-                path: `${__dirname}/blog`,
+                name: `projects`,
+                path: `${__dirname}/projects`,
           },
         },
         "gatsby-plugin-mdx",

@@ -8,10 +8,10 @@ import {
     circle1,
     circle2,
     circle3,
-} from '../components/layout.module.css'
+} from '../styles/layout.module.css'
 import {
     highlight,
-} from '../components/sections.module.css'
+} from '../styles/sections.module.css'
 
 const TitleSection = () => {
     useEffect(() => {
