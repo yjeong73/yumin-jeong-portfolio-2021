@@ -8,6 +8,8 @@ import Fade from '@material-ui/core/Fade';
 import { Button } from '@material-ui/core';
 import { useAllMdx } from "../hooks/use-all-mdx";
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+import "animate.css/animate.min.css"
+import ScrollAnimation from 'react-animate-on-scroll';
 import {
     heading,
     headingDecoration,
@@ -114,7 +116,7 @@ const ProjectsSection = () => {
                                     Project Description<ExpandMoreIcon></ExpandMoreIcon>
                                 </Button>
 
-                                <a title="GitHub" href="https://github.com/yjeong73/testing-website" target="_blank" rel="noopener noreferrer" style={{display: "table-cell", color: "#4D4637"}}>
+                                <a title="GitHub" href="https://github.com/yjeong73/yumin-jeong-portfolio-2021" target="_blank" rel="noopener noreferrer" style={{display: "table-cell", color: "#4D4637"}}>
                                     <GitHubIcon></GitHubIcon>
                                 </a>
                             </div>

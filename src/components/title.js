@@ -1,6 +1,8 @@
 import * as React from 'react'
 import { useEffect } from 'react'
 import $ from 'jquery';
+import "animate.css/animate.min.css"
+import ScrollAnimation from 'react-animate-on-scroll';
 import {
     homeIntro,
     homeDescription,

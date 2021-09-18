@@ -3,6 +3,8 @@ import Divider from "@material-ui/core/Divider";
 import { makeStyles } from "@material-ui/core/styles";
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
+import "animate.css/animate.min.css"
+import ScrollAnimation from 'react-animate-on-scroll';
 import {
     headingDecoration,
     heading,
