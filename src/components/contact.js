@@ -34,7 +34,7 @@ const ContactSection = () => {
             <h3 className={heading}>Contact</h3>
             </ScrollAnimation>
             <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={300}>
-            <p style={{fontFamily: "Nanum Myeongjo, serif", color: "#4D4637", textAlign: "center", margin: "0", fontSize: "3vh"}}>Let's talk! <br/>I am currently actively looking for new opportunities, <br/>so please feel free to leave me a message.</p>
+            <p style={{fontFamily: "Nanum Myeongjo, serif", color: "#4D4637", textAlign: "center", margin: "0", fontSize: "23px"}}>Let's talk! <br/>I am currently actively looking for new opportunities, <br/>so please feel free to leave me a message.</p>
             </ScrollAnimation>
 
             <Divider className={classes.divider}/>
@@ -43,7 +43,7 @@ const ContactSection = () => {
             <div className={contactGrid}>
                 <div className={contactItem}>
                     <a href="https://www.linkedin.com/in/yumin-jeong/" target="_blank" rel="noopener noreferrer" style={{color: "#4D4637"}}>
-                        <LinkedInIcon style={{background: "#F2D479", border: "1vh solid #F2D479", borderRadius: "50%"}}></LinkedInIcon>
+                        <LinkedInIcon style={{background: "#F2D479", border: "7px solid #F2D479", borderRadius: "50%"}}></LinkedInIcon>
                     </a>
                 </div>
                 <div className={contactItem + ' ' + disabled} style={{marginLeft:"0"}}>
@@ -51,7 +51,7 @@ const ContactSection = () => {
                 </div>
                 <div className={contactItem}>
                     <a href={`mailto:ymj982@gmail.com`} style={{color: "#4D4637"}}>
-                        <EmailIcon style={{background: "#F2D479", border: "1vh solid #F2D479", borderRadius: "50%"}}></EmailIcon>
+                        <EmailIcon style={{background: "#F2D479", border: "7px solid #F2D479", borderRadius: "50%"}}></EmailIcon>
                     </a>
                 </div>
                 <div className={contactItem + ' ' + disabled} style={{marginLeft:"0"}}>

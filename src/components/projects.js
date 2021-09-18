@@ -87,7 +87,7 @@ const ProjectsSection = () => {
                 <h2 className={heading}>Projects</h2>
             </ScrollAnimation>
             <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={300}>
-            <p style={{fontFamily: "Nanum Myeongjo, serif", color: "#4D4637", textAlign: "center", margin: "0", fontSize: "3vh"}}>Some of my works</p>
+            <p style={{fontFamily: "Nanum Myeongjo, serif", color: "#4D4637", textAlign: "center", margin: "0", fontSize: "23px"}}>Some of my works</p>
             </ScrollAnimation>
 
             <Divider className={classes.divider}/>
@@ -109,7 +109,7 @@ const ProjectsSection = () => {
                             <h2 className={projectTitles}>
                                 {firstItem.frontmatter.title}
                             </h2>
-                            <p style={{fontFamily: "Yeseva One, cursive", fontSize: "3vh", color: "#A7905E", margin: "0"}}>{firstItem.frontmatter.date}</p>
+                            <p style={{fontFamily: "Yeseva One, cursive", fontSize: "23px", color: "#A7905E", margin: "0"}}>{firstItem.frontmatter.date}</p>
                             <p style={{fontFamily: "Yeseva One, cursive", fontSize: "18px", color: "#4D4637"}}><span className={highlight}>Technology&#58;</span> <span style={{fontFamily: "Nanum Myeongjo, serif"}}>
                             {firstItem.frontmatter.technology}</span></p>
 
@@ -158,7 +158,7 @@ const ProjectsSection = () => {
                             <h2 className={projectTitles}>
                                 {secondItem.frontmatter.title}
                             </h2>
-                            <p style={{fontFamily: "Yeseva One, cursive", fontSize: "3vh", color: "#A7905E", margin: "0"}}>{secondItem.frontmatter.date}</p>
+                            <p style={{fontFamily: "Yeseva One, cursive", fontSize: "23px", color: "#A7905E", margin: "0"}}>{secondItem.frontmatter.date}</p>
                             <p style={{fontFamily: "Yeseva One, cursive", fontSize: "18px", color: "#4D4637"}}><span className={highlight}>Technology&#58;</span> <span style={{fontFamily: "Nanum Myeongjo, serif"}}>
                             {secondItem.frontmatter.technology}</span></p>
 
@@ -206,7 +206,7 @@ const ProjectsSection = () => {
                             <h2 className={projectTitles}>
                                 {thirdItem.frontmatter.title}
                             </h2>
-                            <p style={{fontFamily: "Yeseva One, cursive", fontSize: "3vh", color: "#A7905E", margin: "0"}}>{thirdItem.frontmatter.date}</p>
+                            <p style={{fontFamily: "Yeseva One, cursive", fontSize: "23px", color: "#A7905E", margin: "0"}}>{thirdItem.frontmatter.date}</p>
                             <p style={{fontFamily: "Yeseva One, cursive", fontSize: "18px", color: "#4D4637"}}><span className={highlight}>Technology&#58;</span> <span style={{fontFamily: "Nanum Myeongjo, serif"}}>
                             {thirdItem.frontmatter.technology}</span></p>
 
