@@ -19,8 +19,8 @@ const useStyles = makeStyles(theme => ({
     background: "rgba(0, 0, 0, 0.1)",
     width: "40%",
     margin: "auto",
-    marginBottom: "50px",
-    marginTop: "50px",
+    marginBottom: "75px",
+    marginTop: "75px",
   }
 }));
 
@@ -29,12 +29,17 @@ const ContactSection = () => {
 
     return (
         <div>
+            <ScrollAnimation animateIn="animate__slideInUp" animateOnce={true}>
             <p className={headingDecoration}><span className={highlight}>03.📬</span></p>
             <h3 className={heading}>Contact</h3>
+            </ScrollAnimation>
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={300}>
             <p style={{fontFamily: "Nanum Myeongjo, serif", color: "#4D4637", textAlign: "center", margin: "0", fontSize: "3vh"}}>Let's talk! <br/>I am currently actively looking for new opportunities, <br/>so please feel free to leave me a message.</p>
+            </ScrollAnimation>
 
             <Divider className={classes.divider}/>
 
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={300}>
             <div className={contactGrid}>
                 <div className={contactItem}>
                     <a href="https://www.linkedin.com/in/yumin-jeong/" target="_blank" rel="noopener noreferrer" style={{color: "#4D4637"}}>
@@ -53,6 +58,7 @@ const ContactSection = () => {
                     ymj982@gmail.com
                 </div>
             </div>
+            </ScrollAnimation>
         </div>
     )
 }

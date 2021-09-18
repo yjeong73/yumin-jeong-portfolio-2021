@@ -36,10 +36,11 @@ const TitleSection = () => {
             <div className={circle3} id="circles"></div>
 
             <div style={{width: "50%"}}>
-                <p className={homeIntro}>Hello, <br/> I am Yumin Jeong</p>
+                <ScrollAnimation animateIn="animate__slideInUp" animateOnce={true}><p className={homeIntro}>Hello, <br/> I am Yumin Jeong</p></ScrollAnimation>
+                <ScrollAnimation animateIn="animate__fadeInUp" animateOnce={true}>
                 <p className={homeDescription}>I'm a recent graduate with a passion for
                 <br/><span className={highlight}>computer science👩‍💻</span> and <span className={highlight}>art🌻</span> who is seeking
-                <br/>job opportunities as a front-end engineer.</p>
+                <br/>job opportunities as a front-end engineer.</p></ScrollAnimation>
             </div>
         </div>
     )
