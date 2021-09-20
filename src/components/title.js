@@ -31,8 +31,8 @@ const TitleSection = () => {
     return (
         <div className={introduction}>
             <div className={circle1} id="circles"></div>
-            <div className={circle2} id="circles"></div>
-            <div className={circle3} id="circles"></div>
+            <div className={circle2}></div>
+            <div className={circle3}></div>
 
             <div style={{width: "50%"}}>
                 <p className={homeIntro}>Hello, <br/> I am Yumin Jeong</p>

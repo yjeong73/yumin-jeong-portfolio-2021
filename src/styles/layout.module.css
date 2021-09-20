@@ -111,7 +111,6 @@ body {
     border-radius: 50%;
     filter: blur(30vh);
     opacity: 100%;
-    transition: 0.7s ease;
 }
 
 .circle-3 {
@@ -125,7 +124,6 @@ body {
     border-radius: 50%;
     filter: blur(30vh);
     opacity: 100%;
-    transition: 0.5s ease;
 }
 
 .random-circle-1 {
