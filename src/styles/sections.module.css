@@ -113,6 +113,11 @@ a:hover {
     margin-right: 15px;
 }
 
+.skills-item p {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
 .percentage {
     display: flex;
     flex-direction: column;
@@ -124,14 +129,25 @@ a:hover {
     margin-left: 15px;
 }
 
+.percentage p {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
 .chart {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
+.chart div {
+    height: 10%;
+    margin-bottom: 15px;
+}
+
 .bar-animation {
-    animation: 3s forwards slidein;
+    animation: 2s forwards slidein;
+    animation-play-state: paused;
 }
 
 @keyframes slidein {
@@ -142,7 +158,6 @@ a:hover {
   }
 
   to {
-    width: 100%;
     height: 100%;
     border-radius: 5px;
   }

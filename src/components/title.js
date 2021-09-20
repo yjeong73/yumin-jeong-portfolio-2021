@@ -2,7 +2,6 @@ import * as React from 'react'
 import { useEffect } from 'react'
 import $ from 'jquery';
 import "animate.css/animate.min.css"
-import ScrollAnimation from 'react-animate-on-scroll';
 import {
     homeIntro,
     homeDescription,
@@ -36,11 +35,10 @@ const TitleSection = () => {
             <div className={circle3} id="circles"></div>
 
             <div style={{width: "50%"}}>
-                <ScrollAnimation animateIn="animate__slideInUp" animateOnce={true}><p className={homeIntro}>Hello, <br/> I am Yumin Jeong</p></ScrollAnimation>
-                <ScrollAnimation animateIn="animate__fadeInUp" animateOnce={true}>
+                <p className={homeIntro}>Hello, <br/> I am Yumin Jeong</p>
                 <p className={homeDescription}>I'm a recent graduate with a passion for
                 <br/><span className={highlight}>computer science👩‍💻</span> and <span className={highlight}>art🌻</span> who is seeking
-                <br/>job opportunities as a front-end engineer.</p></ScrollAnimation>
+                <br/>job opportunities as a front-end engineer.</p>
             </div>
         </div>
     )

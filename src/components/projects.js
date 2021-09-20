@@ -86,13 +86,13 @@ const ProjectsSection = () => {
                 <p className={headingDecoration}><span className={highlight}>02.📋</span></p>
                 <h2 className={heading}>Projects</h2>
             </ScrollAnimation>
-            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={300}>
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={100}>
             <p style={{fontFamily: "Nanum Myeongjo, serif", color: "#4D4637", textAlign: "center", margin: "0", fontSize: "23px"}}>Some of my works</p>
             </ScrollAnimation>
 
             <Divider className={classes.divider}/>
 
-            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={300}>
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={100}>
             <div className={expand1 ? viewMore : viewLess}>
                 <div className={projectGrid}>
                     <div>
@@ -141,7 +141,7 @@ const ProjectsSection = () => {
             </div>
             </ScrollAnimation>
 
-            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={300}>
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={100}>
             <div className={expand2 ? viewMore : viewLess}>
                 <div className={projectGrid}>
                     <div>

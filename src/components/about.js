@@ -29,11 +29,35 @@ const useStyles = makeStyles(theme => ({
     margin: "auto",
     marginBottom: "75px",
     marginTop: "75px",
-  }
+  },
+
+  chart1: {
+    background: "linear-gradient(45deg, rgba(242, 195, 53, 0.7), rgba(242, 137, 7, 0.7))",
+  },
+
+  chart2: {
+    background: "linear-gradient(45deg, rgba(205, 162, 145, 0.7), rgba(179, 129, 91, 0.7))",
+  },
 }));
 
 const AboutSection = () => {
     const classes = useStyles();
+    function toggle1() {
+        var childDivs = document.getElementById("chart1").getElementsByTagName("div");
+
+        for(var i=0; i< childDivs.length; i++ ) {
+            var childDiv = childDivs[i];
+            childDiv.style.animationPlayState = "running";
+        }
+    }
+    function toggle2() {
+        var childDivs = document.getElementById("chart2").getElementsByTagName("div");
+
+        for(var i=0; i< childDivs.length; i++ ) {
+            var childDiv = childDivs[i];
+            childDiv.style.animationPlayState = "running";
+        }
+    }
 
     return (
         <div>
@@ -81,47 +105,32 @@ const AboutSection = () => {
             <p className={subheading}>SKILLS</p>
             </ScrollAnimation>
 
-            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={300}>
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} afterAnimatedIn={toggle1}>
             <div className={skills}>
                 <div className={skillsItem}>
-                    <p style={{margin: "0", marginBottom: "15px"}}>Java</p>
-                    <p style={{margin: "0", marginBottom: "15px"}}>Python</p>
-                    <p style={{margin: "0", marginBottom: "15px"}}>C#</p>
-                    <p style={{margin: "0", marginBottom: "15px"}}>CSS</p>
-                    <p style={{margin: "0", marginBottom: "15px"}}>JavaScript</p>
-                    <p style={{margin: "0", marginBottom: "15px"}}>HTML</p>
+                    <p>Java</p>
+                    <p>Python</p>
+                    <p>C#</p>
+                    <p>CSS</p>
+                    <p>JavaScript</p>
+                    <p>HTML</p>
                 </div>
-
-                <div className={chart}>
-                    <div style={{height: "100%", marginBottom: "15px", width: "80%"}}>
-                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(242, 195, 53, 0.7), rgba(242, 137, 7, 0.7))"}}></ScrollAnimation>
-                    </div>
-                    <div style={{height: "100%", marginBottom: "15px", width: "80%"}}>
-                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(242, 195, 53, 0.7), rgba(242, 137, 7, 0.7))"}}></ScrollAnimation>
-                    </div>
-                    <div style={{height: "100%", marginBottom: "15px", width: "20%"}}>
-                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(242, 195, 53, 0.7), rgba(242, 137, 7, 0.7))"}}></ScrollAnimation>
-                    </div>
-                    <div style={{height: "100%", marginBottom: "15px", width: "60%"}}>
-                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(242, 195, 53, 0.7), rgba(242, 137, 7, 0.7))"}}></ScrollAnimation>
-                    </div>
-                    <div style={{height: "100%", marginBottom: "15px", width: "60%"}}>
-                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(242, 195, 53, 0.7), rgba(242, 137, 7, 0.7))"}}></ScrollAnimation>
-                    </div>
-                    <div style={{height: "100%", marginBottom: "15px", width: "40%"}}>
-                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(242, 195, 53, 0.7), rgba(242, 137, 7, 0.7))"}}></ScrollAnimation>
-                    </div>
+                <div className={chart} id="chart1">
+                    <div style={{width: "80%"}} className={classes.chart1 + ' ' + barAnimation}></div>
+                    <div style={{width: "80%"}} className={classes.chart1 + ' ' + barAnimation}></div>
+                    <div style={{width: "20%"}} className={classes.chart1 + ' ' + barAnimation}></div>
+                    <div style={{width: "60%"}} className={classes.chart1 + ' ' + barAnimation}></div>
+                    <div style={{width: "60%"}} className={classes.chart1 + ' ' + barAnimation}></div>
+                    <div style={{width: "40%"}} className={classes.chart1 + ' ' + barAnimation}></div>
                 </div>
-
                 <div className={percentage}>
-                    <p style={{margin: "0", marginBottom: "15px"}}>80%</p>
-                    <p style={{margin: "0", marginBottom: "15px"}}>80%</p>
-                    <p style={{margin: "0", marginBottom: "15px"}}>20%</p>
-                    <p style={{margin: "0", marginBottom: "15px"}}>60%</p>
-                    <p style={{margin: "0", marginBottom: "15px"}}>60%</p>
-                    <p style={{margin: "0", marginBottom: "15px"}}>40%</p>
+                    <p>80%</p>
+                    <p>80%</p>
+                    <p>20%</p>
+                    <p>60%</p>
+                    <p>60%</p>
+                    <p>40%</p>
                 </div>
-
             </div>
             </ScrollAnimation>
 
@@ -131,50 +140,34 @@ const AboutSection = () => {
             <p className={subheading}>TOOLS</p>
             </ScrollAnimation>
 
-            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={300}>
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} afterAnimatedIn={toggle2}>
             <div className={skills}>
                 <div className={skillsItem}>
-                    <p style={{margin: "0", marginBottom: "15px"}}>Git</p>
-                    <p style={{margin: "0", marginBottom: "15px"}}>Angular</p>
-                    <p style={{margin: "0", marginBottom: "15px"}}>React</p>
-                    <p style={{margin: "0", marginBottom: "15px"}}>Unity</p>
-                    <p style={{margin: "0", marginBottom: "15px"}}>Procreate</p>
-                    <p style={{margin: "0", marginBottom: "15px"}}>Photoshop</p>
-                    <p style={{margin: "0", marginBottom: "15px"}}>Figma</p>
+                    <p>Git</p>
+                    <p>Angular</p>
+                    <p>React</p>
+                    <p>Unity</p>
+                    <p>Procreate</p>
+                    <p>Photoshop</p>
+                    <p>Figma</p>
                 </div>
-
-                <div className={chart}>
-                    <div style={{height: "100%", marginBottom: "15px", width: "80%"}}>
-                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(205, 162, 145, 0.7), rgba(179, 129, 91, 0.7))"}}></ScrollAnimation>
-                    </div>
-                    <div style={{height: "100%", marginBottom: "15px", width: "60%"}}>
-                        <ScrollAnimation animateIn={barAnimation} animateOnce={true}style={{background: "linear-gradient(45deg, rgba(205, 162, 145, 0.7), rgba(179, 129, 91, 0.7))"}}></ScrollAnimation>
-                    </div>
-                    <div style={{height: "100%", marginBottom: "15px", width: "60%"}}>
-                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(205, 162, 145, 0.7), rgba(179, 129, 91, 0.7))"}}></ScrollAnimation>
-                    </div>
-                    <div style={{height: "100%", marginBottom: "15px", width: "40%"}}>
-                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(205, 162, 145, 0.7), rgba(179, 129, 91, 0.7))"}}></ScrollAnimation>
-                    </div>
-                    <div style={{height: "100%", marginBottom: "15px", width: "100%"}}>
-                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(205, 162, 145, 0.7), rgba(179, 129, 91, 0.7))"}}></ScrollAnimation>
-                    </div>
-                    <div style={{height: "100%", marginBottom: "15px", width: "60%"}}>
-                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(205, 162, 145, 0.7), rgba(179, 129, 91, 0.7))"}}></ScrollAnimation>
-                    </div>
-                    <div style={{height: "100%", marginBottom: "15px", width: "60%"}}>
-                        <ScrollAnimation animateIn={barAnimation} animateOnce={true} style={{background: "linear-gradient(45deg, rgba(205, 162, 145, 0.7), rgba(179, 129, 91, 0.7))"}}></ScrollAnimation>
-                    </div>
+                <div className={chart} id="chart2">
+                    <div style={{width: "80%"}} className={classes.chart2 + ' ' + barAnimation}></div>
+                    <div style={{width: "60%"}} className={classes.chart2 + ' ' + barAnimation}></div>
+                    <div style={{width: "60%"}} className={classes.chart2 + ' ' + barAnimation}></div>
+                    <div style={{width: "40%"}} className={classes.chart2 + ' ' + barAnimation}></div>
+                    <div style={{width: "100%"}} className={classes.chart2 + ' ' + barAnimation}></div>
+                    <div style={{width: "60%"}} className={classes.chart2 + ' ' + barAnimation}></div>
+                    <div style={{width: "60%"}} className={classes.chart2 + ' ' + barAnimation}></div>
                 </div>
-
                 <div className={percentage}>
-                    <p style={{margin: "0", marginBottom: "15px"}}>80%</p>
-                    <p style={{margin: "0", marginBottom: "15px"}}>60%</p>
-                    <p style={{margin: "0", marginBottom: "15px"}}>60%</p>
-                    <p style={{margin: "0", marginBottom: "15px"}}>40%</p>
-                    <p style={{margin: "0", marginBottom: "15px"}}>100%</p>
-                    <p style={{margin: "0", marginBottom: "15px"}}>60%</p>
-                    <p style={{margin: "0", marginBottom: "15px"}}>60%</p>
+                    <p>80%</p>
+                    <p>60%</p>
+                    <p>60%</p>
+                    <p>40%</p>
+                    <p>100%</p>
+                    <p>60%</p>
+                    <p>60%</p>
                 </div>
             </div>
             </ScrollAnimation>
