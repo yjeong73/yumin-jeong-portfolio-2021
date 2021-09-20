@@ -88,13 +88,13 @@ const AboutSection = () => {
                         />
                     </div>
                     <div className={educationItem}>
-                        <p style={{fontWeight: "800", marginTop: "5px", marginBottom: "5px"}}>Georgia Institute of Technology</p>
-                        <p style={{margin: "0px", color: "#A7905E"}}>Aug 2017 - May 2021</p>
-                        <p style={{margin: "0px", color: "#A7905E"}}>📍<i>Atlanta, Georgia</i></p>
+                        <p1>Georgia Institute of Technology</p1>
+                        <p>Aug 2017 - May 2021</p>
+                        <p>📍<i>Atlanta, Georgia</i></p>
                     </div>
                     <div className={educationItem}>
-                        <p style={{fontWeight: "800", marginTop: "5px", marginBottom: "5px"}}>Bachelor of Science in Computer Science</p>
-                        <p style={{margin: "0px", color: "#A7905E"}}>Concentration: Intelligence-Media</p>
+                        <p1>Bachelor of Science in Computer Science</p1>
+                        <p>Concentration: Intelligence-Media</p>
                     </div>
                 </div>
                 </ScrollAnimation>
