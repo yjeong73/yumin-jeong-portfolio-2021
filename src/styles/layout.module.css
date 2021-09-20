@@ -201,6 +201,7 @@ body {
 
 .contact-bar {
     position: fixed;
+    z-index: 1;
     bottom: 38px;
     display: flex;
     flex-direction: row;
