@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
-import { StaticImage } from 'gatsby-plugin-image'
 import { Linkedin } from 'react-feather';
 import { Mail } from 'react-feather';
 import {
@@ -27,13 +26,7 @@ const Layout = ({ children }) => {
     <div>
       <title>{data.site.siteMetadata.title}</title>
 
-      <AnchorLink to="/#title" className={mainLogo}>
-        <StaticImage
-          src="../images/new_logo.png"
-          width={40}
-          height={40}
-        />
-      </AnchorLink>
+      <AnchorLink to="/#title" className={mainLogo}></AnchorLink>
 
       <div className={contactBar}>
         <div style={{width: "50px", height: "2px", background: "#4D4637"}}></div>

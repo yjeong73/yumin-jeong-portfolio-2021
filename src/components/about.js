@@ -74,7 +74,7 @@ const AboutSection = () => {
                 <div className={education}>
                     <div className={educationItem} style={{background: "#F2D479", borderRadius: "50%", border: "none", height: "75px", width:"75px", margin: "auto"}}>
                         <StaticImage
-                          src="../images/gt.png"
+                          src="../images/gt.webp"
                         />
                     </div>
                     <div className={educationItem}>

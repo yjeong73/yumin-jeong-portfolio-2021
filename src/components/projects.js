@@ -66,6 +66,11 @@ const ProjectsSection = () => {
             <div className={expand1 ? viewMore : viewLess}>
                 <div className={projectGrid}>
                     <div className={projectPhotos}>
+                        <picture> </picture>
+                        <StaticImage
+                        src={"../../projects/yumin-jeong-portfolio-2021/portfolio.webp"}
+                        imgStyle={{borderRadius: "5px"}}
+                        />
                     </div>
 
                     <div className={projectItem}>
@@ -97,6 +102,10 @@ const ProjectsSection = () => {
             <div className={expand2 ? viewMore : viewLess}>
                 <div className={projectGrid}>
                     <div className={projectPhotos}>
+                        <StaticImage
+                        src={"../../projects/brainy-phonics/brainyphonics.webp"}
+                        imgStyle={{borderRadius: "5px"}}
+                        />
                     </div>
 
                     <div className={projectItem}>
@@ -128,6 +137,10 @@ const ProjectsSection = () => {
             <div className={expand3 ? viewMore : viewLess}>
                 <div className={projectGrid}>
                     <div className={projectPhotos}>
+                        <StaticImage
+                        src={"../../projects/donation-tracker/donationtracker.webp"}
+                        imgStyle={{borderRadius: "5px"}}
+                        />
                     </div>
 
                     <div className={projectItem}>
