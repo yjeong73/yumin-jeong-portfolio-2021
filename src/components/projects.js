@@ -67,7 +67,7 @@ const ProjectsSection = () => {
             <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={100}>
             <div className={expand1 ? viewMore : viewLess}>
                 <div className={projectGrid}>
-                    <div className={portfolio2021}></div>
+
 
                     <div>
                         <h2 className={projectTitles}>
@@ -98,7 +98,7 @@ const ProjectsSection = () => {
 
             <div className={expand2 ? viewMore : viewLess}>
                 <div className={projectGrid}>
-                    <div className={brainyPhonics}></div>
+
 
                     <div>
                         <h2 className={projectTitles}>
@@ -129,7 +129,7 @@ const ProjectsSection = () => {
 
             <div className={expand3 ? viewMore : viewLess}>
                 <div className={projectGrid}>
-                    <div className={donationTracker}></div>
+                    
 
                     <div>
                         <h2 className={projectTitles}>
