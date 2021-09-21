@@ -1,11 +1,8 @@
 import * as React from 'react'
-import Divider from "@material-ui/core/Divider";
-import { makeStyles } from "@material-ui/core/styles";
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import GitHubIcon from '@material-ui/icons/GitHub';
+import { ChevronDown } from 'react-feather';
+import { GitHub } from 'react-feather';
 import Fade from '@material-ui/core/Fade';
-import { Button } from '@material-ui/core';
 import { useAllMdx } from "../hooks/use-all-mdx";
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import "animate.css/animate.min.css"
@@ -21,37 +18,11 @@ import {
     projectIcons,
     viewMore,
     viewLess,
+    divider,
+    buttons,
 } from '../styles/sections.module.css'
 
-const useStyles = makeStyles(theme => ({
-  buttons: {
-    width: "auto",
-    // border: "2px solid #578d2b",
-    // borderRadius: "0px",
-    background: "transparent",
-    borderRadius: "3px",
-    color: "#4D4637",
-    fontFamily: "Open Sans, sans-serif",
-    fontWeight: "bold",
-    '&:hover': {
-      transition: "0.5s ease",
-      borderRadius: "0px",
-      background: "transparent",
-      color: "#F2C335"
-    },
-  },
-
-  divider: {
-    background: "rgba(0, 0, 0, 0.1)",
-    width: "40%",
-    margin: "auto",
-    marginBottom: "50px",
-    marginTop: "50px",
-  }
-}));
-
 const ProjectsSection = () => {
-    const classes = useStyles();
     const { allMdx } = useAllMdx();
 
     const firstItem= allMdx.nodes[0];
@@ -90,7 +61,7 @@ const ProjectsSection = () => {
             <p style={{fontFamily: "Nanum Myeongjo, serif", color: "#4D4637", textAlign: "center", margin: "0", fontSize: "23px"}}>Some of my works</p>
             </ScrollAnimation>
 
-            <Divider className={classes.divider}/>
+            <div className={divider}></div>
 
             <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={100}>
             <div className={expand1 ? viewMore : viewLess}>
@@ -114,17 +85,13 @@ const ProjectsSection = () => {
                             {firstItem.frontmatter.technology}</span></p>
 
                             <div className={projectIcons}>
-                                <Button
-                                    onClick={handleEvent1}
-                                    className={classes.buttons}
-                                >
-                                    Project Description<ExpandMoreIcon></ExpandMoreIcon>
-                                </Button>
-
+                                <button className={buttons} onClick={handleEvent1}>PROJECT DESCRIPTION<ChevronDown/>
+                                </button>
                                 <a title="GitHub" href="https://github.com/yjeong73/yumin-jeong-portfolio-2021" target="_blank" rel="noopener noreferrer" style={{display: "table-cell", color: "#4D4637"}}>
-                                    <GitHubIcon></GitHubIcon>
+                                    <GitHub/>
                                 </a>
                             </div>
+
                         </div>
 
                         <div>
@@ -162,15 +129,11 @@ const ProjectsSection = () => {
                             <p style={{fontFamily: "Yeseva One, cursive", fontSize: "18px", color: "#4D4637"}}><span className={highlight}>Technology&#58;</span> <span style={{fontFamily: "Nanum Myeongjo, serif"}}>
                             {secondItem.frontmatter.technology}</span></p>
 
+
                             <div className={projectIcons}>
-                                <Button
-                                    onClick={handleEvent2}
-                                    className={classes.buttons}
-                                >
-                                    Project Description<ExpandMoreIcon></ExpandMoreIcon>
-                                </Button>
+                                <button className={buttons} onClick={handleEvent2}>PROJECT DESCRIPTION<ChevronDown/></button>
                                 <a title="GitHub" href="https://github.com/william-crawford/brainy-phonics-web" target="_blank" rel="noopener noreferrer" style={{display: "table-cell", color: "#4D4637"}}>
-                                    <GitHubIcon></GitHubIcon>
+                                    <GitHub/>
                                 </a>
                             </div>
                         </div>
@@ -211,13 +174,8 @@ const ProjectsSection = () => {
                             {thirdItem.frontmatter.technology}</span></p>
 
                             <div className={projectIcons}>
-                                <Button
-                                    onClick={handleEvent3}
-                                    className={classes.buttons}
-                                >
-                                    Project Description<ExpandMoreIcon></ExpandMoreIcon>
-                                </Button>
-                                <GitHubIcon style={{color: "rgba(0, 0, 0, 0.2)"}}></GitHubIcon>
+                                <button className={buttons} onClick={handleEvent3}>PROJECT DESCRIPTION<ChevronDown/></button>
+                                <GitHub color="rgba(0, 0, 0, 0.2)"/>
                             </div>
                         </div>
 

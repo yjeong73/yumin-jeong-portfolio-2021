@@ -9,6 +9,33 @@
     overflow: hidden;
 }
 
+.divider {
+    height: 1px;
+    width: 40%;
+    background: rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+.buttons {
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    background: transparent;
+    color: var(--darkbrown);
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.buttons:hover {
+    color: var(--yellow);
+    transition: 0.5s ease;
+}
+
+
 /*TYPOGRAPHY*/
 
 .highlight {
