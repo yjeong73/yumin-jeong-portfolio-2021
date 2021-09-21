@@ -11,11 +11,6 @@ export const useAllMdx = () => {
                     goal
                     technology
                     title
-                    hero_image {
-                      childImageSharp {
-                        gatsbyImageData
-                      }
-                    }
                   }
                   id
                   slug
