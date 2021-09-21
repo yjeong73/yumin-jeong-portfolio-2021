@@ -23,11 +23,64 @@ body {
     margin: 0;
 }
 
+.divider {
+    height: 1px;
+    width: 40%;
+    background: rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+/*TYPOGRAPHY*/
+
+.highlight {
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        var(--yellow) 50%
+        );
+}
+
+a:hover {
+    transition: ease 0.5s;
+    opacity: 50%;
+}
+
+/*HEADINGS*/
+
+.heading {
+  font-family: 'Yeseva One', cursive;
+  text-align: center;
+  color: var(--darkbrown);
+  font-size: 52px;
+  letter-spacing: 3px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.heading-decoration {
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: bold;
+    text-align: center;
+    color: var(--darkbrown);
+    font-size: 25px;
+    margin: 0;
+    margin-top: 75px;
+}
+
 /*CONTAINERS*/
 
 .container {
   margin: auto;
   width: 100%;
+}
+
+.section {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 
 .plate {

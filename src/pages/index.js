@@ -1,18 +1,16 @@
 import * as React from 'react'
+import "animate.css/animate.min.css"
 import Layout from '../components/layout'
 import TitleSection from '../components/title'
 import AboutSection from '../components/about'
 import ProjectsSection from '../components/projects'
 import ContactSection from '../components/contact'
-import Loader from "react-loader-spinner";
 import {
+    section,
     plate,
     randomCircle1,
     randomCircle2,
 } from '../styles/layout.module.css'
-import {
-    section,
-} from '../styles/sections.module.css'
 
 function randomValue() {
     return Math.floor(Math.random() * 101);

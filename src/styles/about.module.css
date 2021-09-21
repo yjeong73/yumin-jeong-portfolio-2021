@@ -1,0 +1,155 @@
+/*TYPOGRAPHY*/
+
+.subheading {
+    font-family: 'Yeseva One', cursive;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 15px;
+    color: var(--darkbrown);
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+
+/*ABOUT ME SECTION*/
+
+.profile {
+    width: 75%;
+    margin: auto;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 23px;
+    color: var(--darkbrown);
+}
+
+.profile-pic {
+    height: 225px;
+    width: 225px;
+    margin: auto;
+    background-image: url("../images/profile.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 7px solid var(--lightestyellow);
+    display: inline-block;
+}
+
+.education {
+    width: 50%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 10% 35% 55%;
+    column-gap: 15px;
+    margin-bottom: 5vh;
+    color: var(--darkbrown);
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 19px;
+}
+
+.education p1 {
+    font-weight: 800;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.education p {
+    color: var(--lightbrown);
+    margin: 0;
+}
+
+.education-pic {
+    background: #F2D479;
+    background-image: url("../images/gt.webp");
+    background-size: cover;
+    background-repeat: none;
+    border-radius: 50%;
+    border: none;
+    height: 75px;
+    width: 75px;
+    margin: auto;
+}
+
+.skills {
+    position: relative;
+    display: flex;
+    width: 50%;
+    margin: auto;
+}
+
+.skills-item {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    color: var(--darkbrown);
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 800;
+    font-size: 19px;
+    margin-right: 15px;
+}
+
+.skills-item p {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.percentage {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    color: var(--lightbrown);
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 19px;
+    text-align: right;
+    margin-left: 15px;
+}
+
+.percentage p {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.chart {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.chart div {
+    margin-bottom: 15px;
+}
+
+.bar-animation {
+    animation: 2s forwards slidein;
+    animation-play-state: paused;
+}
+
+@keyframes slidein {
+  from {
+    width: 0%;
+    height: 100%;
+    border-radius: 5px;
+  }
+
+  to {
+    height: 100%;
+    border-radius: 5px;
+  }
+}
+
+.language {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 20px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.language p {
+    color: var(--darkbrown);
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 800;
+    font-size: 19px;
+    margin: 0;
+}
