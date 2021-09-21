@@ -72,7 +72,7 @@ const AboutSection = () => {
 
                 <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={300}>
                 <div className={education}>
-                    <div className={educationItem} style={{background: "#F2D479", borderRadius: "50%", border: "none", height: "75px", width:"75px", margin: "auto", boxShadow: "0 0 5px 0 rgba(0, 0, 0, .2)"}}>
+                    <div className={educationItem} style={{background: "#F2D479", borderRadius: "50%", border: "none", height: "75px", width:"75px", margin: "auto"}}>
                         <StaticImage
                           src="../images/gt.png"
                         />

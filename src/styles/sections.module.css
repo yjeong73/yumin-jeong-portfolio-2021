@@ -103,9 +103,8 @@ a:hover {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 50%;
-    border: 5px solid var(--lightestyellow);
+    border: 7px solid var(--lightestyellow);
     display: inline-block;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
 }
 
 .education {
@@ -229,44 +228,21 @@ a:hover {
     column-gap: 15px;
 }
 
-.project-photo {
-    height: auto;
-    border-top: 13px solid transparent;
-    border-bottom: 13px solid transparent;
-}
-
-.portfolio-2021 {
-    height: 140px;
-    width: 100%;
-    background-image: url("../../projects/yumin-jeong-portfolio-2021/portfolio.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+.project-photos {
+    height: fit-content;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 5px;
     border-radius: 5px;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
 }
 
-.brainy-phonics {
-    height: 140px;
-    width: 100%;
-    background-image: url("../../projects/brainy-phonics/brainyphonics.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 5px;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+.project-item {
+    font-family: "Nanum Myeongjo", serif;
+    color: var(--darkbrown);
+    font-size: 19px;
 }
 
-.donation-tracker {
-    height: 140px;
-    width: 100%;
-    background-image: url("../../projects/donation-tracker/donationtracker.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 5px;
-    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
-}
-
-.project-titles {
-    font-family: 'Yeseva One', cursive;
+.project-item h2 {
+    font-family: "Yeseva One", cursive;
     color: var(--darkbrown);
     font-size: 30px;
     letter-spacing: 1px;
@@ -274,11 +250,11 @@ a:hover {
     margin-top: 0;
 }
 
-.project-description {
-    font-family: "Nanum Myeongjo", serif;
-    color: var(--darkbrown);
-    font-size: 19px;
-    margin-bottom: 110px;
+.project-item h3 {
+    font-family: "Yeseva One", cursive;
+    color: var(--lightbrown);
+    font-size: 23px;
+    margin: 0;
 }
 
 .project-Icons {
