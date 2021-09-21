@@ -1,17 +1,18 @@
 import * as React from 'react'
 import { Linkedin } from 'react-feather';
 import { Mail } from 'react-feather';
-import "animate.css/animate.min.css"
 import ScrollAnimation from 'react-animate-on-scroll';
+import {
+    contactGrid,
+    contactItem,
+    disabled,
+} from '../styles/contact.module.css'
 import {
     headingDecoration,
     heading,
-    contactGrid,
-    contactItem,
     highlight,
-    disabled,
     divider,
-} from '../styles/sections.module.css'
+} from '../styles/layout.module.css'
 
 const ContactSection = () => {
     return (

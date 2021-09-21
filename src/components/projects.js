@@ -1,25 +1,26 @@
 import * as React from 'react'
-import { ChevronDown } from 'react-feather';
-import { GitHub } from 'react-feather';
 import { StaticImage } from 'gatsby-plugin-image'
-import Fade from '@material-ui/core/Fade';
 import { useAllMdx } from "../hooks/use-all-mdx";
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import "animate.css/animate.min.css"
+import { ChevronDown } from 'react-feather';
+import { GitHub } from 'react-feather';
+import Fade from '@material-ui/core/Fade';
 import ScrollAnimation from 'react-animate-on-scroll';
 import {
-    heading,
-    headingDecoration,
-    highlight,
+    buttons,
     projectGrid,
     projectPhotos,
     projectItem,
     projectIcons,
     viewMore,
     viewLess,
+} from '../styles/projects.module.css'
+import {
+    headingDecoration,
+    heading,
+    highlight,
     divider,
-    buttons,
-} from '../styles/sections.module.css'
+} from '../styles/layout.module.css'
 
 const ProjectsSection = () => {
     const { allMdx } = useAllMdx();

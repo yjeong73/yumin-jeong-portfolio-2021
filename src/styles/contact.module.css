@@ -1,0 +1,28 @@
+/* CONTACT SECTION*/
+
+.contact-grid {
+    width: 30%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-row-gap: 23px;
+    margin-bottom: 50px;
+}
+
+.contact-item {
+    margin: auto;
+    color: var(--darkbrown);
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    color: var(--lightbrown);
+    transition: 0.3s ease;
+}
+
+.disabled {
+    pointer-events: none;
+}

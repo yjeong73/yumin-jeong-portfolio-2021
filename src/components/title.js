@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { useEffect } from 'react'
 import $ from 'jquery';
-import "animate.css/animate.min.css"
 import {
     homeIntro,
     homeDescription,
@@ -9,10 +8,8 @@ import {
     circle1,
     circle2,
     circle3,
-} from '../styles/layout.module.css'
-import {
     highlight,
-} from '../styles/sections.module.css'
+} from '../styles/layout.module.css'
 
 const TitleSection = () => {
     useEffect(() => {
