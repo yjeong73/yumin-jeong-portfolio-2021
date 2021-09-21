@@ -106,9 +106,7 @@ const ProjectsSection = () => {
                     </div>
                 </div>
             </div>
-            </ScrollAnimation>
 
-            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={100}>
             <div className={expand2 ? viewMore : viewLess}>
                 <div className={projectGrid}>
                     <div>
@@ -150,9 +148,7 @@ const ProjectsSection = () => {
                     </div>
                 </div>
             </div>
-            </ScrollAnimation>
 
-            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={300}>
             <div className={expand3 ? viewMore : viewLess}>
                 <div className={projectGrid}>
                     <div>

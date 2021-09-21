@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { makeStyles } from "@material-ui/core/styles";
+import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
 import "animate.css/animate.min.css"
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -22,18 +22,17 @@ import {
     divider,
 } from '../styles/sections.module.css'
 
-const useStyles = makeStyles(theme => ({
-  chart1: {
-    background: "linear-gradient(45deg, rgba(242, 195, 53, 0.7), rgba(242, 137, 7, 0.7))",
-  },
-
-  chart2: {
-    background: "linear-gradient(45deg, rgba(205, 162, 145, 0.7), rgba(179, 129, 91, 0.7))",
-  },
-}));
-
 const AboutSection = () => {
-    const classes = useStyles();
+    const Bar1 = styled.div`
+      margin-bottom: 15px;
+      background: linear-gradient(45deg, rgba(242, 195, 53, 0.7), rgba(242, 137, 7, 0.7));
+    `;
+
+    const Bar2 = styled.div`
+      margin-bottom: 15px;
+      background: linear-gradient(45deg, rgba(205, 162, 145, 0.7), rgba(179, 129, 91, 0.7));
+    `;
+
     function toggle1() {
         var childDivs = document.getElementById("chart1").getElementsByTagName("div");
 
@@ -108,12 +107,12 @@ const AboutSection = () => {
                     <p>HTML</p>
                 </div>
                 <div className={chart} id="chart1">
-                    <div style={{width: "80%"}} className={classes.chart1 + ' ' + barAnimation}></div>
-                    <div style={{width: "80%"}} className={classes.chart1 + ' ' + barAnimation}></div>
-                    <div style={{width: "20%"}} className={classes.chart1 + ' ' + barAnimation}></div>
-                    <div style={{width: "60%"}} className={classes.chart1 + ' ' + barAnimation}></div>
-                    <div style={{width: "60%"}} className={classes.chart1 + ' ' + barAnimation}></div>
-                    <div style={{width: "40%"}} className={classes.chart1 + ' ' + barAnimation}></div>
+                    <Bar1 style={{width: "80%"}} className={barAnimation}></Bar1>
+                    <Bar1 style={{width: "80%"}} className={barAnimation}></Bar1>
+                    <Bar1 style={{width: "20%"}} className={barAnimation}></Bar1>
+                    <Bar1 style={{width: "60%"}} className={barAnimation}></Bar1>
+                    <Bar1 style={{width: "60%"}} className={barAnimation}></Bar1>
+                    <Bar1 style={{width: "40%"}} className={barAnimation}></Bar1>
                 </div>
                 <div className={percentage}>
                     <p>80%</p>
@@ -144,13 +143,13 @@ const AboutSection = () => {
                     <p>Figma</p>
                 </div>
                 <div className={chart} id="chart2">
-                    <div style={{width: "80%"}} className={classes.chart2 + ' ' + barAnimation}></div>
-                    <div style={{width: "60%"}} className={classes.chart2 + ' ' + barAnimation}></div>
-                    <div style={{width: "60%"}} className={classes.chart2 + ' ' + barAnimation}></div>
-                    <div style={{width: "40%"}} className={classes.chart2 + ' ' + barAnimation}></div>
-                    <div style={{width: "100%"}} className={classes.chart2 + ' ' + barAnimation}></div>
-                    <div style={{width: "60%"}} className={classes.chart2 + ' ' + barAnimation}></div>
-                    <div style={{width: "60%"}} className={classes.chart2 + ' ' + barAnimation}></div>
+                    <Bar2 style={{width: "80%"}} className={barAnimation}></Bar2>
+                    <Bar2 style={{width: "60%"}} className={barAnimation}></Bar2>
+                    <Bar2 style={{width: "60%"}} className={barAnimation}></Bar2>
+                    <Bar2 style={{width: "40%"}} className={barAnimation}></Bar2>
+                    <Bar2 style={{width: "100%"}} className={barAnimation}></Bar2>
+                    <Bar2 style={{width: "60%"}} className={barAnimation}></Bar2>
+                    <Bar2 style={{width: "60%"}} className={barAnimation}></Bar2>
                 </div>
                 <div className={percentage}>
                     <p>80%</p>
