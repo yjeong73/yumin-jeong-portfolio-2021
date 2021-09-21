@@ -1,5 +1,4 @@
 import * as React from 'react'
-import Divider from "@material-ui/core/Divider";
 import { makeStyles } from "@material-ui/core/styles";
 import { StaticImage } from 'gatsby-plugin-image'
 import "animate.css/animate.min.css"
@@ -20,17 +19,10 @@ import {
     highlight,
     chart,
     barAnimation,
+    divider,
 } from '../styles/sections.module.css'
 
 const useStyles = makeStyles(theme => ({
-  divider: {
-    background: "rgba(0, 0, 0, 0.1)",
-    width: "40%",
-    margin: "auto",
-    marginBottom: "75px",
-    marginTop: "75px",
-  },
-
   chart1: {
     background: "linear-gradient(45deg, rgba(242, 195, 53, 0.7), rgba(242, 137, 7, 0.7))",
   },
@@ -74,7 +66,7 @@ const AboutSection = () => {
             </div>
             </ScrollAnimation>
 
-            <Divider className={classes.divider}/>
+            <div className={divider}></div>
 
             <ScrollAnimation animateIn="animate__slideInUp" animateOnce={true}>
             <p className={subheading}>EDUCATION</p>
@@ -99,7 +91,7 @@ const AboutSection = () => {
                 </div>
                 </ScrollAnimation>
 
-            <Divider className={classes.divider}/>
+            <div className={divider}></div>
 
             <ScrollAnimation animateIn="animate__slideInUp" animateOnce={true}>
             <p className={subheading}>SKILLS</p>
@@ -134,7 +126,7 @@ const AboutSection = () => {
             </div>
             </ScrollAnimation>
 
-            <Divider className={classes.divider}/>
+            <div className={divider}></div>
 
             <ScrollAnimation animateIn="animate__slideInUp" animateOnce={true}>
             <p className={subheading}>TOOLS</p>
@@ -172,7 +164,7 @@ const AboutSection = () => {
             </div>
             </ScrollAnimation>
 
-            <Divider className={classes.divider}/>
+            <div className={divider}></div>
 
             <ScrollAnimation animateIn="animate__slideInUp" animateOnce={true}>
             <p className={subheading}>LANGUAGES</p>

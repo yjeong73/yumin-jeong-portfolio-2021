@@ -2,8 +2,8 @@ import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 import { StaticImage } from 'gatsby-plugin-image'
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import EmailIcon from '@material-ui/icons/Email';
+import { Linkedin } from 'react-feather';
+import { Mail } from 'react-feather';
 import {
     container,
     navLinks,
@@ -39,11 +39,11 @@ const Layout = ({ children }) => {
         <div style={{width: "50px", height: "2px", background: "#4D4637"}}></div>
         <div>
             <a href="https://www.linkedin.com/in/yumin-jeong/" target="_blank" rel="noopener noreferrer" style={{color: "#4D4637"}}>
-            <LinkedInIcon style={{color: "#4D4637"}}></LinkedInIcon></a>
+            <Linkedin color="#4D4637"/></a>
         </div>
         <div>
             <a href={`mailto:ymj982@gmail.com`} style={{color: "#4D4637"}}>
-            <EmailIcon style={{color: "#4D4637"}}></EmailIcon></a>
+            <Mail color="#4D4637"/></a>
             </div>
       </div>
 
