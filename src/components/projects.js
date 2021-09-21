@@ -66,10 +66,6 @@ const ProjectsSection = () => {
             <div className={expand1 ? viewMore : viewLess}>
                 <div className={projectGrid}>
                     <div className={projectPhotos}>
-                        <StaticImage
-                        src={"../../projects/yumin-jeong-portfolio-2021/portfolio.jpg"}
-                        imgStyle={{borderRadius: "5px"}}
-                        />
                     </div>
 
                     <div className={projectItem}>
@@ -101,10 +97,6 @@ const ProjectsSection = () => {
             <div className={expand2 ? viewMore : viewLess}>
                 <div className={projectGrid}>
                     <div className={projectPhotos}>
-                        <StaticImage
-                        src={"../../projects/brainy-phonics/brainyphonics.jpg"}
-                        imgStyle={{borderRadius: "5px"}}
-                        />
                     </div>
 
                     <div className={projectItem}>
@@ -136,10 +128,6 @@ const ProjectsSection = () => {
             <div className={expand3 ? viewMore : viewLess}>
                 <div className={projectGrid}>
                     <div className={projectPhotos}>
-                        <StaticImage
-                        src={"../../projects/donation-tracker/donationtracker.jpg"}
-                        imgStyle={{borderRadius: "5px"}}
-                        />
                     </div>
 
                     <div className={projectItem}>
