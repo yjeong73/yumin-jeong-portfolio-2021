@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import { StaticImage } from 'gatsby-plugin-image'
+import ReactCountryFlag from "react-country-flag"
 import "animate.css/animate.min.css"
 import ScrollAnimation from 'react-animate-on-scroll';
 import {
@@ -26,11 +27,13 @@ const AboutSection = () => {
     const Bar1 = styled.div`
       margin-bottom: 15px;
       background: linear-gradient(45deg, rgba(242, 195, 53, 0.7), rgba(242, 137, 7, 0.7));
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
     `;
 
     const Bar2 = styled.div`
       margin-bottom: 15px;
       background: linear-gradient(45deg, rgba(205, 162, 145, 0.7), rgba(179, 129, 91, 0.7));
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
     `;
 
     function toggle1() {
@@ -73,7 +76,7 @@ const AboutSection = () => {
 
                 <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={300}>
                 <div className={education}>
-                    <div className={educationItem} style={{background: "#F2D479", borderRadius: "50%", border: "none", height: "75px", width:"75px", margin: "auto"}}>
+                    <div className={educationItem} style={{background: "#F2D479", borderRadius: "50%", border: "none", height: "75px", width:"75px", margin: "auto", boxShadow: "0 0 5px 0 rgba(0, 0, 0, .2)"}}>
                         <StaticImage
                           src="../images/gt.png"
                         />
@@ -171,31 +174,9 @@ const AboutSection = () => {
 
             <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={300}>
             <div className={language}>
-                <div style={{height: "50px", width: "50px", borderRadius: "50%", border: "5px solid #F2D479"}}>
-                    <StaticImage
-                      src="../images/korea.png"
-                      width={100}
-                      height={100}
-                      imgStyle={{borderRadius: "50%"}}
-                    />
-                </div>
-                <div className={languageItem}>
-                    <p>Korean <span style={{color: "#A7905E", fontWeight:"400"}}>(Native)</span></p>
-                </div>
-            </div>
+                <p><span className={highlight} style={{marginRight: "15px"}}>🇰🇷</span>Korean <span style={{color: "#A7905E", fontWeight:"400"}}>(Native)</span></p>
 
-            <div className={language} style={{marginBottom: "110px"}}>
-                <div style={{height: "50px", width: "50px", borderRadius: "50%", border: "5px solid #F2D479"}}>
-                    <StaticImage
-                      src="../images/us.png"
-                      width={100}
-                      height={100}
-                      imgStyle={{borderRadius: "50%"}}
-                    />
-                </div>
-                <div className={languageItem}>
-                    <p>English <span style={{color: "#A7905E", fontWeight:"400"}}>(Fluent)</span></p>
-                </div>
+                <p style={{marginBottom: "110px"}}><span className={highlight} style={{marginRight: "15px"}}>🇺🇸</span>English <span style={{color: "#A7905E", fontWeight:"400"}}>(Fluent)</span></p>
             </div>
             </ScrollAnimation>
         </div>
