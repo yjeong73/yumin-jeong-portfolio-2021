@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { ChevronDown } from 'react-feather';
 import { GitHub } from 'react-feather';
+import { StaticImage } from 'gatsby-plugin-image'
 import Fade from '@material-ui/core/Fade';
 import { useAllMdx } from "../hooks/use-all-mdx";
 import { MDXRenderer } from 'gatsby-plugin-mdx'
@@ -11,11 +12,8 @@ import {
     headingDecoration,
     highlight,
     projectGrid,
-    portfolio2021,
-    brainyPhonics,
-    donationTracker,
-    projectTitles,
-    projectDescription,
+    projectPhotos,
+    projectItem,
     projectIcons,
     viewMore,
     viewLess,
@@ -67,15 +65,19 @@ const ProjectsSection = () => {
             <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={100}>
             <div className={expand1 ? viewMore : viewLess}>
                 <div className={projectGrid}>
+                    <div className={projectPhotos}>
+                        <StaticImage
+                        src={"../../projects/yumin-jeong-portfolio-2021/portfolio.jpg"}
+                        imgStyle={{borderRadius: "5px"}}
+                        />
+                    </div>
 
+                    <div className={projectItem}>
+                        <h2>{firstItem.frontmatter.title}</h2>
 
-                    <div>
-                        <h2 className={projectTitles}>
-                            {firstItem.frontmatter.title}
-                        </h2>
-                        <p style={{fontFamily: "Yeseva One, cursive", fontSize: "23px", color: "#A7905E", margin: "0"}}>{firstItem.frontmatter.date}</p>
-                        <p style={{fontFamily: "Yeseva One, cursive", fontSize: "18px", color: "#4D4637"}}><span className={highlight}>Technology&#58;</span> <span style={{fontFamily: "Nanum Myeongjo, serif"}}>
-                        {firstItem.frontmatter.technology}</span></p>
+                        <h3>{firstItem.frontmatter.date}</h3>
+                        <p><span style={{fontFamily: "Yeseva One, cursive", fontSize: "18px", color: "#4D4637"}} className={highlight}>Technology&#58;</span>
+                        &nbsp;{firstItem.frontmatter.technology}</p>
 
                         <div className={projectIcons}>
                             <button className={buttons} onClick={handleEvent1}>PROJECT DESCRIPTION<ChevronDown/>
@@ -86,7 +88,7 @@ const ProjectsSection = () => {
                         </div>
 
                         <Fade in={checked1}>
-                            <div className={projectDescription}>
+                            <div style={{marginBottom: "110px"}}>
                                 <MDXRenderer>
                                   {firstItem.body}
                                 </MDXRenderer>
@@ -98,15 +100,19 @@ const ProjectsSection = () => {
 
             <div className={expand2 ? viewMore : viewLess}>
                 <div className={projectGrid}>
+                    <div className={projectPhotos}>
+                        <StaticImage
+                        src={"../../projects/brainy-phonics/brainyphonics.jpg"}
+                        imgStyle={{borderRadius: "5px"}}
+                        />
+                    </div>
 
+                    <div className={projectItem}>
+                        <h2>{secondItem.frontmatter.title}</h2>
 
-                    <div>
-                        <h2 className={projectTitles}>
-                            {secondItem.frontmatter.title}
-                        </h2>
-                        <p style={{fontFamily: "Yeseva One, cursive", fontSize: "23px", color: "#A7905E", margin: "0"}}>{secondItem.frontmatter.date}</p>
-                        <p style={{fontFamily: "Yeseva One, cursive", fontSize: "18px", color: "#4D4637"}}><span className={highlight}>Technology&#58;</span> <span style={{fontFamily: "Nanum Myeongjo, serif"}}>
-                        {secondItem.frontmatter.technology}</span></p>
+                        <h3>{secondItem.frontmatter.date}</h3>
+                        <p><span style={{fontFamily: "Yeseva One, cursive", fontSize: "18px", color: "#4D4637"}} className={highlight}>Technology&#58;</span>
+                        &nbsp;{secondItem.frontmatter.technology}</p>
 
 
                         <div className={projectIcons}>
@@ -117,7 +123,7 @@ const ProjectsSection = () => {
                         </div>
 
                         <Fade in={checked2}>
-                            <div className={projectDescription}>
+                            <div style={{marginBottom: "110px"}}>
                                 <MDXRenderer>
                                   {secondItem.body}
                                 </MDXRenderer>
@@ -129,15 +135,19 @@ const ProjectsSection = () => {
 
             <div className={expand3 ? viewMore : viewLess}>
                 <div className={projectGrid}>
-                    
+                    <div className={projectPhotos}>
+                        <StaticImage
+                        src={"../../projects/donation-tracker/donationtracker.jpg"}
+                        imgStyle={{borderRadius: "5px"}}
+                        />
+                    </div>
 
-                    <div>
-                        <h2 className={projectTitles}>
-                            {thirdItem.frontmatter.title}
-                        </h2>
-                        <p style={{fontFamily: "Yeseva One, cursive", fontSize: "23px", color: "#A7905E", margin: "0"}}>{thirdItem.frontmatter.date}</p>
-                        <p style={{fontFamily: "Yeseva One, cursive", fontSize: "18px", color: "#4D4637"}}><span className={highlight}>Technology&#58;</span> <span style={{fontFamily: "Nanum Myeongjo, serif"}}>
-                        {thirdItem.frontmatter.technology}</span></p>
+                    <div className={projectItem}>
+                        <h2>{thirdItem.frontmatter.title}</h2>
+
+                        <h3>{thirdItem.frontmatter.date}</h3>
+                        <p><span style={{fontFamily: "Yeseva One, cursive", fontSize: "18px", color: "#4D4637"}} className={highlight}>Technology&#58;</span>
+                        &nbsp;{thirdItem.frontmatter.technology}</p>
 
                         <div className={projectIcons}>
                             <button className={buttons} onClick={handleEvent3}>PROJECT DESCRIPTION<ChevronDown/></button>
@@ -145,7 +155,7 @@ const ProjectsSection = () => {
                         </div>
 
                         <Fade in={checked3}>
-                            <div className={projectDescription}>
+                            <div style={{marginBottom: "110px"}}>
                                 <MDXRenderer>
                                   {thirdItem.body}
                                 </MDXRenderer>
