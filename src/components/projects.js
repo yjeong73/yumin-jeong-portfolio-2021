@@ -67,7 +67,12 @@ const ProjectsSection = () => {
             <div className={expand1 ? viewMore : viewLess}>
                 <div className={projectGrid}>
                     <div>
-
+                        <div className={projectPhoto}>
+                            <GatsbyImage
+                              imgStyle={{width: "100%", height: "100"}}
+                              image={getImage(firstItem.frontmatter.hero_image)}
+                            />
+                        </div>
                     </div>
 
                     <div>
@@ -105,7 +110,12 @@ const ProjectsSection = () => {
             <div className={expand2 ? viewMore : viewLess}>
                 <div className={projectGrid}>
                     <div>
-
+                        <div className={projectPhoto}>
+                            <GatsbyImage
+                              imgStyle={{width: "100%", height: "100%"}}
+                              image={getImage(secondItem.frontmatter.hero_image)}
+                            />
+                        </div>
                     </div>
 
                     <div>
@@ -142,7 +152,12 @@ const ProjectsSection = () => {
             <div className={expand3 ? viewMore : viewLess}>
                 <div className={projectGrid}>
                     <div>
-                        
+                        <div className={projectPhoto}>
+                            <GatsbyImage
+                              imgStyle={{width: "100%", height: "100%"}}
+                              image={getImage(thirdItem.frontmatter.hero_image)}
+                            />
+                        </div>
                     </div>
 
                     <div>
