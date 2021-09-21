@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { ChevronDown } from 'react-feather';
 import { GitHub } from 'react-feather';
 import Fade from '@material-ui/core/Fade';
@@ -12,7 +11,9 @@ import {
     headingDecoration,
     highlight,
     projectGrid,
-    projectPhoto,
+    portfolio2021,
+    brainyPhonics,
+    donationTracker,
     projectTitles,
     projectDescription,
     projectIcons,
@@ -66,124 +67,90 @@ const ProjectsSection = () => {
             <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={100}>
             <div className={expand1 ? viewMore : viewLess}>
                 <div className={projectGrid}>
+                    <div className={portfolio2021}></div>
+
                     <div>
-                        <div className={projectPhoto}>
-                            <GatsbyImage
-                              imgStyle={{width: "100%", height: "100"}}
-                              image={getImage(firstItem.frontmatter.hero_image)}
-                            />
+                        <h2 className={projectTitles}>
+                            {firstItem.frontmatter.title}
+                        </h2>
+                        <p style={{fontFamily: "Yeseva One, cursive", fontSize: "23px", color: "#A7905E", margin: "0"}}>{firstItem.frontmatter.date}</p>
+                        <p style={{fontFamily: "Yeseva One, cursive", fontSize: "18px", color: "#4D4637"}}><span className={highlight}>Technology&#58;</span> <span style={{fontFamily: "Nanum Myeongjo, serif"}}>
+                        {firstItem.frontmatter.technology}</span></p>
+
+                        <div className={projectIcons}>
+                            <button className={buttons} onClick={handleEvent1}>PROJECT DESCRIPTION<ChevronDown/>
+                            </button>
+                            <a title="GitHub" href="https://github.com/yjeong73/yumin-jeong-portfolio-2021" target="_blank" rel="noopener noreferrer" style={{display: "table-cell", color: "#4D4637"}}>
+                                <GitHub/>
+                            </a>
                         </div>
-                    </div>
 
-                    <div>
-                        <div>
-                            <h2 className={projectTitles}>
-                                {firstItem.frontmatter.title}
-                            </h2>
-                            <p style={{fontFamily: "Yeseva One, cursive", fontSize: "23px", color: "#A7905E", margin: "0"}}>{firstItem.frontmatter.date}</p>
-                            <p style={{fontFamily: "Yeseva One, cursive", fontSize: "18px", color: "#4D4637"}}><span className={highlight}>Technology&#58;</span> <span style={{fontFamily: "Nanum Myeongjo, serif"}}>
-                            {firstItem.frontmatter.technology}</span></p>
-
-                            <div className={projectIcons}>
-                                <button className={buttons} onClick={handleEvent1}>PROJECT DESCRIPTION<ChevronDown/>
-                                </button>
-                                <a title="GitHub" href="https://github.com/yjeong73/yumin-jeong-portfolio-2021" target="_blank" rel="noopener noreferrer" style={{display: "table-cell", color: "#4D4637"}}>
-                                    <GitHub/>
-                                </a>
+                        <Fade in={checked1}>
+                            <div className={projectDescription}>
+                                <MDXRenderer>
+                                  {firstItem.body}
+                                </MDXRenderer>
                             </div>
-
-                        </div>
-
-                        <div>
-                            <Fade in={checked1}>
-                                <div className={projectDescription}>
-                                    <MDXRenderer>
-                                      {firstItem.body}
-                                    </MDXRenderer>
-                                </div>
-                            </Fade>
-                        </div>
+                        </Fade>
                     </div>
                 </div>
             </div>
 
             <div className={expand2 ? viewMore : viewLess}>
                 <div className={projectGrid}>
+                    <div className={brainyPhonics}></div>
+
                     <div>
-                        <div className={projectPhoto}>
-                            <GatsbyImage
-                              imgStyle={{width: "100%", height: "100%"}}
-                              image={getImage(secondItem.frontmatter.hero_image)}
-                            />
+                        <h2 className={projectTitles}>
+                            {secondItem.frontmatter.title}
+                        </h2>
+                        <p style={{fontFamily: "Yeseva One, cursive", fontSize: "23px", color: "#A7905E", margin: "0"}}>{secondItem.frontmatter.date}</p>
+                        <p style={{fontFamily: "Yeseva One, cursive", fontSize: "18px", color: "#4D4637"}}><span className={highlight}>Technology&#58;</span> <span style={{fontFamily: "Nanum Myeongjo, serif"}}>
+                        {secondItem.frontmatter.technology}</span></p>
+
+
+                        <div className={projectIcons}>
+                            <button className={buttons} onClick={handleEvent2}>PROJECT DESCRIPTION<ChevronDown/></button>
+                            <a title="GitHub" href="https://github.com/william-crawford/brainy-phonics-web" target="_blank" rel="noopener noreferrer" style={{display: "table-cell", color: "#4D4637"}}>
+                                <GitHub/>
+                            </a>
                         </div>
-                    </div>
 
-                    <div>
-                        <div>
-                            <h2 className={projectTitles}>
-                                {secondItem.frontmatter.title}
-                            </h2>
-                            <p style={{fontFamily: "Yeseva One, cursive", fontSize: "23px", color: "#A7905E", margin: "0"}}>{secondItem.frontmatter.date}</p>
-                            <p style={{fontFamily: "Yeseva One, cursive", fontSize: "18px", color: "#4D4637"}}><span className={highlight}>Technology&#58;</span> <span style={{fontFamily: "Nanum Myeongjo, serif"}}>
-                            {secondItem.frontmatter.technology}</span></p>
-
-
-                            <div className={projectIcons}>
-                                <button className={buttons} onClick={handleEvent2}>PROJECT DESCRIPTION<ChevronDown/></button>
-                                <a title="GitHub" href="https://github.com/william-crawford/brainy-phonics-web" target="_blank" rel="noopener noreferrer" style={{display: "table-cell", color: "#4D4637"}}>
-                                    <GitHub/>
-                                </a>
+                        <Fade in={checked2}>
+                            <div className={projectDescription}>
+                                <MDXRenderer>
+                                  {secondItem.body}
+                                </MDXRenderer>
                             </div>
-                        </div>
-
-                        <div>
-                            <Fade in={checked2}>
-                                <div className={projectDescription}>
-                                    <MDXRenderer>
-                                      {secondItem.body}
-                                    </MDXRenderer>
-                                </div>
-                            </Fade>
-                        </div>
+                        </Fade>
                     </div>
                 </div>
             </div>
 
             <div className={expand3 ? viewMore : viewLess}>
                 <div className={projectGrid}>
+                    <div className={donationTracker}></div>
+
                     <div>
-                        <div className={projectPhoto}>
-                            <GatsbyImage
-                              imgStyle={{width: "100%", height: "100%"}}
-                              image={getImage(thirdItem.frontmatter.hero_image)}
-                            />
+                        <h2 className={projectTitles}>
+                            {thirdItem.frontmatter.title}
+                        </h2>
+                        <p style={{fontFamily: "Yeseva One, cursive", fontSize: "23px", color: "#A7905E", margin: "0"}}>{thirdItem.frontmatter.date}</p>
+                        <p style={{fontFamily: "Yeseva One, cursive", fontSize: "18px", color: "#4D4637"}}><span className={highlight}>Technology&#58;</span> <span style={{fontFamily: "Nanum Myeongjo, serif"}}>
+                        {thirdItem.frontmatter.technology}</span></p>
+
+                        <div className={projectIcons}>
+                            <button className={buttons} onClick={handleEvent3}>PROJECT DESCRIPTION<ChevronDown/></button>
+                            <GitHub color="rgba(0, 0, 0, 0.2)"/>
                         </div>
-                    </div>
 
-                    <div>
-                        <div>
-                            <h2 className={projectTitles}>
-                                {thirdItem.frontmatter.title}
-                            </h2>
-                            <p style={{fontFamily: "Yeseva One, cursive", fontSize: "23px", color: "#A7905E", margin: "0"}}>{thirdItem.frontmatter.date}</p>
-                            <p style={{fontFamily: "Yeseva One, cursive", fontSize: "18px", color: "#4D4637"}}><span className={highlight}>Technology&#58;</span> <span style={{fontFamily: "Nanum Myeongjo, serif"}}>
-                            {thirdItem.frontmatter.technology}</span></p>
-
-                            <div className={projectIcons}>
-                                <button className={buttons} onClick={handleEvent3}>PROJECT DESCRIPTION<ChevronDown/></button>
-                                <GitHub color="rgba(0, 0, 0, 0.2)"/>
+                        <Fade in={checked3}>
+                            <div className={projectDescription}>
+                                <MDXRenderer>
+                                  {thirdItem.body}
+                                </MDXRenderer>
                             </div>
-                        </div>
-
-                        <div>
-                            <Fade in={checked3}>
-                                <div className={projectDescription}>
-                                    <MDXRenderer>
-                                      {thirdItem.body}
-                                    </MDXRenderer>
-                                </div>
-                            </Fade>
-                        </div>
+                        </Fade>
                     </div>
                 </div>
             </div>
