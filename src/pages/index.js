@@ -5,6 +5,11 @@ import TitleSection from '../components/title'
 import AboutSection from '../components/about'
 import ProjectsSection from '../components/projects'
 import ContactSection from '../components/contact'
+import MobileView from '../components/mobile'
+import {
+  isTablet,
+  isMobile,
+} from "react-device-detect";
 import {
     section,
     plate,
@@ -18,6 +23,15 @@ function randomValue() {
 
 const IndexPage = () => {
   const values = [randomValue(), randomValue(), randomValue(), randomValue(), randomValue()];
+
+  if(isMobile || isTablet) {
+      return (
+          <div>
+              <div className={plate}></div>
+              <MobileView></MobileView>
+          </div>
+      )
+  }
 
   return (
       <Layout pageTitle="Home Page">
