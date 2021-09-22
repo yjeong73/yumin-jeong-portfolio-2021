@@ -7,7 +7,6 @@ import ProjectsSection from '../components/projects'
 import ContactSection from '../components/contact'
 import MobileView from '../components/mobile'
 import {
-  isTablet,
   isMobile,
 } from "react-device-detect";
 import {
@@ -24,9 +23,9 @@ function randomValue() {
 const IndexPage = () => {
   const values = [randomValue(), randomValue(), randomValue(), randomValue(), randomValue()];
 
-  if(isMobile || isTablet) {
+  if(isMobile) {
       return (
-          <div>
+          <div pagetitle="Home Page">
               <div className={plate}></div>
               <MobileView></MobileView>
           </div>
