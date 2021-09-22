@@ -1,13 +1,17 @@
 import * as React from 'react'
+import styled from 'styled-components'
 import ScrollAnimation from 'react-animate-on-scroll';
-import Skills from '../components/skills'
-import Tools from '../components/tools'
 import {
     subheading,
     profile,
     profilePic,
     education,
     educationPic,
+    skills,
+    skillsItem,
+    percentage,
+    chart,
+    barAnimation,
     language,
 } from '../styles/about.module.css'
 import {
@@ -18,6 +22,34 @@ import {
 } from '../styles/layout.module.css'
 
 const AboutSection = () => {
+    const Bar1 = styled.div`
+      margin-bottom: 15px;
+      background: linear-gradient(45deg, rgba(242, 195, 53, 0.7), rgba(242, 137, 7, 0.7));
+    `;
+
+    const Bar2 = styled.div`
+      margin-bottom: 15px;
+      background: linear-gradient(45deg, rgba(205, 162, 145, 0.7), rgba(179, 129, 91, 0.7));
+    `;
+
+    function toggle1() {
+        var childDivs = document.getElementById("chart1").getElementsByTagName("div");
+
+        for(var i=0; i< childDivs.length; i++ ) {
+            var childDiv = childDivs[i];
+            childDiv.style.animationPlayState = "running";
+        }
+    }
+
+    function toggle2() {
+        var childDivs = document.getElementById("chart2").getElementsByTagName("div");
+
+        for(var i=0; i< childDivs.length; i++ ) {
+            var childDiv = childDivs[i];
+            childDiv.style.animationPlayState = "running";
+        }
+    }
+
     return (
         <div>
             <ScrollAnimation animateIn="animate__slideInUp" animateOnce={true}>
@@ -60,7 +92,34 @@ const AboutSection = () => {
             <p className={subheading}>SKILLS</p>
             </ScrollAnimation>
 
-            <Skills></Skills>
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} afterAnimatedIn={toggle1}>
+            <div className={skills}>
+                <div className={skillsItem}>
+                    <p>Java</p>
+                    <p>Python</p>
+                    <p>C#</p>
+                    <p>CSS</p>
+                    <p>JavaScript</p>
+                    <p>HTML</p>
+                </div>
+                <div className={chart} id="chart1">
+                    <Bar1 style={{width: "80%"}} className={barAnimation}></Bar1>
+                    <Bar1 style={{width: "80%"}} className={barAnimation}></Bar1>
+                    <Bar1 style={{width: "20%"}} className={barAnimation}></Bar1>
+                    <Bar1 style={{width: "60%"}} className={barAnimation}></Bar1>
+                    <Bar1 style={{width: "60%"}} className={barAnimation}></Bar1>
+                    <Bar1 style={{width: "40%"}} className={barAnimation}></Bar1>
+                </div>
+                <div className={percentage}>
+                    <p>80%</p>
+                    <p>80%</p>
+                    <p>20%</p>
+                    <p>60%</p>
+                    <p>60%</p>
+                    <p>40%</p>
+                </div>
+            </div>
+            </ScrollAnimation>
 
             <div className={divider}></div>
 
@@ -68,7 +127,37 @@ const AboutSection = () => {
             <p className={subheading}>TOOLS</p>
             </ScrollAnimation>
 
-            <Tools></Tools>
+            <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} afterAnimatedIn={toggle2}>
+            <div className={skills}>
+                <div className={skillsItem}>
+                    <p>Git</p>
+                    <p>Angular</p>
+                    <p>React</p>
+                    <p>Unity</p>
+                    <p>Procreate</p>
+                    <p>Photoshop</p>
+                    <p>Figma</p>
+                </div>
+                <div className={chart} id="chart2">
+                    <Bar2 style={{width: "80%"}} className={barAnimation}></Bar2>
+                    <Bar2 style={{width: "60%"}} className={barAnimation}></Bar2>
+                    <Bar2 style={{width: "60%"}} className={barAnimation}></Bar2>
+                    <Bar2 style={{width: "40%"}} className={barAnimation}></Bar2>
+                    <Bar2 style={{width: "100%"}} className={barAnimation}></Bar2>
+                    <Bar2 style={{width: "60%"}} className={barAnimation}></Bar2>
+                    <Bar2 style={{width: "60%"}} className={barAnimation}></Bar2>
+                </div>
+                <div className={percentage}>
+                    <p>80%</p>
+                    <p>60%</p>
+                    <p>60%</p>
+                    <p>40%</p>
+                    <p>100%</p>
+                    <p>60%</p>
+                    <p>60%</p>
+                </div>
+            </div>
+            </ScrollAnimation>
 
             <div className={divider}></div>
 
