@@ -1,5 +1,4 @@
 import * as React from 'react'
-import "animate.css/animate.min.css"
 import ScrollAnimation from 'react-animate-on-scroll';
 import Skills from '../components/skills'
 import Tools from '../components/tools'
