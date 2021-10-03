@@ -97,7 +97,6 @@ const AboutSection = () => {
                 <div className={skillsItem}>
                     <p>Java</p>
                     <p>Python</p>
-                    <p>C#</p>
                     <p>CSS</p>
                     <p>JavaScript</p>
                     <p>HTML</p>
@@ -105,7 +104,6 @@ const AboutSection = () => {
                 <div className={chart} id="chart1">
                     <Bar1 style={{width: "80%"}} className={barAnimation}></Bar1>
                     <Bar1 style={{width: "80%"}} className={barAnimation}></Bar1>
-                    <Bar1 style={{width: "20%"}} className={barAnimation}></Bar1>
                     <Bar1 style={{width: "60%"}} className={barAnimation}></Bar1>
                     <Bar1 style={{width: "60%"}} className={barAnimation}></Bar1>
                     <Bar1 style={{width: "40%"}} className={barAnimation}></Bar1>
@@ -113,7 +111,6 @@ const AboutSection = () => {
                 <div className={percentage}>
                     <p>80%</p>
                     <p>80%</p>
-                    <p>20%</p>
                     <p>60%</p>
                     <p>60%</p>
                     <p>40%</p>
