@@ -38,12 +38,12 @@ const ContactSection = () => {
                     https://www.linkedin.com/in/yumin-jeong/
                 </div>
                 <div className={contactItem}>
-                    <a href={`mailto:ymj982@gmail.com`} style={{color: "#4D4637"}}>
+                    <a href={`mailto:yjeong982@outlook.com`} style={{color: "#4D4637"}}>
                         <Mail className={highlight}/>
                     </a>
                 </div>
                 <div className={contactItem + ' ' + disabled} style={{marginLeft:"0"}}>
-                    ymj982@gmail.com
+                    yjeong982@outlook.com
                 </div>
             </div>
             </ScrollAnimation>

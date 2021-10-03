@@ -85,7 +85,6 @@
 
 .mobile-logo {
     display: flex;
-    position: fixed;
     z-index: 1;
     background-image: url("../images/new_logo.webp");
     background-size: cover;

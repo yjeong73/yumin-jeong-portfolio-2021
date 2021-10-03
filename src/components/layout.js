@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
             <Linkedin color="#4D4637"/></a>
         </div>
         <div>
-            <a href={`mailto:ymj982@gmail.com`} style={{color: "#4D4637"}}>
+            <a href={`mailto:yjeong982@outlook.com`} style={{color: "#4D4637"}}>
             <Mail color="#4D4637"/></a>
             </div>
       </div>

@@ -36,7 +36,7 @@ const MobileView = () => {
                     <a href="https://www.linkedin.com/in/yumin-jeong/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" style={{color: "#4D4637"}}>
                         <Linkedin className={highlight}/>
                     </a>
-                    <a href={`mailto:ymj982@gmail.com`} aria-label="Email" style={{color: "#4D4637"}}>
+                    <a href={`mailto:yjeong982@outlook.com`} aria-label="Email" style={{color: "#4D4637"}}>
                         <Mail className={highlight}/>
                     </a>
                 </div>
