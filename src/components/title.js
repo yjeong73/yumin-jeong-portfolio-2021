@@ -33,9 +33,8 @@ const TitleSection = () => {
 
             <div style={{width: "50%"}}>
                 <p className={homeIntro}>Hello, <br/> I am Yumin Jeong</p>
-                <p className={homeDescription}>I'm a recent graduate with a passion for
-                <br/><span className={highlight}>computer science👩‍💻</span> and <span className={highlight}>art🌻</span> who is seeking
-                <br/>job opportunities as a front-end engineer.</p>
+                <p className={homeDescription}>I'm a front-end engineer with a passion for blending
+                <br/><span className={highlight}>computer science👩‍💻</span> and <span className={highlight}>art🌻</span> into our digital experiences.</p>
             </div>
         </div>
     )
