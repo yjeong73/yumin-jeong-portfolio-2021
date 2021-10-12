@@ -22,7 +22,7 @@ const ContactSection = () => {
             <h3 className={heading}>Contact</h3>
             </ScrollAnimation>
             <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true} delay={300}>
-            <p style={{fontFamily: "Nanum Myeongjo, serif", color: "#4D4637", textAlign: "center", margin: "0", fontSize: "23px"}}>Let's talk! <br/>I am currently actively looking for new opportunities, <br/>so please feel free to leave me a message.</p>
+            <p style={{fontFamily: "Nanum Myeongjo, serif", color: "#4D4637", textAlign: "center", margin: "0", fontSize: "23px"}}>Let's talk! <br/>I am not currently looking for new opportunities, <br/>but please feel free to leave me a message and I'll try my best to get back to you!</p>
             </ScrollAnimation>
 
             <div className={divider}></div>
